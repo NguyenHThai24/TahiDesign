@@ -1,0 +1,30 @@
+/* font logo  */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+/* font title  */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+/* font content  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* tailwind css  */
+@import "tailwindcss";
+
+/* import swiper slider  */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+:root {
+  --background-color: #678c6d; /*layout kiểu gallery*/
+  --text-color: #315040; /*Màu chữ xanh đen*/
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  background: #e9ece9;
+}
+
+section {
+  margin-top: 20px;
+}

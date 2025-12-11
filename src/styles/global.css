@@ -1,0 +1,53 @@
+@layer utilities {
+  .font-logo {
+    font-family: "Pacifico", cursive;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .title {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 1.5px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+}
+
+/* slider banner */
+.swiper-pagination-bullet {
+  background: #ccc !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--text-color) !important;
+}
+
+.custom-pagination .swiper-pagination-bullets {
+  position: static !important;
+  margin-top: 5px; /* khoảng cách giữa card và pagination */
+}
+/* end slider banner */
+
+/* hiệu ứng chạy chữ ở header  */
+@keyframes marquee {
+  0% {
+    transform: translateX(250%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 35s linear infinite;
+}
+
+/* end hiệu ứng chạy chữ ở header  */
