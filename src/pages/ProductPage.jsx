@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import Gallery from "../components/Gallery";
 
 const ProductPage = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [priceRange, setPriceRange] = useState([0, 1000000]);
   const [sortOption, setSortOption] = useState("");
@@ -13,6 +15,34 @@ const ProductPage = () => {
     { id: 4, label: "Bao lì xì" },
   ];
 
+  // Lấy tham số category từ URL khi component mount
+  useEffect(() => {
+    const categoryId = searchParams.get("category");
+    if (categoryId) {
+      setSelectedCategory(parseInt(categoryId));
+    }
+  }, [searchParams]);
+
+  // Cập nhật URL khi selectedCategory thay đổi
+  useEffect(() => {
+    if (selectedCategory) {
+      searchParams.set("category", selectedCategory);
+      setSearchParams(searchParams);
+    } else {
+      searchParams.delete("category");
+      setSearchParams(searchParams);
+    }
+  }, [selectedCategory, searchParams, setSearchParams]);
+
+  const handleCategoryClick = (categoryId) => {
+    if (selectedCategory === categoryId) {
+      // Nếu đang chọn cùng danh mục thì bỏ chọn
+      setSelectedCategory(null);
+    } else {
+      setSelectedCategory(categoryId);
+    }
+  };
+
   return (
     <main className="min-h-screen">
       <section className="grid grid-cols-12 gap-4 h-full">
@@ -23,7 +53,7 @@ const ProductPage = () => {
             {categories.map((c) => (
               <li
                 key={c.id}
-                onClick={() => setSelectedCategory(c.id)}
+                onClick={() => handleCategoryClick(c.id)}
                 className={`cursor-pointer p-1 rounded ${
                   selectedCategory === c.id
                     ? "bg-(--background-color) text-(--text-color) font-medium"

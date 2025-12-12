@@ -21,7 +21,7 @@
     "categoryId": 2,
     "name": "Thiệp cưới Minimalist Bé Hồng",
     "price": 28000,
-    "salePrice": 25000,
+
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product2-1.jpg",
@@ -66,7 +66,6 @@
     "categoryId": 3,
     "name": "Thiệp cưới Modern Elegance",
     "price": 32000,
-    "salePrice": 29000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product5-1.jpg",
@@ -96,7 +95,6 @@
     "categoryId": 1,
     "name": "Thiệp cưới Blossom Pink",
     "price": 26000,
-    "salePrice": 23000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product7-1.jpg",
@@ -125,7 +123,6 @@
     "categoryId": 3,
     "name": "Thiệp cưới Golden Leaves",
     "price": 36000,
-    "salePrice": 33000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product9-1.jpg",
@@ -154,7 +151,6 @@
     "categoryId": 1,
     "name": "Thiệp cưới Classic Ivory",
     "price": 29000,
-    "salePrice": 27000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product11-1.jpg",
@@ -183,7 +179,6 @@
     "categoryId": 3,
     "name": "Thiệp cưới Pearl Shine",
     "price": 39000,
-    "salePrice": 35000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product13-1.jpg",
@@ -212,7 +207,6 @@
     "categoryId": 1,
     "name": "Thiệp cưới Blush Pink",
     "price": 26500,
-    "salePrice": 24000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product15-1.jpg",
@@ -241,7 +235,6 @@
     "categoryId": 3,
     "name": "Thiệp cưới Diamond Cut",
     "price": 42000,
-    "salePrice": 38000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product17-1.jpg",
@@ -270,7 +263,6 @@
     "categoryId": 1,
     "name": "Thiệp cưới Soft Peach",
     "price": 25500,
-    "salePrice": 23500,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product19-1.jpg",
@@ -299,7 +291,6 @@
     "categoryId": 3,
     "name": "Thiệp cưới Copper Shimmer",
     "price": 37500,
-    "salePrice": 34500,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product21-1.jpg",
@@ -328,7 +319,6 @@
     "categoryId": 1,
     "name": "Thiệp cưới Coral Bliss",
     "price": 31000,
-    "salePrice": 28500,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product23-1.jpg",
@@ -357,7 +347,6 @@
     "categoryId": 3,
     "name": "Thiệp cưới Platinum Edge",
     "price": 41000,
-    "salePrice": 37000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product25-1.jpg",
@@ -386,7 +375,6 @@
     "categoryId": 1,
     "name": "Thiệp cưới Buttercream",
     "price": 27500,
-    "salePrice": 25000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product27-1.jpg",
@@ -415,7 +403,6 @@
     "categoryId": 3,
     "name": "Thiệp cưới Velvet Touch",
     "price": 39500,
-    "salePrice": 36000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product29-1.jpg",
@@ -444,7 +431,6 @@
     "categoryId": 1,
     "name": "Thiệp cưới Rose Gold",
     "price": 34500,
-    "salePrice": 31500,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product31-1.jpg",
@@ -473,7 +459,6 @@
     "categoryId": 3,
     "name": "Thiệp cưới Crystal Clear",
     "price": 43000,
-    "salePrice": 39000,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product33-1.jpg",
@@ -502,7 +487,6 @@
     "categoryId": 1,
     "name": "Thiệp cưới Lilac Mist",
     "price": 28500,
-    "salePrice": 26500,
     "image": "/images/product/product1.jpg",
     "images": [
       "/images/product/detail/product35-1.jpg",
