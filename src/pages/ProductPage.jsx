@@ -47,8 +47,8 @@ const ProductPage = () => {
     <main className="min-h-screen">
       <section className="grid grid-cols-12 gap-4 h-full">
         {/* CỘT DANH MỤC */}
-        <div className="col-span-3 bg-white p-4 shadow-sm rounded h-full min-h-screen">
-          <h3 className="font-bold mb-3">Danh mục</h3>
+        <div className="col-span-3 bg-white p-4 shadow-sm h-full min-h-screen">
+          <h3 className="font-bold mb-3 mt-5">Danh mục</h3>
           <ul className="space-y-1 ml-2">
             {categories.map((c) => (
               <li
