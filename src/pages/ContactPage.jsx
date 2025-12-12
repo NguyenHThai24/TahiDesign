@@ -17,7 +17,7 @@ const ContactPage = () => {
       </section>
       <section className="flex justify-center h-[300px] gap-5">
         {/* div 1 - address  */}
-        <div className="h-full border border-(--background-color) w-[300px] flex flex-col justify-center items-center gap-4 p-4">
+        <div className="h-full border border-white bg-white w-[300px] flex flex-col justify-center items-center gap-4 p-4">
           <RiHome9Fill size={40} color="#315040" />
           <h3 className="font-bold text-base uppercase">Địa chỉ</h3>
           <p className="text-sm text-center text-gray-800 leading-6">
@@ -30,7 +30,7 @@ const ContactPage = () => {
         </div>
 
         {/* div 2 - phone  */}
-        <div className="h-full border border-(--background-color) w-[300px] flex flex-col justify-center items-center gap-4 p-4">
+        <div className="h-full border border-white bg-white w-[300px] flex flex-col justify-center items-center gap-4 p-4">
           <RiPhoneFill size={40} color="#315040" />
           <h3 className="font-bold text-base uppercase">Điện thoại</h3>
           <p className="text-sm text-center text-gray-800 leading-6">
@@ -41,7 +41,7 @@ const ContactPage = () => {
         </div>
 
         {/* div 3 - email  */}
-        <div className="h-full border border-(--background-color) w-[300px] flex flex-col justify-center items-center gap-4 p-4">
+        <div className="h-full border border-white bg-white w-[300px] flex flex-col justify-center items-center gap-4 p-4">
           <RiMailSendFill size={40} color="#315040" />
           <h3 className="font-bold text-base uppercase">Email</h3>
           <p className="text-sm text-center text-gray-800 leading-6">
@@ -51,7 +51,7 @@ const ContactPage = () => {
           <h4 className="font-bold text-(--text-color)">abc@gmail.com</h4>
         </div>
       </section>
-      <section className="h-[350px] w-full border border-(--background-color)">
+      <section className="h-[350px] w-full border border-white bg-white">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15687.580433109737!2d105.24213305919645!3d10.587373490193675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1765433067092!5m2!1sen!2s"
           width="100%"

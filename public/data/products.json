@@ -6,14 +6,15 @@
     "price": 35000,
     "image": "/images/product/product1.jpg",
     "images": [
-      "/images/product/detail/product1-1.jpg",
-      "/images/product/detail/product1-2.jpg",
+      "/images/product/product1.jpg",
+      "/images/product/product1.jpg",
       "/images/product/detail/product1-3.jpg",
       "/images/product/detail/product1-4.jpg",
       "/images/product/detail/product1-5.jpg"
     ],
-    "description": "Thiệp cưới sang trọng phong cách Luxury Gold, sử dụng giấy cao cấp và họa tiết mạ vàng tinh xảo.",
-    "createdAt": "2025-12-03"
+    "description": "Thiệp cưới sang trọng phong cách Luxury Gold\n\n**Đặc điểm nổi bật:**\n- Giấy cao cấp định lượng 300gsm\n- Họa tiết mạ vàng 24K\n- Ép kim 3D tinh xảo\n- Phù hợp đám cưới cao cấp\n\n**Kích thước:** 15x10cm\n**Màu sắc:** Vàng - Trắng",
+    "createdAt": "2025-12-03",
+    "stock": 150
   },
   {
     "id": 2,
@@ -28,7 +29,8 @@
       "/images/product/detail/product2-3.jpg"
     ],
     "description": "Thiệp cưới phong cách tối giản, tông màu hồng pastel nhẹ nhàng và tinh tế.",
-    "createdAt": "2025-01-02"
+    "createdAt": "2025-01-02",
+    "stock": 200
   },
   {
     "id": 3,
@@ -42,7 +44,8 @@
       "/images/product/detail/product3-3.jpg"
     ],
     "description": "Thiệp cưới phong cách vintage cổ điển với họa tiết hoa văn nhẹ nhàng.",
-    "createdAt": "2025-12-01"
+    "createdAt": "2025-12-01",
+    "stock": 180
   },
   {
     "id": 4,
@@ -55,66 +58,675 @@
       "/images/product/detail/product4-2.jpg"
     ],
     "description": "Thiệp cưới thiết kế tinh khôi với nền trắng và họa tiết hoa đơn giản.",
-    "createdAt": "2025-01-04"
+    "createdAt": "2025-01-04",
+    "stock": 220
   },
   {
     "id": 5,
-    "categoryId": 2,
-    "name": "Thiệp cưới Minimalist Bé Hồng",
-    "price": 28000,
-    "salePrice": 25000,
+    "categoryId": 3,
+    "name": "Thiệp cưới Modern Elegance",
+    "price": 32000,
+    "salePrice": 29000,
     "image": "/images/product/product1.jpg",
     "images": [
-      "/images/product/detail/product2-1.jpg",
-      "/images/product/detail/product2-2.jpg",
-      "/images/product/detail/product2-3.jpg"
+      "/images/product/detail/product5-1.jpg",
+      "/images/product/detail/product5-2.jpg"
     ],
-    "description": "Thiệp cưới phong cách tối giản, tông màu hồng pastel nhẹ nhàng và tinh tế.",
-    "createdAt": "2025-01-02"
+    "description": "Thiết kế hiện đại với đường nét tinh tế, phù hợp cho các đám cưới sang trọng.",
+    "createdAt": "2025-02-15",
+    "stock": 160
   },
   {
     "id": 6,
     "categoryId": 2,
-    "name": "Thiệp cưới Minimalist Bé Hồng",
-    "price": 28000,
-    "salePrice": 25000,
+    "name": "Thiệp cưới Royal Blue",
+    "price": 38000,
     "image": "/images/product/product1.jpg",
     "images": [
-      "/images/product/detail/product2-1.jpg",
-      "/images/product/detail/product2-2.jpg",
-      "/images/product/detail/product2-3.jpg"
+      "/images/product/detail/product6-1.jpg",
+      "/images/product/detail/product6-2.jpg",
+      "/images/product/detail/product6-3.jpg"
     ],
-    "description": "Thiệp cưới phong cách tối giản, tông màu hồng pastel nhẹ nhàng và tinh tế.",
-    "createdAt": "2025-01-02"
+    "description": "Thiệp cưới màu xanh hoàng gia kết hợp họa tiết mạ vàng sang trọng.",
+    "createdAt": "2025-03-10",
+    "stock": 140
   },
   {
     "id": 7,
-    "categoryId": 2,
-    "name": "Thiệp cưới Minimalist Bé Hồng",
-    "price": 28000,
-    "salePrice": 25000,
+    "categoryId": 1,
+    "name": "Thiệp cưới Blossom Pink",
+    "price": 26000,
+    "salePrice": 23000,
     "image": "/images/product/product1.jpg",
     "images": [
-      "/images/product/detail/product2-1.jpg",
-      "/images/product/detail/product2-2.jpg",
-      "/images/product/detail/product2-3.jpg"
+      "/images/product/detail/product7-1.jpg",
+      "/images/product/detail/product7-2.jpg"
     ],
-    "description": "Thiệp cưới phong cách tối giản, tông màu hồng pastel nhẹ nhàng và tinh tế.",
-    "createdAt": "2025-01-02"
+    "description": "Thiệp cưới với họa tiết hoa anh đào trên nền hồng pastel.",
+    "createdAt": "2025-04-05",
+    "stock": 190
   },
   {
     "id": 8,
+    "categoryId": 4,
+    "name": "Thiệp cưới Minimalist White",
+    "price": 24000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product8-1.jpg",
+      "/images/product/detail/product8-2.jpg"
+    ],
+    "description": "Thiệp tối giản với nền trắng và chữ đen thanh lịch.",
+    "createdAt": "2025-05-12",
+    "stock": 210
+  },
+  {
+    "id": 9,
+    "categoryId": 3,
+    "name": "Thiệp cưới Golden Leaves",
+    "price": 36000,
+    "salePrice": 33000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product9-1.jpg",
+      "/images/product/detail/product9-2.jpg"
+    ],
+    "description": "Thiệp cưới với họa tiết lá vàng trên nền trắng sang trọng.",
+    "createdAt": "2025-06-18",
+    "stock": 170
+  },
+  {
+    "id": 10,
     "categoryId": 2,
-    "name": "Thiệp cưới Minimalist Bé Hồng",
-    "price": 28000,
+    "name": "Thiệp cưới Romantic Rose",
+    "price": 31000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product10-1.jpg",
+      "/images/product/detail/product10-2.jpg"
+    ],
+    "description": "Thiệp cưới với họa tiết hoa hồng lãng mạn trên nền kem.",
+    "createdAt": "2025-07-22",
+    "stock": 155
+  },
+  {
+    "id": 11,
+    "categoryId": 1,
+    "name": "Thiệp cưới Classic Ivory",
+    "price": 29000,
+    "salePrice": 27000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product11-1.jpg",
+      "/images/product/detail/product11-2.jpg"
+    ],
+    "description": "Thiệp cưới cổ điển màu ngà với viền vàng tinh tế.",
+    "createdAt": "2025-08-30",
+    "stock": 185
+  },
+  {
+    "id": 12,
+    "categoryId": 4,
+    "name": "Thiệp cưới Lavender Dream",
+    "price": 27500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product12-1.jpg",
+      "/images/product/detail/product12-2.jpg"
+    ],
+    "description": "Thiệp cưới màu oải hương nhẹ nhàng với họa tiết hoa mỏng manh.",
+    "createdAt": "2025-09-14",
+    "stock": 175
+  },
+  {
+    "id": 13,
+    "categoryId": 3,
+    "name": "Thiệp cưới Pearl Shine",
+    "price": 39000,
+    "salePrice": 35000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product13-1.jpg",
+      "/images/product/detail/product13-2.jpg"
+    ],
+    "description": "Thiệp cưới có hiệu ứng ngọc trai lấp lánh độc đáo.",
+    "createdAt": "2025-10-05",
+    "stock": 135
+  },
+  {
+    "id": 14,
+    "categoryId": 2,
+    "name": "Thiệp cưới Navy Elegance",
+    "price": 34000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product14-1.jpg",
+      "/images/product/detail/product14-2.jpg"
+    ],
+    "description": "Thiệp cưới màu xanh navy kết hợp họa tiết bạc thanh lịch.",
+    "createdAt": "2025-11-11",
+    "stock": 165
+  },
+  {
+    "id": 15,
+    "categoryId": 1,
+    "name": "Thiệp cưới Blush Pink",
+    "price": 26500,
+    "salePrice": 24000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product15-1.jpg",
+      "/images/product/detail/product15-2.jpg"
+    ],
+    "description": "Thiệp cưới màu hồng đào nhẹ nhàng với thiết kế tối giản.",
+    "createdAt": "2025-12-08",
+    "stock": 195
+  },
+  {
+    "id": 16,
+    "categoryId": 4,
+    "name": "Thiệp cưới Botanical Green",
+    "price": 28500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product16-1.jpg",
+      "/images/product/detail/product16-2.jpg"
+    ],
+    "description": "Thiệp cưới với họa tiết thực vật xanh tươi trên nền trắng.",
+    "createdAt": "2025-01-25",
+    "stock": 205
+  },
+  {
+    "id": 17,
+    "categoryId": 3,
+    "name": "Thiệp cưới Diamond Cut",
+    "price": 42000,
+    "salePrice": 38000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product17-1.jpg",
+      "/images/product/detail/product17-2.jpg"
+    ],
+    "description": "Thiệp cưới với hiệu ứng cắt kim cương độc đáo và sang trọng.",
+    "createdAt": "2025-02-19",
+    "stock": 125
+  },
+  {
+    "id": 18,
+    "categoryId": 2,
+    "name": "Thiệp cưới Burgundy Romance",
+    "price": 37000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product18-1.jpg",
+      "/images/product/detail/product18-2.jpg"
+    ],
+    "description": "Thiệp cưới màu rượu vang đậm tạo cảm giác lãng mạn và ấm cúng.",
+    "createdAt": "2025-03-28",
+    "stock": 145
+  },
+  {
+    "id": 19,
+    "categoryId": 1,
+    "name": "Thiệp cưới Soft Peach",
+    "price": 25500,
+    "salePrice": 23500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product19-1.jpg",
+      "/images/product/detail/product19-2.jpg"
+    ],
+    "description": "Thiệp cưới màu đào nhạt với họa tiết hoa mơ màng.",
+    "createdAt": "2025-04-17",
+    "stock": 215
+  },
+  {
+    "id": 20,
+    "categoryId": 4,
+    "name": "Thiệp cưới Minimalist Grey",
+    "price": 24500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product20-1.jpg",
+      "/images/product/detail/product20-2.jpg"
+    ],
+    "description": "Thiệp cưới tối giản với tông xám hiện đại và chữ trắng.",
+    "createdAt": "2025-05-23",
+    "stock": 225
+  },
+  {
+    "id": 21,
+    "categoryId": 3,
+    "name": "Thiệp cưới Copper Shimmer",
+    "price": 37500,
+    "salePrice": 34500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product21-1.jpg",
+      "/images/product/detail/product21-2.jpg"
+    ],
+    "description": "Thiệp cưới với hiệu ứng đồng lấp lánh độc đáo.",
+    "createdAt": "2025-06-29",
+    "stock": 150
+  },
+  {
+    "id": 22,
+    "categoryId": 2,
+    "name": "Thiệp cưới Sage Green",
+    "price": 29500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product22-1.jpg",
+      "/images/product/detail/product22-2.jpg"
+    ],
+    "description": "Thiệp cưới màu xanh sage dịu nhẹ với họa tiết tinh tế.",
+    "createdAt": "2025-07-15",
+    "stock": 180
+  },
+  {
+    "id": 23,
+    "categoryId": 1,
+    "name": "Thiệp cưới Coral Bliss",
+    "price": 31000,
+    "salePrice": 28500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product23-1.jpg",
+      "/images/product/detail/product23-2.jpg"
+    ],
+    "description": "Thiệp cưới màu san hô tươi sáng với thiết kế hiện đại.",
+    "createdAt": "2025-08-09",
+    "stock": 170
+  },
+  {
+    "id": 24,
+    "categoryId": 4,
+    "name": "Thiệp cưới Classic Black & White",
+    "price": 26000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product24-1.jpg",
+      "/images/product/detail/product24-2.jpg"
+    ],
+    "description": "Thiệp cưới đen trắng cổ điển, không bao giờ lỗi thời.",
+    "createdAt": "2025-09-03",
+    "stock": 200
+  },
+  {
+    "id": 25,
+    "categoryId": 3,
+    "name": "Thiệp cưới Platinum Edge",
+    "price": 41000,
+    "salePrice": 37000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product25-1.jpg",
+      "/images/product/detail/product25-2.jpg"
+    ],
+    "description": "Thiệp cưới với viền bạch kim sang trọng và hiện đại.",
+    "createdAt": "2025-10-21",
+    "stock": 130
+  },
+  {
+    "id": 26,
+    "categoryId": 2,
+    "name": "Thiệp cưới Mauve Magic",
+    "price": 32500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product26-1.jpg",
+      "/images/product/detail/product26-2.jpg"
+    ],
+    "description": "Thiệp cưới màu hoa cà nhẹ nhàng với họa tiết tinh xảo.",
+    "createdAt": "2025-11-07",
+    "stock": 160
+  },
+  {
+    "id": 27,
+    "categoryId": 1,
+    "name": "Thiệp cưới Buttercream",
+    "price": 27500,
     "salePrice": 25000,
     "image": "/images/product/product1.jpg",
     "images": [
-      "/images/product/detail/product2-1.jpg",
-      "/images/product/detail/product2-2.jpg",
-      "/images/product/detail/product2-3.jpg"
+      "/images/product/detail/product27-1.jpg",
+      "/images/product/detail/product27-2.jpg"
     ],
-    "description": "Thiệp cưới phong cách tối giản, tông màu hồng pastel nhẹ nhàng và tinh tế.",
-    "createdAt": "2025-01-02"
+    "description": "Thiệp cưới màu kem vàng dịu nhẹ như lớp kem bơ.",
+    "createdAt": "2025-12-02",
+    "stock": 190
+  },
+  {
+    "id": 28,
+    "categoryId": 4,
+    "name": "Thiệp cưới Geometric Art",
+    "price": 29000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product28-1.jpg",
+      "/images/product/detail/product28-2.jpg"
+    ],
+    "description": "Thiệp cưới với họa tiết hình học hiện đại và độc đáo.",
+    "createdAt": "2025-01-18",
+    "stock": 210
+  },
+  {
+    "id": 29,
+    "categoryId": 3,
+    "name": "Thiệp cưới Velvet Touch",
+    "price": 39500,
+    "salePrice": 36000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product29-1.jpg",
+      "/images/product/detail/product29-2.jpg"
+    ],
+    "description": "Thiệp cưới có hiệu ứng nhung mềm mại và sang trọng.",
+    "createdAt": "2025-02-22",
+    "stock": 140
+  },
+  {
+    "id": 30,
+    "categoryId": 2,
+    "name": "Thiệp cưới Ocean Blue",
+    "price": 33500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product30-1.jpg",
+      "/images/product/detail/product30-2.jpg"
+    ],
+    "description": "Thiệp cưới màu xanh đại dương sâu thẳm và bí ẩn.",
+    "createdAt": "2025-03-14",
+    "stock": 175
+  },
+  {
+    "id": 31,
+    "categoryId": 1,
+    "name": "Thiệp cưới Rose Gold",
+    "price": 34500,
+    "salePrice": 31500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product31-1.jpg",
+      "/images/product/detail/product31-2.jpg"
+    ],
+    "description": "Thiệp cưới với tông hồng vàng thời thượng và nữ tính.",
+    "createdAt": "2025-04-08",
+    "stock": 155
+  },
+  {
+    "id": 32,
+    "categoryId": 4,
+    "name": "Thiệp cưới Linen Texture",
+    "price": 28000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product32-1.jpg",
+      "/images/product/detail/product32-2.jpg"
+    ],
+    "description": "Thiệp cưới có kết cấu vải lanh tự nhiên và mộc mạc.",
+    "createdAt": "2025-05-30",
+    "stock": 195
+  },
+  {
+    "id": 33,
+    "categoryId": 3,
+    "name": "Thiệp cưới Crystal Clear",
+    "price": 43000,
+    "salePrice": 39000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product33-1.jpg",
+      "/images/product/detail/product33-2.jpg"
+    ],
+    "description": "Thiệp cưới trong suốt với họa tiết pha lê tinh xảo.",
+    "createdAt": "2025-06-12",
+    "stock": 120
+  },
+  {
+    "id": 34,
+    "categoryId": 2,
+    "name": "Thiệp cưới Terracotta",
+    "price": 30500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product34-1.jpg",
+      "/images/product/detail/product34-2.jpg"
+    ],
+    "description": "Thiệp cưới màu đất nung ấm áp với cảm giác tự nhiên.",
+    "createdAt": "2025-07-28",
+    "stock": 165
+  },
+  {
+    "id": 35,
+    "categoryId": 1,
+    "name": "Thiệp cưới Lilac Mist",
+    "price": 28500,
+    "salePrice": 26500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product35-1.jpg",
+      "/images/product/detail/product35-2.jpg"
+    ],
+    "description": "Thiệp cưới màu tím hoa cà nhẹ như sương mù.",
+    "createdAt": "2025-08-19",
+    "stock": 185
+  },
+  {
+    "id": 36,
+    "categoryId": 4,
+    "name": "Thiệp cưới Watercolor Splash",
+    "price": 31500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product36-1.jpg",
+      "/images/product/detail/product36-2.jpg"
+    ],
+    "description": "Thiệp cưới với hiệu ứng màu nước loang độc đáo.",
+    "createdAt": "2025-09-25",
+    "stock": 205
+  },
+  {
+    "id": 37,
+    "categoryId": 3,
+    "name": "Thiệp cưới Metallic Silver",
+    "price": 38500,
+    "salePrice": 35500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product37-1.jpg",
+      "/images/product/detail/product37-2.jpg"
+    ],
+    "description": "Thiệp cưới với hiệu ứng bạc kim loại hiện đại.",
+    "createdAt": "2025-10-11",
+    "stock": 135
+  },
+  {
+    "id": 38,
+    "categoryId": 2,
+    "name": "Thiệp cưới Forest Green",
+    "price": 32000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product38-1.jpg",
+      "/images/product/detail/product38-2.jpg"
+    ],
+    "description": "Thiệp cưới màu xanh rừng đậm tạo cảm giác gần gũi thiên nhiên.",
+    "createdAt": "2025-11-29",
+    "stock": 175
+  },
+  {
+    "id": 39,
+    "categoryId": 1,
+    "name": "Thiệp cưới Apricot Glow",
+    "price": 29500,
+    "salePrice": 27500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product39-1.jpg",
+      "/images/product/detail/product39-2.jpg"
+    ],
+    "description": "Thiệp cưới màu mơ vàng ấm áp và tươi sáng.",
+    "createdAt": "2025-12-15",
+    "stock": 195
+  },
+  {
+    "id": 40,
+    "categoryId": 4,
+    "name": "Thiệp cưới Monogram Style",
+    "price": 33000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product40-1.jpg",
+      "/images/product/detail/product40-2.jpg"
+    ],
+    "description": "Thiệp cưới với thiết kế monogram cá nhân hóa.",
+    "createdAt": "2025-01-07",
+    "stock": 215
+  },
+  {
+    "id": 41,
+    "categoryId": 3,
+    "name": "Thiệp cưới Champagne Glitter",
+    "price": 40000,
+    "salePrice": 36500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product41-1.jpg",
+      "/images/product/detail/product41-2.jpg"
+    ],
+    "description": "Thiệp cưới với hiệu ứng lấp lánh như sâm panh.",
+    "createdAt": "2025-02-14",
+    "stock": 125
+  },
+  {
+    "id": 42,
+    "categoryId": 2,
+    "name": "Thiệp cưới Slate Grey",
+    "price": 31000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product42-1.jpg",
+      "/images/product/detail/product42-2.jpg"
+    ],
+    "description": "Thiệp cưới màu xám đá phiến hiện đại và thanh lịch.",
+    "createdAt": "2025-03-05",
+    "stock": 160
+  },
+  {
+    "id": 43,
+    "categoryId": 1,
+    "name": "Thiệp cưới Peach Blossom",
+    "price": 27000,
+    "salePrice": 24500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product43-1.jpg",
+      "/images/product/detail/product43-2.jpg"
+    ],
+    "description": "Thiệp cưới với họa tiết hoa đào truyền thống.",
+    "createdAt": "2025-04-20",
+    "stock": 180
+  },
+  {
+    "id": 44,
+    "categoryId": 4,
+    "name": "Thiệp cưới Handmade Paper",
+    "price": 35500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product44-1.jpg",
+      "/images/product/detail/product44-2.jpg"
+    ],
+    "description": "Thiệp cưới làm từ giấy handmade có độ bền cao.",
+    "createdAt": "2025-05-16",
+    "stock": 200
+  },
+  {
+    "id": 45,
+    "categoryId": 3,
+    "name": "Thiệp cưới Mother of Pearl",
+    "price": 41500,
+    "salePrice": 37500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product45-1.jpg",
+      "/images/product/detail/product45-2.jpg"
+    ],
+    "description": "Thiệp cưới với hiệu ứng xà cừ lấp lánh tinh tế.",
+    "createdAt": "2025-06-07",
+    "stock": 115
+  },
+  {
+    "id": 46,
+    "categoryId": 2,
+    "name": "Thiệp cưới Dusty Rose",
+    "price": 30000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product46-1.jpg",
+      "/images/product/detail/product46-2.jpg"
+    ],
+    "description": "Thiệp cưới màu hồng phấn nhẹ nhàng và cổ điển.",
+    "createdAt": "2025-07-02",
+    "stock": 145
+  },
+  {
+    "id": 47,
+    "categoryId": 1,
+    "name": "Thiệp cưới Mint Fresh",
+    "price": 29000,
+    "salePrice": 27000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product47-1.jpg",
+      "/images/product/detail/product47-2.jpg"
+    ],
+    "description": "Thiệp cưới màu xanh bạc hà tươi mát và trẻ trung.",
+    "createdAt": "2025-08-26",
+    "stock": 175
+  },
+  {
+    "id": 48,
+    "categoryId": 4,
+    "name": "Thiệp cưới Embossed Floral",
+    "price": 36500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product48-1.jpg",
+      "/images/product/detail/product48-2.jpg"
+    ],
+    "description": "Thiệp cưới với họa tiết hoa nổi tinh xảo.",
+    "createdAt": "2025-09-19",
+    "stock": 195
+  },
+  {
+    "id": 49,
+    "categoryId": 3,
+    "name": "Thiệp cưới Gold Foil Stamping",
+    "price": 42500,
+    "salePrice": 39500,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product49-1.jpg",
+      "/images/product/detail/product49-2.jpg"
+    ],
+    "description": "Thiệp cưới ép nhũ vàng cao cấp và sang trọng.",
+    "createdAt": "2025-10-31",
+    "stock": 110
+  },
+  {
+    "id": 50,
+    "categoryId": 2,
+    "name": "Thiệp cưới Midnight Blue",
+    "price": 34000,
+    "image": "/images/product/product1.jpg",
+    "images": [
+      "/images/product/detail/product50-1.jpg",
+      "/images/product/detail/product50-2.jpg"
+    ],
+    "description": "Thiệp cưới màu xanh nửa đêm huyền bí và lãng mạn.",
+    "createdAt": "2025-11-24",
+    "stock": 150
   }
 ]
