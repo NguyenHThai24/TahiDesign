@@ -28,7 +28,7 @@ const ProductSale = ({ title }) => {
     <div>
       <div className="flex justify-between">
         <h3 className="title">{title}</h3>
-        <Link className="underline text-sm">Xem thêm</Link>
+        <Link className="underline text-sm italic">Xem thêm</Link>
       </div>
       <CardGrid products={productSale} />
     </div>

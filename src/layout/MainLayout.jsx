@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
       <div className="max-w-6xl w-full fixed top-0 z-20">
         <Header />
       </div>
-      <main className="max-w-6xl flex-1 mx-auto w-full mt-34">{children}</main>
+      <main className="max-w-6xl flex-1 mx-auto w-full mt-30">{children}</main>
       <div className="max-w-6xl w-full">
         <Footer />
       </div>

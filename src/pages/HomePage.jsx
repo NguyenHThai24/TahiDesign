@@ -9,17 +9,17 @@ const HomePage = () => {
     <main className="flex flex-col">
       <Banner />
       <section>
-        <div className="bg-white p-3">
+        <div className="bg-white px-3 py-7">
           <ProductNew title="Bộ sưu tập mới" />
         </div>
 
-        <div className="bg-(--text-color) p-3">
+        <div className="bg-(--text-color) px-3 pt-4">
           <About />
         </div>
-        <div className="bg-(--text-color) p-3">
+        <div className="bg-(--text-color) px-3 py-4">
           <Category title="Danh mục sản phẩm" />
         </div>
-        <div className="bg-white p-3">
+        <div className="bg-white px-3 py-7">
           <ProductSale title="Sản phẩm khuyến mãi" />
         </div>
       </section>

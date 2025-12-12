@@ -19,12 +19,5 @@
   --background-color: #e9ece9; /*layout kiểu gallery*/
   --text-color: #315040; /*Màu chữ xanh đen*/
 
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
   background: var(--background-color);
-}
-
-section {
-  /* margin-top: 20px; */
 }

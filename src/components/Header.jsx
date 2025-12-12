@@ -23,7 +23,7 @@ const Header = () => {
       </div>
 
       {/* CENTER BAR */}
-      <div className="flex justify-between pb-6 gap-4 px-4 sm:px-6 lg:px-10">
+      <div className="flex justify-between  gap-4 px-4 sm:px-6 lg:px-10">
         {/* LOGO - Center */}
         <div className="justify-self-center">
           <Link
@@ -80,7 +80,7 @@ const Header = () => {
           <input
             type="text"
             placeholder="Tìm kiếm..."
-            className="px-4 py-2 border-b rounded w-60 sm:w-60 lg:w-68 outline-none text-sm bg-(--background-color) border-(--background-color)"
+            className="px-4 py-2 border-b rounded w-60 sm:w-60 lg:w-68 outline-none text-sm bg-[#e9ece9] border-(--background-color)"
           />
           <FaSearch className="absolute right-3 top-1/2 -translate-y-1/2 text-(--text-color)" />
         </div>

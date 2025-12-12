@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="w-full  flex ">
       <div className="w-[550px] bg-white ">
-        <img src={meImg} alt="" className="mx-auto h-[200px]" />
+        <img src={meImg} alt="" className="mx-auto h-[250px]" />
       </div>
       <div className="w-full bg-white p-2 text-(--text-color) flex flex-col justify-center gap-7">
         <p>
@@ -13,11 +13,11 @@ const About = () => {
           natus necessitatibus animi, rem unde soluta? Ut harum beatae esse
           recusandae?
         </p>
-        <div className="flex gap-7">
-          <button className="border w-36 h-9 rounded-full font-medium cursor-pointer hover:bg-(--background-color)">
+        <div className="flex gap-5">
+          <button className="border w-36 h-10 rounded-full font-medium cursor-pointer hover:bg-(--background-color)">
             Liên hệ
           </button>
-          <button className="border w-36 h-9 rounded-full font-medium cursor-pointer hover:bg-(--background-color)">
+          <button className="border w-36 h-10 rounded-full font-medium cursor-pointer hover:bg-(--background-color)">
             Mua hàng
           </button>
         </div>
