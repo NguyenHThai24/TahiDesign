@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CardGrid from "../CardGrid";
+import { Link } from "react-router-dom";
 
 const ProductSale = ({ title }) => {
   const [productSale, setProductSale] = useState([]);
@@ -25,7 +26,10 @@ const ProductSale = ({ title }) => {
 
   return (
     <div>
-      <h3 className="title">{title}</h3>
+      <div className="flex justify-between">
+        <h3 className="title">{title}</h3>
+        <Link className="underline text-sm">Xem thêm</Link>
+      </div>
       <CardGrid products={productSale} />
     </div>
   );

@@ -11,14 +11,14 @@ const CardItem = ({ item }) => {
   return (
     <Link
       to={`/product/${item.id}`}
-      className="border border-(--background-color) rounded-sm p-3 shadow-sm h-[300px] flex flex-col justify-between bg-white"
+      className="border border-(--background-color) p-3 shadow-sm h-[300px] flex flex-col justify-between bg-white"
     >
       {/* Hình + tên */}
       <div>
         <img
           src={item.image}
           alt={item.name}
-          className="w-full h-[180px] object-cover rounded"
+          className="w-full h-[180px] object-cover"
         />
 
         {/* Tên sản phẩm: tối đa 2 dòng, nếu dài thì ... */}
