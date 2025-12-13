@@ -1,25 +1,62 @@
-import meImg from "../../../public/images/imgMe.png";
+import meImg from "../../../public/images/aboutImg.png";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 
-const About = () => {
+const About = ({ title }) => {
   return (
-    <div className="w-full  flex ">
-      <div className="w-[550px] bg-white ">
-        <img src={meImg} alt="" className="mx-auto h-[250px]" />
-      </div>
-      <div className="w-full bg-white p-2 text-(--text-color) flex flex-col justify-center gap-7">
+    <div className="w-full">
+      <div className="text-center mb-6">
+        <h3 className="title">{title}</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit neque,
-          at dolore exercitationem omnis expedita doloremque, quod iste voluptas
-          natus necessitatibus animi, rem unde soluta? Ut harum beatae esse
-          recusandae?
+          Không chỉ là thiết kế thiệp, chúng tôi mang đến <br /> giải pháp trọn
+          vẹn cho những khoảnh khắc quan trọng của bạn.
         </p>
-        <div className="flex gap-5">
-          <button className="border w-36 h-10 rounded-full font-medium cursor-pointer hover:bg-(--background-color)">
-            Liên hệ
-          </button>
-          <button className="border w-36 h-10 rounded-full font-medium cursor-pointer hover:bg-(--background-color)">
-            Mua hàng
-          </button>
+      </div>
+      <div className="w-full flex gap-4 max-w-4xl mx-auto">
+        <div className="w-full flex flex-col justify-center gap-10">
+          <div className="text-left max-w-xs">
+            <div className="mb-5 text-(--text-color) flex justify-start pl-2">
+              <TfiHeadphoneAlt size={25} />
+            </div>
+            <h2 className="font-bold mb-2">Hỗ trợ nhanh 24/7</h2>
+            <p className="text-gray-600 text-sm">
+              Tư vấn nhanh, chỉnh sửa linh hoạt, đúng hẹn.
+            </p>
+          </div>
+
+          <div className="text-left max-w-xs">
+            <div className="mb-5 text-(--text-color) flex justify-start pl-2">
+              <TfiHeadphoneAlt size={25} />
+            </div>
+            <h2 className="font-bold mb-2">Hỗ trợ nhanh 24/7</h2>
+            <p className="text-gray-600 text-sm">
+              Tư vấn nhanh, chỉnh sửa linh hoạt, đúng hẹn.
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full">
+          <img src={meImg} alt="" className="max-h-[400px]" />
+        </div>
+        <div className="w-full flex flex-col justify-center gap-10">
+          <div className="text-left max-w-xs">
+            <div className="mb-5 text-(--text-color) flex justify-start pl-2">
+              <TfiHeadphoneAlt size={25} />
+            </div>
+            <h2 className="font-bold mb-2">Hỗ trợ nhanh 24/7</h2>
+            <p className="text-gray-600 text-sm">
+              Tư vấn nhanh, chỉnh sửa linh hoạt, đúng hẹn.
+            </p>
+          </div>
+
+          <div className="text-left max-w-xs">
+            <div className="mb-5 text-(--text-color) flex justify-start pl-2">
+              <TfiHeadphoneAlt size={25} />
+            </div>
+            <h2 className="font-bold mb-2">Hỗ trợ nhanh 24/7</h2>
+            <p className="text-gray-600 text-sm">
+              Tư vấn nhanh, chỉnh sửa linh hoạt, đúng hẹn.
+            </p>
+          </div>
         </div>
       </div>
     </div>

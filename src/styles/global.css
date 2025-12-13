@@ -1,20 +1,17 @@
 @layer utilities {
   .font-logo {
-    font-family: "Pacifico", cursive;
-    font-weight: 600;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
     font-style: normal;
   }
 
   .title {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-size: 1.7rem;
-    text-align: left;
-    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1.6rem;
     text-underline-offset: 10px;
     text-decoration-thickness: 1.5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: var(--text-color);
   }
 }

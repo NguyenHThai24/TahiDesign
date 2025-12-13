@@ -9,7 +9,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="w-full h-[450px]">
+    <div className="w-full h-[550px]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         // navigation

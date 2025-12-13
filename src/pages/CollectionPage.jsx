@@ -1,6 +1,6 @@
 const CollectionPage = () => {
   return (
-    <main>
+    <main className="">
       <section>collection</section>
     </main>
   );

@@ -44,7 +44,7 @@ const ProductPage = () => {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen ">
       <section className="grid grid-cols-12 gap-4 h-full">
         {/* CỘT DANH MỤC */}
         <div className="col-span-3 bg-white p-4 shadow-sm h-full min-h-screen">

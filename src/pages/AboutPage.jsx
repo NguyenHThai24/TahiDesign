@@ -1,6 +1,6 @@
 const AboutPage = () => {
   return (
-    <main>
+    <main className="">
       <section>AboutPage</section>
     </main>
   );

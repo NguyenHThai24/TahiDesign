@@ -33,7 +33,7 @@ const ProductDetail = () => {
   if (!productDetail) return <div className="p-6">Không tìm thấy sản phẩm</div>;
 
   return (
-    <main className="my-8">
+    <main className="mt-7">
       <section className="bg-white shadow p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* ẢNH SẢN PHẨM */}
         <div>
