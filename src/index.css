@@ -11,7 +11,7 @@
 
 :root {
   --background-color: #e9ece9; /*layout kiểu gallery*/
-  --text-color: #4d5e1b; /*Màu chữ xanh đen*/
+  --text-color: #084023; /*Màu chữ xanh đen*/
 
   background: var(--background-color);
   font-family: "Nunito", sans-serif;

@@ -6,9 +6,10 @@ const About = ({ title }) => {
     <div className="w-full">
       <div className="text-center mb-6">
         <h3 className="title">{title}</h3>
-        <p>
-          Không chỉ là thiết kế thiệp, chúng tôi mang đến <br /> giải pháp trọn
-          vẹn cho những khoảnh khắc quan trọng của bạn.
+        <p className="italic text-sm font-medium leading-6">
+          Chúng tôi mang đến giải pháp trọn vẹn
+          <br />
+          cho những khoảnh khắc quan trọng của bạn.
         </p>
       </div>
       <div className="w-full flex gap-4 max-w-4xl mx-auto">
