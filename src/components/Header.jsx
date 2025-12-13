@@ -15,8 +15,8 @@ const Header = () => {
   return (
     <header className="flex flex-col gap-2 bg-white shadow-sm">
       {/* TOP BAR  */}
-      <div className="relative overflow-hidden bg-(--text-color) w-full py-1">
-        <div className="marquee whitespace-nowrap text-white text-sm font-semibold">
+      <div className="relative overflow-hidden bg-(--text-color) w-full">
+        <div className="marquee whitespace-nowrap text-white text-[12px] font-semibold">
           NGUYỄN HOÀNG THÁI&nbsp;&nbsp;•&nbsp;&nbsp;NGUYỄN HOÀNG
           THÁI&nbsp;&nbsp;•&nbsp;&nbsp;NGUYỄN HOÀNG THÁI
         </div>
