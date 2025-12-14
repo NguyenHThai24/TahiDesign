@@ -26,7 +26,6 @@ const ProductDetail = () => {
 
         setLoading(false);
       })
-      .catch((err) => console.log("Lỗi fetch:", err));
   }, [id]);
 
   if (loading) return <div className="p-6">Đang tải...</div>;
