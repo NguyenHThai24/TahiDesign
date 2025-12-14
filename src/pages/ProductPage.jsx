@@ -100,7 +100,7 @@ const ProductPage = () => {
         </div>
 
         {/* DANH SÁCH SẢN PHẨM */}
-        <div className="col-span-9">
+        <div className="col-span-9 h-full min-h-screen">
           <Gallery
             selectedCategory={selectedCategory}
             priceRange={priceRange}
