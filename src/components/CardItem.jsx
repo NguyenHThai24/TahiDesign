@@ -19,7 +19,7 @@ const CardItem = ({ item }) => {
   return (
     <Link
       to={`/product/${item.id}`}
-      className="group relative border border-gray-200 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-[340px] flex flex-col justify-between bg-white transform hover:-translate-y-2"
+      className="group w-full relative border border-gray-200 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-[340px] flex flex-col justify-between bg-white transform hover:-translate-y-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -88,7 +88,7 @@ const CardItem = ({ item }) => {
         {/* Giá */}
         <div className="mt-auto">
           <div className="flex items-baseline gap-2">
-            <span className="text-xl font-bold text-red-600">
+            <span className="text-lg font-bold text-red-600">
               {formatPrice(hasSale ? item.salePrice : item.price)}
             </span>
             {hasSale && (
