@@ -26,14 +26,14 @@ const ProductDetail = () => {
 
         setLoading(false);
       })
-      .catch((err) => console.log("Lỗi fetch:", err));
+      
   }, [id]);
 
   if (loading) return <div className="p-6">Đang tải...</div>;
   if (!productDetail) return <div className="p-6">Không tìm thấy sản phẩm</div>;
 
   return (
-    <main className="mt-7">
+    <main className="">
       <section className="bg-white shadow p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* ẢNH SẢN PHẨM */}
         <div>
