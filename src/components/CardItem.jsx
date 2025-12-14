@@ -17,8 +17,7 @@ const CardItem = ({ item }) => {
     : 0;
 
   return (
-    <Link
-      to={`/product/${item.id}`}
+    <div
       className="group w-full relative border border-gray-200 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 h-[340px] flex flex-col justify-between bg-white transform hover:-translate-y-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -36,9 +35,9 @@ const CardItem = ({ item }) => {
       {/* Overlay khi hover */}
       <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none`}>
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-          <button className="bg-white text-gray-800 p-2 rounded-full hover:bg-gray-100 transition-colors pointer-events-auto">
+          <Link  to={`/product/${item.id}`} className="bg-white text-gray-800 p-2 rounded-full hover:bg-gray-100 transition-colors pointer-events-auto">
             <Eye size={18} />
-          </button>
+          </Link>
           <button className="bg-red-500 text-white p-2 rounded-full hover:bg-red-600 transition-colors pointer-events-auto">
             <ShoppingCart size={18} />
           </button>
@@ -116,7 +115,7 @@ const CardItem = ({ item }) => {
              maskComposite: 'exclude'
            }}>
       </div>
-    </Link>
+    </div>
   );
 };
 
