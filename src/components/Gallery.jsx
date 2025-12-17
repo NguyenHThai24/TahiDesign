@@ -112,16 +112,26 @@ const Gallery = ({ selectedCategory, priceRange, sortOption }) => {
         </div>
       ) : (
         <>
-          <div className="flex justify-between items-center">
-            {/* Thông tin số lượng */}
-            <div className="text-(--text-color) text-sm">
+          <div className="flex justify-between items-center ">
+            {/* <div className="text-(--text-color) text-sm">
               Hiển thị{" "}
               <span className="font-medium">
                 ({startIndex + 1}-{Math.min(endIndex, filtered.length)})
               </span>{" "}
               trong {filtered.length} sản phẩm
-            </div>
+            </div> */}
+          </div>
 
+          {/* Grid sản phẩm */}
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {currentItems.map((item) => (
+              <div key={item.id} className="flex justify-center">
+                <CardItem item={item} />
+              </div>
+            ))}
+          </div>
+          <div>
+            {" "}
             {/* Phân trang */}
             {totalPages > 1 && (
               <div className="flex justify-end items-center space-x-1 my-2">
@@ -196,15 +206,6 @@ const Gallery = ({ selectedCategory, priceRange, sortOption }) => {
                 </button>
               </div>
             )}
-          </div>
-
-          {/* Grid sản phẩm */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {currentItems.map((item) => (
-              <div key={item.id} className="flex justify-center">
-                <CardItem item={item} />
-              </div>
-            ))}
           </div>
         </>
       )}

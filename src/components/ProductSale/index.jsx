@@ -49,7 +49,7 @@ const ProductSale = ({ title }) => {
   const displayedProducts = productSale.slice(0, displayCount);
 
   return (
-    <div className="bg-white px-3 pt-7 pb-4">
+    <div className="pt-7 pb-4">
       {/* Tiêu đề căn giữa */}
       <div className="text-center mb-6">
         <h3 className="title text-2xl font-bold">{title}</h3>
@@ -64,14 +64,14 @@ const ProductSale = ({ title }) => {
           {isExpanded ? (
             <button
               onClick={handleShowLess}
-              className="underline text-sm italic text-gray-600 hover:text-(--primary-color) transition-colors"
+              className="bg-(--text-color) py-1 px-4 rounded-full text-white cursor-pointer"
             >
               Ẩn bớt
             </button>
           ) : (
             <button
               onClick={handleShowMore}
-              className="underline text-sm italic text-gray-600 hover:text-(--primary-color) transition-colors"
+              className="bg-(--text-color) py-1 px-4 rounded-full text-white cursor-pointer"
             >
               Xem thêm
             </button>
