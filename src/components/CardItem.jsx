@@ -5,14 +5,14 @@ import { useState } from "react";
 
 const CardItem = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   const hasSale =
     item.salePrice !== undefined &&
     item.salePrice !== null &&
     item.salePrice > 0 &&
     item.salePrice < item.price;
 
-  const discountPercent = hasSale 
+  const discountPercent = hasSale
     ? Math.round(((item.price - item.salePrice) / item.price) * 100)
     : 0;
 
@@ -22,20 +22,33 @@ const CardItem = ({ item }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        transform: isHovered ? 'perspective(1000px) rotateX(2deg)' : 'none'
+        transform: isHovered ? "perspective(1000px) rotateX(2deg)" : "none",
       }}
     >
       {/* Badge giảm giá */}
       {hasSale && (
-        <div className="absolute top-3 left-3 bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold z-10 shadow-lg animate-pulse">
+        <div
+          className="
+                    absolute top-2 right-2 
+                    bg-(--text-color)
+                    text-white h-9 w-9 rounded-full text-xs font-bold
+                    z-10 shadow-lg
+                    flex items-center justify-center
+                  "
+        >
           -{discountPercent}%
         </div>
       )}
 
       {/* Overlay khi hover */}
-      <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none`}>
+      <div
+        className={`absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none`}
+      >
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-          <Link  to={`/product/${item.id}`} className="bg-white text-gray-800 p-2 rounded-full hover:bg-gray-100 transition-colors pointer-events-auto">
+          <Link
+            to={`/product/${item.id}`}
+            className="bg-white text-gray-800 p-2 rounded-full hover:bg-gray-100 transition-colors pointer-events-auto"
+          >
             <Eye size={18} />
           </Link>
           <button className="bg-red-500 text-white p-2 rounded-full hover:bg-red-600 transition-colors pointer-events-auto">
@@ -51,13 +64,13 @@ const CardItem = ({ item }) => {
           alt={item.name}
           className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
           style={{
-            transform: isHovered 
-              ? 'scale(1.1) translateZ(20px)' 
-              : 'scale(1) translateZ(0)',
-            transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)'
+            transform: isHovered
+              ? "scale(1.1) translateZ(20px)"
+              : "scale(1) translateZ(0)",
+            transition: "transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         />
-        
+
         {/* Shine effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
       </div>
@@ -74,7 +87,9 @@ const CardItem = ({ item }) => {
           {[...Array(5)].map((_, i) => (
             <svg
               key={i}
-              className={`w-3 h-3 ${i < 4 ? 'text-yellow-400' : 'text-gray-300'}`}
+              className={`w-3 h-3 ${
+                i < 4 ? "text-yellow-400" : "text-gray-300"
+              }`}
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -96,7 +111,7 @@ const CardItem = ({ item }) => {
               </span>
             )}
           </div>
-          
+
           {hasSale && (
             <p className="text-xs text-green-600 font-medium mt-1">
               Tiết kiệm {formatPrice(item.price - item.salePrice)}
@@ -106,15 +121,17 @@ const CardItem = ({ item }) => {
       </div>
 
       {/* Border gradient khi hover */}
-      <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" 
-           style={{
-             background: 'linear-gradient(45deg, #e9ece9 0%, #084023 100%)',
-             padding: '2px',
-             WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-             WebkitMaskComposite: 'xor',
-             maskComposite: 'exclude'
-           }}>
-      </div>
+      <div
+        className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+        style={{
+          background: "linear-gradient(45deg, #e9ece9 0%, #084023 100%)",
+          padding: "2px",
+          WebkitMask:
+            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          maskComposite: "exclude",
+        }}
+      ></div>
     </div>
   );
 };

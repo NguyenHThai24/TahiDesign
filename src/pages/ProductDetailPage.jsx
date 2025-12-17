@@ -25,7 +25,7 @@ const ProductDetail = () => {
         }
 
         setLoading(false);
-      })
+      });
   }, [id]);
 
   if (loading) return <div className="p-6">Đang tải...</div>;
@@ -33,52 +33,71 @@ const ProductDetail = () => {
 
   return (
     <main className="">
-      <section className="bg-white shadow p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* ẢNH SẢN PHẨM */}
-        <div>
-          {/* Ảnh lớn */}
-          <img
-            src={mainImage}
-            alt={productDetail.name}
-            className="w-full h-80 object-cover rounded cursor-pointer"
-            onClick={() => setShowZoom(true)}
-          />
+      <section className="bg-white shadow px-6 py-10">
+        {/* HÀNG 1: ẢNH SẢN PHẨM - 2 cột */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {/* Cột trái: Ảnh chính */}
+          <div>
+            <img
+              src={mainImage}
+              alt={productDetail.name}
+              className="w-full h-80 object-cover rounded cursor-pointer"
+              onClick={() => setShowZoom(true)}
+            />
+          </div>
 
-          {/* List thumbnails */}
-          <div className="flex gap-2 mt-3 overflow-x-auto">
-            {productDetail.images?.map((img, idx) => (
-              <img
-                key={idx}
-                src={img}
-                className={`w-20 h-20 object-cover rounded cursor-pointer border ${
-                  mainImage === img
-                    ? "border-(--text-color)"
-                    : "border-gray-300"
-                }`}
-                onClick={() => setMainImage(img)}
-              />
-            ))}
+          {/* Cột phải: Các hình ảnh con xếp nghiêng */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {productDetail.images?.map((img, idx) => {
+              // Tạo góc xoay ngẫu nhiên từ -15 đến 15 độ
+              const rotation = (idx % 5) * 7 - 15; // -15, -8, -1, 6, 13 độ
+              return (
+                <div
+                  key={idx}
+                  className="transform transition-transform duration-300 hover:scale-105 hover:z-10"
+                  style={{
+                    transform: `rotate(${rotation}deg)`,
+                    transformOrigin: "center",
+                  }}
+                >
+                  <img
+                    src={img}
+                    className={`w-full h-32 object-cover rounded-lg cursor-pointer border-2 ${
+                      mainImage === img
+                        ? "border-red-500 shadow-lg"
+                        : "border-gray-300"
+                    }`}
+                    onClick={() => setMainImage(img)}
+                    style={{
+                      transform: `rotate(${-rotation * 0.3}deg)`, // Bù lại một phần góc xoay để hình không bị nghiêng quá nhiều
+                    }}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* THÔNG TIN SẢN PHẨM */}
+        {/* HÀNG 2: THÔNG TIN SẢN PHẨM - 1 cột */}
         <div>
           <h1 className="text-2xl font-bold mb-4 text-(--text-color)">
             {productDetail.name}
           </h1>
 
-          <p className="text-lg font-semibold text-red-600">
-            Giá:{" "}
-            {productDetail.salePrice
-              ? formatPrice(productDetail.salePrice)
-              : formatPrice(productDetail.price)}
-          </p>
-
-          {productDetail.salePrice && (
-            <p className="line-through text-gray-600">
-              {formatPrice(productDetail.price)}
+          <div className="mb-4">
+            <p className="text-lg font-semibold text-red-600">
+              Giá:{" "}
+              {productDetail.salePrice
+                ? formatPrice(productDetail.salePrice)
+                : formatPrice(productDetail.price)}
             </p>
-          )}
+
+            {productDetail.salePrice && (
+              <p className="line-through text-gray-600">
+                {formatPrice(productDetail.price)}
+              </p>
+            )}
+          </div>
 
           <div className="mt-4 text-gray-800 leading-relaxed">
             <ReactMarkdown>{productDetail.description}</ReactMarkdown>
@@ -95,6 +114,7 @@ const ProductDetail = () => {
           <img
             src={mainImage}
             className="max-w-[90%] max-h-[90%] rounded shadow-lg"
+            alt="Zoomed product"
           />
         </div>
       )}
