@@ -32,12 +32,12 @@ const ProductDetail = () => {
   if (!productDetail) return <div className="p-6">Không tìm thấy sản phẩm</div>;
 
   return (
-    <main className="max-w-6xl mx-auto">
-      <section className="bg-white py-10">
+    <main className="">
+      <section className="bg-white py-10 grid grid-cols-2 gap-4">
         {/* HÀNG 1: ẢNH SẢN PHẨM - 2 cột */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {/* Cột trái: Ảnh chính */}
-          <div>
+        <div className="flex flex-col gap-6">
+          {/* Ảnh chính */}
+          <div className="h-[450px] bg-(--text-color) p-2">
             <img
               src={mainImage}
               alt={productDetail.name}
@@ -62,14 +62,14 @@ const ProductDetail = () => {
                 >
                   <img
                     src={img}
-                    className={`w-full h-40 object-cover rounded-lg cursor-pointer border-2 ${
+                    className={`w-full h-20 object-cover rounded-lg cursor-pointer border-2 ${
                       mainImage === img
                         ? "border-red-500 shadow-lg"
                         : "border-gray-300"
                     }`}
                     onClick={() => setMainImage(img)}
                     style={{
-                      transform: `rotate(${-rotation * 0.3}deg)`, // Bù lại một phần góc xoay để hình không bị nghiêng quá nhiều
+                      transform: `rotate(${-rotation * 0.3}deg)`,
                     }}
                   />
                 </div>
@@ -78,7 +78,7 @@ const ProductDetail = () => {
           </div>
         </div>
 
-        {/* HÀNG 2: THÔNG TIN SẢN PHẨM - 1 cột */}
+        {/* THÔNG TIN SẢN PHẨM - 1 cột */}
         <div>
           <h1 className="text-2xl font-bold mb-4 text-(--text-color)">
             {productDetail.name}
@@ -98,7 +98,6 @@ const ProductDetail = () => {
               </p>
             )}
           </div>
-
           <div className="mt-4 text-gray-800 leading-relaxed">
             <ReactMarkdown>{productDetail.description}</ReactMarkdown>
           </div>

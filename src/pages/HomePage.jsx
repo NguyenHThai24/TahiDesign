@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <main className="flex flex-col w-full">
       <Banner />
-      <section className="max-w-6xl mx-auto w-full">
+      <section className="w-full">
         <div className="px-3 py-7">
           <About title="Tại sao bạn nên chọn TahiDesign?" />
         </div>

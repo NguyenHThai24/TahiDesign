@@ -113,18 +113,17 @@ const Gallery = ({ selectedCategory, priceRange, sortOption }) => {
       ) : (
         <>
           {/* Grid sản phẩm */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {currentItems.map((item) => (
               <div key={item.id} className="flex justify-center">
                 <CardItem item={item} />
               </div>
             ))}
           </div>
-          <div>
-            {" "}
+          <div className="">
             {/* Phân trang */}
             {totalPages > 1 && (
-              <div className="flex justify-end items-center space-x-1 my-2">
+              <div className="flex justify-center items-center space-x-1 my-2">
                 {/* Nút Previous */}
                 <button
                   onClick={() => handlePageChange(currentPage - 1)}

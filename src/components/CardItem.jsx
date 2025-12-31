@@ -18,7 +18,7 @@ const CardItem = ({ item }) => {
   return (
     <Link
       to={`/product/${item.id}`}
-      className="group p-2 w-full relative overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col justify-between transform hover:-translate-y-2"
+      className="group w-full relative overflow-hidden hover:shadow-2xl transition-all duration-500 flex flex-col justify-between transform hover:-translate-y-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -26,7 +26,7 @@ const CardItem = ({ item }) => {
       }}
     >
       {/* Hình ảnh với hiệu ứng 3D */}
-      <div className="relative overflow-hidden h-[250px] bg-(--background-color)">
+      <div className="relative overflow-hidden h-[250px] bg-white">
         <img
           src={item.image}
           alt={item.name}

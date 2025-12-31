@@ -12,8 +12,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex flex-col gap-2 bg-white shadow-sm ">
-      <div className="grid grid-cols-3 items-center h-18 max-w-6xl mx-auto">
+    <header className="flex flex-col gap-2 bg-white px-2 shadow-sm">
+      <div className="grid grid-cols-3 items-center h-18 ">
         {/* LOGO - center vertically */}
         <div className="flex justify-start items-center">
           <Link

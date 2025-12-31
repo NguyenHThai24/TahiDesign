@@ -1,6 +1,6 @@
 const CollectionPage = () => {
   return (
-    <main className="max-w-6xl mx-auto h-screen">
+    <main className="h-screen">
       <section>collection</section>
     </main>
   );

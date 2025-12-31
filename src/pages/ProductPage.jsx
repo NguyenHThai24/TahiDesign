@@ -46,7 +46,7 @@ const ProductPage = () => {
 
   return (
     <main className="min-h-screen">
-      <section className="flex flex-col gap-4 h-full max-w-6xl mx-auto">
+      <section className="flex flex-col gap-4 h-full">
         {/* CỘT DANH MỤC */}
         <div className="flex gap-4 mt-6 mb-2">
           {/* DANH MỤC - DẠNG DROPDOWN */}
