@@ -50,7 +50,7 @@ const ProductPage = () => {
         {/* CỘT DANH MỤC */}
         <div className="flex gap-4 mt-6 mb-2">
           {/* DANH MỤC - DẠNG DROPDOWN */}
-          <div className="border w-52 py-1">
+          <div className="border-b border-(--text-color) w-52 py-1">
             <select
               className="w-full outline-none"
               value={selectedCategory || ""}
@@ -64,7 +64,7 @@ const ProductPage = () => {
             </select>
           </div>
           {/* LỌC GIÁ */}
-          <div className="border w-52 py-1">
+          <div className="border-b border-(--text-color) w-52 py-1">
             <select
               className="w-full outline-none"
               onChange={(e) => {
@@ -84,7 +84,7 @@ const ProductPage = () => {
             </select>
           </div>
           {/* SẮP XẾP */}
-          <div className="border w-52 py-1">
+          <div className="border-b border-(--text-color) w-52 py-1">
             <select
               className="w-full outline-none"
               onChange={(e) => setSortOption(e.target.value)}

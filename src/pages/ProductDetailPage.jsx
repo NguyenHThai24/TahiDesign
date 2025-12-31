@@ -41,7 +41,7 @@ const ProductDetail = () => {
             <img
               src={mainImage}
               alt={productDetail.name}
-              className="w-full h-80 object-cover rounded cursor-pointer"
+              className="w-full h-full object-cover rounded cursor-pointer"
               onClick={() => setShowZoom(true)}
             />
           </div>
@@ -62,7 +62,7 @@ const ProductDetail = () => {
                 >
                   <img
                     src={img}
-                    className={`w-full h-32 object-cover rounded-lg cursor-pointer border-2 ${
+                    className={`w-full h-40 object-cover rounded-lg cursor-pointer border-2 ${
                       mainImage === img
                         ? "border-red-500 shadow-lg"
                         : "border-gray-300"

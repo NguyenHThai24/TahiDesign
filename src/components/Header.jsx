@@ -27,15 +27,15 @@ const Header = () => {
           </Link>
         </div>
         {/* NAV - bottom aligned */}
-        <nav className="flex justify-center items-center gap-3 sm:gap-3 lg:gap-5 h-full">
+        <nav className="flex justify-center items-center gap-6 sm:gap-6 lg:gap-7 h-full">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`transition text-sm sm:text-base font-medium whitespace-nowrap border py-1 px-4 rounded-full
+              className={`transition text-[14px] font-semibold whitespace-nowrap uppercase
           ${
             location.pathname === item.path
-              ? "font-semibold text-white bg-(--text-color)"
+              ? "text-(--text-color) font-bold"
               : "text-gray-700"
           }`}
             >
