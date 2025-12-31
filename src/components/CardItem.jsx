@@ -18,7 +18,7 @@ const CardItem = ({ item }) => {
 
   return (
     <div
-      className="group bg-white w-full relative overflow-hidden hover:shadow-2xl transition-all duration-500 h-[320px] flex flex-col justify-between transform hover:-translate-y-2"
+      className="group bg-(--background-color) p-2 w-full relative overflow-hidden hover:shadow-2xl transition-all duration-500 h-[320px] flex flex-col justify-between transform hover:-translate-y-2"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -43,25 +43,19 @@ const CardItem = ({ item }) => {
       </div>
 
       {/* Hình ảnh với hiệu ứng 3D */}
-      <div className="relative overflow-hidden h-[200px]">
+      <div className="relative overflow-hidden h-[250px]">
         <img
           src={item.image}
           alt={item.name}
-          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
-          style={{
-            transform: isHovered
-              ? "scale(1.1) translateZ(20px)"
-              : "scale(1) translateZ(0)",
-            transition: "transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
-          }}
+          className="w-full h-full object-cover"
         />
 
         {/* Shine effect */}
-        <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
       </div>
 
       {/* Nội dung */}
-      <div className="p-4 flex flex-col justify-end grow text-left">
+      <div className="py-2 flex flex-col justify-end grow text-left">
         {/* Tên sản phẩm */}
         <h3 className="text-sm font-semibold text-gray-800 line-clamp-2 mb-2 group-hover:text-red-600 transition-colors duration-300 leading-relaxed">
           {item.name}

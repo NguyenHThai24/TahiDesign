@@ -3,17 +3,12 @@ import Header from "../components/Header";
 
 const MainLayout = ({ children }) => {
   return (
-    <div
-      className="min-h-screen flex flex-col items-center"
-      // style={{
-      //   backgroundImage: "url('/images/bg.jpg')",
-      // }}
-    >
-      <div className="max-w-6xl w-full fixed top-0 z-20">
+    <div className="min-h-screen flex flex-col items-center">
+      <div className="w-full fixed top-0 z-20">
         <Header />
       </div>
-      <main className="max-w-6xl flex-1 mx-auto w-full mt-16">{children}</main>
-      <div className="max-w-6xl w-full">
+      <main className="flex-1 mx-auto w-full mt-18">{children}</main>
+      <div className="w-full">
         <Footer />
       </div>
     </div>

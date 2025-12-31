@@ -4,12 +4,12 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const Banner = () => {
   const images = [
     "/images/banner/bg.jpg",
-    "/images/banner/bg.jpg",
-    "/images/banner/bg.jpg",
+    // "/images/banner/bg.jpg",
+    // "/images/banner/bg.jpg",
   ];
 
   return (
-    <div className="w-full h-[550px]">
+    <div className="w-full h-[800px]">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         // navigation

@@ -5,7 +5,6 @@ import MainLayout from "../layout/MainLayout";
 import HomePage from "../pages/HomePage";
 import Product from "../pages/ProductPage";
 import ProductDetailPage from "../pages/ProductDetailPage";
-import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import CollectionPage from "../pages/CollectionPage";
@@ -45,14 +44,7 @@ const router = createBrowserRouter([
       </MainLayout>
     ),
   },
-  {
-    path: "/about",
-    element: (
-      <MainLayout>
-        <AboutPage />
-      </MainLayout>
-    ),
-  },
+
   {
     path: "/contact",
     element: (
