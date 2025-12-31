@@ -7,9 +7,9 @@ import Category from "../components/Category";
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col w-full">
       <Banner />
-      <section className="max-w-6xl mx-auto">
+      <section className="max-w-6xl mx-auto w-full">
         <div className="px-3 py-7">
           <About title="Tại sao bạn nên chọn TahiDesign?" />
         </div>

@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="w-full bg-(--background-color) pt-10 text-sm mt-2 shadow-sm">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8 sm:px-8 lg:px-16">
         {/* Cột logo và mô tả */}
         <div className="lg:col-span-2">
           <h2 className="font-logo text-3xl text-(--text-color) mb-4">

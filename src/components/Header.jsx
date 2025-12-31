@@ -12,27 +12,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex justify-center gap-2 bg-white shadow-sm items-center">
-      <div className="grid grid-cols-3 h-18">
-        {/* NAV - bottom aligned */}
-        <nav className="flex justify-start items-center gap-8 sm:gap-6 lg:gap-8 h-full">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`transition hover:text-(--text-color) text-sm sm:text-base font-medium whitespace-nowrap
-          ${
-            location.pathname === item.path
-              ? "font-semibold text-(--text-color) underline underline-offset-6 decoration-3"
-              : "text-gray-700"
-          }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+    <header className="flex flex-col gap-2 bg-white shadow-sm ">
+      <div className="grid grid-cols-3 items-center h-18 max-w-6xl mx-auto">
         {/* LOGO - center vertically */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-start items-center">
           <Link
             to="/"
             className="font-logo text-3xl sm:text-4xl text-(--text-color) whitespace-nowrap"
@@ -43,6 +26,24 @@ const Header = () => {
             TahiDesign
           </Link>
         </div>
+        {/* NAV - bottom aligned */}
+        <nav className="flex justify-center items-center gap-3 sm:gap-3 lg:gap-5 h-full">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`transition text-sm sm:text-base font-medium whitespace-nowrap border py-1 px-4 rounded-full
+          ${
+            location.pathname === item.path
+              ? "font-semibold text-white bg-(--text-color)"
+              : "text-gray-700"
+          }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
         {/*  */}
         <div className="flex justify-end items-center gap-6">
           <div className="cursor-pointer hover:text-(--text-color)">
