@@ -48,11 +48,11 @@ const ProductPage = () => {
     <main className="min-h-screen">
       <section className="flex flex-col gap-4 h-full max-w-6xl mx-auto">
         {/* CỘT DANH MỤC */}
-        <div className="flex gap-4 my-4">
+        <div className="flex gap-4 mt-6 mb-2">
           {/* DANH MỤC - DẠNG DROPDOWN */}
-          <div className="border px-2 py-1">
+          <div className="border w-52 py-1">
             <select
-              className="outline-none"
+              className="w-full outline-none"
               value={selectedCategory || ""}
               onChange={handleCategoryChange}
             >
@@ -64,9 +64,9 @@ const ProductPage = () => {
             </select>
           </div>
           {/* LỌC GIÁ */}
-          <div className="border px-2 py-1">
+          <div className="border w-52 py-1">
             <select
-              className=""
+              className="w-full outline-none"
               onChange={(e) => {
                 const val = e.target.value;
                 if (val === "1") setPriceRange([0, 50000]);
@@ -84,9 +84,9 @@ const ProductPage = () => {
             </select>
           </div>
           {/* SẮP XẾP */}
-          <div className="border px-2 py-1">
+          <div className="border w-52 py-1">
             <select
-              className=""
+              className="w-full outline-none"
               onChange={(e) => setSortOption(e.target.value)}
             >
               <option value="">Sắp xếp</option>

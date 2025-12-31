@@ -112,16 +112,6 @@ const Gallery = ({ selectedCategory, priceRange, sortOption }) => {
         </div>
       ) : (
         <>
-          <div className="flex justify-between items-center ">
-            {/* <div className="text-(--text-color) text-sm">
-              Hiển thị{" "}
-              <span className="font-medium">
-                ({startIndex + 1}-{Math.min(endIndex, filtered.length)})
-              </span>{" "}
-              trong {filtered.length} sản phẩm
-            </div> */}
-          </div>
-
           {/* Grid sản phẩm */}
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {currentItems.map((item) => (

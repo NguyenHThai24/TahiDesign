@@ -32,8 +32,8 @@ const ProductDetail = () => {
   if (!productDetail) return <div className="p-6">Không tìm thấy sản phẩm</div>;
 
   return (
-    <main className="">
-      <section className="bg-white shadow px-6 py-10">
+    <main className="max-w-6xl mx-auto">
+      <section className="bg-white py-10">
         {/* HÀNG 1: ẢNH SẢN PHẨM - 2 cột */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {/* Cột trái: Ảnh chính */}
