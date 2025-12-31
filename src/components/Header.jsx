@@ -14,20 +14,8 @@ const Header = () => {
   return (
     <header className="flex flex-col gap-2 bg-white px-2 shadow-sm">
       <div className="grid grid-cols-3 items-center h-18 ">
-        {/* LOGO - center vertically */}
-        <div className="flex justify-start items-center">
-          <Link
-            to="/"
-            className="font-logo text-3xl sm:text-4xl text-(--text-color) whitespace-nowrap"
-            style={{
-              fontFamily: '"Tagesschrift", system-ui',
-            }}
-          >
-            TahiDesign
-          </Link>
-        </div>
         {/* NAV - bottom aligned */}
-        <nav className="flex justify-center items-center gap-6 sm:gap-6 lg:gap-7 h-full">
+        <nav className="flex justify-start items-center gap-6 sm:gap-6 lg:gap-7 h-full">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -43,7 +31,18 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-
+        {/* LOGO - center vertically */}
+        <div className="flex justify-center items-center">
+          <Link
+            to="/"
+            className="font-logo text-3xl sm:text-4xl text-(--text-color) whitespace-nowrap"
+            style={{
+              fontFamily: '"Tagesschrift", system-ui',
+            }}
+          >
+            TahiDesign
+          </Link>
+        </div>
         {/*  */}
         <div className="flex justify-end items-center gap-6">
           <div className="cursor-pointer hover:text-(--text-color)">
