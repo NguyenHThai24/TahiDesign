@@ -1,4 +1,4 @@
-import thiepCuoiIMG from '../../public/images/thiep-cuoi.jpg'
+import thiepCuoiIMG from '../../public/images/li-xi.png'
 
 const Introduce = () => {
   return (

@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="relative w-full pt-10 text-sm shadow-sm">
       {/* Gradient trắng từ dưới lên */}
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-100 bg-linear-to-t from-white via-white/80 to-transparent z-0" />
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-64 bg-linear-to-t from-white via-white/80 to-transparent z-0" />
 
       {/* Nội dung */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-2">

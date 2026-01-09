@@ -12,7 +12,7 @@ const Category = ({ data = [] }) => {
           <img
             src={item.image}
             alt={item.name}
-            className="h-24 w-24 object-contain transition-transform duration-300 group-hover:scale-110"
+            className="h-36 w-36 object-contain transition-transform duration-300 group-hover:scale-110"
           />
 
           <div className="absolute inset-0 flex translate-y-full items-end justify-center bg-white/80 transition-all duration-300 ease-out group-hover:translate-y-0">
