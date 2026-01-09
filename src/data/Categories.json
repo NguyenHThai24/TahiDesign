@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Thiệp cưới",
+    "image": "/images/categories/thiep-cuoi.png"
+  },
+  {
+    "id": 2,
+    "name": "Thiệp sinh nhật",
+    "image": "/images/categories/thiep-sinh-nhat.png"
+  },
+  {
+    "id": 3,
+    "name": "Thiệp sự kiện",
+    "image": "/images/categories/thiep-su-kien.png"
+  },
+  {
+    "id": 4,
+    "name": "Thiệp handmade",
+    "image": "/images/categories/thiep-handmade.png"
+  }
+]
