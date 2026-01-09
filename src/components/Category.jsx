@@ -13,7 +13,7 @@ const Category = ({ data = [] }) => {
           />
 
           <div className="absolute inset-0 flex translate-y-full items-end justify-center bg-white/80 transition group-hover:translate-y-0">
-            <h3 className="mb-6 font-semibold text-(--primary-color)">
+            <h3 className="mb-20 font-bold text-(--primary-color)">
               {item.name}
             </h3>
           </div>
