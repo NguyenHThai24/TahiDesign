@@ -1,8 +1,32 @@
+/* font title  */
+@import url("https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap");
+
 /* tailwind css  */
 @import "tailwindcss";
 
 :root {
-  --primary-color: #e9ece9;
-  --secondary-color: #000;
-  --text-color: #084023;
+  --primary-color: #689554;
+  --secondary-color: #58901f;
+  --text-color: #000000;
+
+  background: #e2f9df;
+}
+
+.title {
+  font-family: "Tagesschrift", system-ui;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.btn {
+  background: var(--secondary-color);
+  color: #ffffff;
+  padding: 4px 16px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--primary-color);
 }
