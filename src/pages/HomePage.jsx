@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Category from "../components/Category";
 import categoriesData from "../data/Categories.json";
+import Introduce from "../components/Introduce";
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
@@ -15,10 +16,9 @@ const HomePage = () => {
         Banner
       </section>
 
-      <main className="mx-auto -mt-22 max-w-7xl">
-        <section>
-          <Category data={categories} />
-        </section>
+      <main className="mx-auto -mt-22 flex max-w-7xl flex-col gap-14">
+        <Category data={categories} />
+        <Introduce />
       </main>
     </>
   );
