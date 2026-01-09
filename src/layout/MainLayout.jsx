@@ -3,12 +3,12 @@ import Header from "../components/Header";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col items-center max-w-6xl mx-auto">
-      <div className="w-full fixed top-0 z-20 max-w-6xl mx-auto">
+    <div className="">
+      <div className="">
         <Header />
       </div>
-      <main className="flex-1 w-full mt-18">{children}</main>
-      <div className="w-full">
+      <main className="">{children}</main>
+      <div className="">
         <Footer />
       </div>
     </div>

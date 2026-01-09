@@ -1,21 +1,8 @@
-/* font logo  */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap");
-
 /* tailwind css  */
 @import "tailwindcss";
 
-/* import swiper slider  */
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
-
 :root {
-  --background-color: #e9ece9; /*layout kiểu gallery*/
-  --text-color: #084023; /*Màu chữ xanh đen*/
-
-  background: var(--background-color);
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  /* font-weight: 700; */
+  --primary-color: #e9ece9;
+  --secondary-color: #000;
+  --text-color: #084023;
 }
