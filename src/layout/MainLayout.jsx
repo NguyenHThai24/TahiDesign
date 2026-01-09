@@ -4,7 +4,7 @@ import Header from "../components/Header";
 const MainLayout = ({ children }) => {
   return (
     <div className="">
-      <div className="fixed top-0 w-full">
+      <div className="">
         <Header />
       </div>
       <main className="h-screen">{children}</main>

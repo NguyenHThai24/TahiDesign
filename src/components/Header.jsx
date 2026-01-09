@@ -19,7 +19,7 @@ const Header = () => {
 
       <div className="relative z-10">
         {/* LOGO - center vertically */}
-        <div className="flex justify-between items-center  py-4 max-w-7xl mx-auto">
+        <div className="flex justify-between items-center  py-8 max-w-7xl mx-auto">
           <div>Hotline: 033333333333</div>
           <Link
             to="/"
@@ -28,7 +28,7 @@ const Header = () => {
             <img src={treeLOGO} alt="" width={45} />
             <span>Tahi Design</span>
           </Link>
-          <div className="flex gap-5 text-2xl items-center">
+          <div className="flex gap-4 text-2xl items-center">
             <CiSearch />
             <CiUser />
             <CiHeart />
@@ -39,7 +39,7 @@ const Header = () => {
           </div>
         </div>
         {/* NAV - bottom aligned */}
-        <nav className="flex justify-center items-center gap-6 py-3 border-t border-gray-200">
+        <nav className="flex justify-center items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.path}
