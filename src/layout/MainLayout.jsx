@@ -3,16 +3,17 @@ import Header from "../components/Header";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="">
-      <div className="">
-        <Header />
-      </div>
-      <main className="h-screen">{children}</main>
-      <div className="">
-        <Footer />
-      </div>
+    <div className="flex min-h-screen flex-col">
+      <Header />
+
+      <main className="flex-1">
+        {children}
+      </main>
+
+      <Footer />
     </div>
   );
 };
 
 export default MainLayout;
+
