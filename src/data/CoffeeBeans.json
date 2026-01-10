@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Arabica Cầu Đất",
+    "origin": "Đà Lạt, Việt Nam",
+    "roastLevel": "Medium",
+    "price": 220000,
+    "weight": "500g",
+    "flavor": ["Chua thanh", "Hương hoa", "Hậu ngọt"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  },
+  {
+    "id": 2,
+    "name": "Robusta Buôn Ma Thuột",
+    "origin": "Đắk Lắk, Việt Nam",
+    "roastLevel": "Dark",
+    "price": 180000,
+    "weight": "500g",
+    "flavor": ["Đắng đậm", "Socola đen", "Hậu mạnh"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  },
+  {
+    "id": 3,
+    "name": "Arabica Ethiopia",
+    "origin": "Ethiopia",
+    "roastLevel": "Light",
+    "price": 320000,
+    "weight": "500g",
+    "flavor": ["Trái cây", "Cam chanh", "Hương hoa"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  },
+  {
+    "id": 4,
+    "name": "Arabica Colombia",
+    "origin": "Colombia",
+    "roastLevel": "Medium",
+    "price": 300000,
+    "weight": "500g",
+    "flavor": ["Caramel", "Socola sữa", "Cân bằng"],
+    "image": "/images/cafe-hat.png",
+    "inStock": false
+  },
+  {
+    "id": 5,
+    "name": "Robusta Honey Process",
+    "origin": "Gia Lai, Việt Nam",
+    "roastLevel": "Medium Dark",
+    "price": 210000,
+    "weight": "500g",
+    "flavor": ["Ngọt mật ong", "Ít đắng", "Hậu dày"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  },
+  {
+    "id": 6,
+    "name": "Arabica Brazil Santos",
+    "origin": "Brazil",
+    "roastLevel": "Medium",
+    "price": 260000,
+    "weight": "500g",
+    "flavor": ["Hạt dẻ", "Socola", "Ít chua"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  },
+  {
+    "id": 7,
+    "name": "Blend Espresso House",
+    "origin": "Blend",
+    "roastLevel": "Dark",
+    "price": 240000,
+    "weight": "500g",
+    "flavor": ["Đậm", "Crema dày", "Socola"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  },
+  {
+    "id": 8,
+    "name": "Arabica Kenya AA",
+    "origin": "Kenya",
+    "roastLevel": "Light Medium",
+    "price": 350000,
+    "weight": "500g",
+    "flavor": ["Berry", "Chua sáng", "Hậu dài"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  },
+  {
+    "id": 9,
+    "name": "Robusta Fine Grade",
+    "origin": "Lâm Đồng, Việt Nam",
+    "roastLevel": "Medium Dark",
+    "price": 195000,
+    "weight": "500g",
+    "flavor": ["Đậm", "Gỗ", "Ít chua"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  },
+  {
+    "id": 10,
+    "name": "Arabica Guatemala",
+    "origin": "Guatemala",
+    "roastLevel": "Medium",
+    "price": 310000,
+    "weight": "500g",
+    "flavor": ["Socola", "Gia vị", "Cân bằng"],
+    "image": "/images/cafe-hat.png",
+    "inStock": true
+  }
+]

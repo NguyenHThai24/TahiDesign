@@ -1,6 +1,6 @@
 const Category = ({ data = [] }) => {
   return (
-    <section className="mx-auto flex w-full max-w-7xl flex-col gap-14 bg-white p-4">
+    <section className="mx-auto flex w-full max-w-7xl flex-col gap-14 rounded border border-(--secondary-color) bg-white p-4">
       <div className="flex justify-around">
         {data.map((item) => (
           <div
