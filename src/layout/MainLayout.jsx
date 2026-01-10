@@ -6,9 +6,7 @@ const MainLayout = ({ children }) => {
     <div className="flex min-h-screen flex-col">
       <Header />
 
-      <main className="flex-1">
-        {children}
-      </main>
+      <main className="my-4 flex-1">{children}</main>
 
       <Footer />
     </div>
@@ -16,4 +14,3 @@ const MainLayout = ({ children }) => {
 };
 
 export default MainLayout;
-

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import Category from "../components/Category";
 import categoriesData from "../data/Categories.json";
-
-import bannerIMG from "/images/banner.png";
+import Banner from "../components/Banner";
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
@@ -13,9 +12,7 @@ const HomePage = () => {
 
   return (
     <main className="flex flex-col gap-7">
-      <section className="h-[600px]">
-        <img src={bannerIMG} alt="" className="h-full w-full object-fill" />
-      </section>
+      <Banner />
       <Category data={categories} />
     </main>
   );
