@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Category from "../components/Category";
 import categoriesData from "../data/Categories.json";
-import Introduce from "../components/Introduce";
 
 import bannerIMG from "/images/banner.jpg";
 
@@ -18,7 +17,6 @@ const HomePage = () => {
         <img src={bannerIMG} alt="" className="h-full w-full object-fill" />
       </section>
       <Category data={categories} />
-      <Introduce title="About Us" />
     </main>
   );
 };

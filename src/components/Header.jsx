@@ -32,7 +32,7 @@ const Header = () => {
             className="title flex items-baseline gap-2 text-5xl whitespace-nowrap"
           >
             <img src={treeLOGO} alt="" width={45} />
-            <span>Tahi Design</span>
+            <span>Tahi Coffee</span>
           </Link>
           <div className="flex items-center gap-4 text-2xl">
             <div className="cursor-pointer rounded-full border border-(--secondary-color) p-1.5 font-bold text-(--secondary-color)">

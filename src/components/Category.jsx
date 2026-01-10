@@ -1,6 +1,6 @@
 const Category = ({ data = [] }) => {
   return (
-    <section className="mx-auto -mt-10 flex max-w-7xl flex-col gap-14">
+    <section className="mx-auto -mt-20 flex max-w-7xl flex-col gap-14">
       <div className="flex justify-center gap-10">
         {data.map((item) => (
           <div
@@ -8,7 +8,7 @@ const Category = ({ data = [] }) => {
             className="group border-4 border-(--secondary-color) bg-(--primary-color) p-4"
           >
             {/* Vùng tròn */}
-            <div className="perspective -mt-22 h-46 w-46">
+            <div className="perspective -mt-16 h-46 w-46">
               {/* Flip container */}
               <div className="transform-style-preserve-3d relative h-full w-full rounded-full transition-transform duration-700 group-hover:rotate-y-180">
                 {/* Mặt trước */}

@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "name": "Thiệp cưới",
-    "image": "/images/li-xi.png",
-    "image1": "/images/li-xi.png"
+    "name": "Cà phê hạt",
+    "image": "/images/coffee-beans.png",
+    "image1": "/images/coffee-beans-hover.png"
   },
   {
     "id": 2,
-    "name": "Thiệp sinh nhật",
-    "image": "/images/li-xi.png",
-    "image1": "/images/li-xi.png"
+    "name": "Cà phê rang xay",
+    "image": "/images/ground-coffee.png",
+    "image1": "/images/ground-coffee-hover.png"
   },
   {
     "id": 3,
-    "name": "Thiệp sự kiện",
-    "image": "/images/li-xi.png",
-    "image1": "/images/li-xi.png"
+    "name": "Cà phê hòa tan",
+    "image": "/images/instant-coffee.png",
+    "image1": "/images/instant-coffee-hover.png"
   },
   {
     "id": 4,
-    "name": "Thiệp handmade",
-    "image": "/images/li-xi.png",
-    "image1": "/images/li-xi.png"
+    "name": "Phụ kiện pha cà phê",
+    "image": "/images/coffee-tools.png",
+    "image1": "/images/coffee-tools-hover.png"
   }
 ]

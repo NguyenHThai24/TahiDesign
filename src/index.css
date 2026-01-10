@@ -5,11 +5,11 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #689554;
-  --secondary-color: #58901f;
+  --primary-color: #6f4e37;
+  --secondary-color: #c89b3c;
   --text-color: #000000;
 
-  background: #e2f9df;
+  background: #e9d2a0;
 }
 
 .title {
