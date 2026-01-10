@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Category from "../components/Category";
 import categoriesData from "../data/Categories.json";
 
-import bannerIMG from "/images/banner.jpg";
+import bannerIMG from "/images/banner.png";
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);

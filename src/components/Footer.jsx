@@ -5,10 +5,10 @@ const Footer = () => {
       <div className="pointer-events-none absolute bottom-0 left-0 z-0 h-64 w-full bg-linear-to-t from-white via-white/80 to-transparent" />
 
       {/* Nội dung */}
-      <div className="relative z-10 grid grid-cols-1 gap-8 px-2 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 px-2 sm:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
           <h2 className="font-logo mb-4 text-3xl text-(--text-color)">
-            Tahi Design
+            Tahi Coffee
           </h2>
           <p className="leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem

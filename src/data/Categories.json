@@ -2,25 +2,25 @@
   {
     "id": 1,
     "name": "Cà phê hạt",
-    "image": "/images/coffee-beans.png",
-    "image1": "/images/coffee-beans-hover.png"
+    "image": "/images/cafe-hat.png",
+    "image1": "/images/cafe-hat.png"
   },
   {
     "id": 2,
     "name": "Cà phê rang xay",
-    "image": "/images/ground-coffee.png",
-    "image1": "/images/ground-coffee-hover.png"
+    "image": "/images/cafe-rang-xay.png",
+    "image1": "/images/cafe-rang-xay.png"
   },
   {
     "id": 3,
     "name": "Cà phê hòa tan",
-    "image": "/images/instant-coffee.png",
-    "image1": "/images/instant-coffee-hover.png"
+    "image": "/images/cafe-rang-xay.png",
+    "image1": "/images/cafe-rang-xay.png"
   },
   {
     "id": 4,
     "name": "Phụ kiện pha cà phê",
-    "image": "/images/coffee-tools.png",
-    "image1": "/images/coffee-tools-hover.png"
+    "image": "/images/phu-kien.png",
+    "image1": "/images/phu-kien.png"
   }
 ]
