@@ -13,7 +13,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="flex flex-col gap-4">
+    <main className="flex flex-col gap-7">
       <section className="h-[600px]">
         <img src={bannerIMG} alt="" className="h-full w-full object-fill" />
       </section>
