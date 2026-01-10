@@ -2,21 +2,25 @@
   {
     "id": 1,
     "name": "Thiệp cưới",
-    "image": "/images/li-xi.png"
+    "image": "/images/li-xi.png",
+    "image1": "/images/li-xi.png"
   },
   {
     "id": 2,
     "name": "Thiệp sinh nhật",
-    "image": "/images/li-xi.png"
+    "image": "/images/li-xi.png",
+    "image1": "/images/li-xi.png"
   },
   {
     "id": 3,
     "name": "Thiệp sự kiện",
-    "image": "/images/li-xi.png"
+    "image": "/images/li-xi.png",
+    "image1": "/images/li-xi.png"
   },
   {
     "id": 4,
     "name": "Thiệp handmade",
-    "image": "/images/li-xi.png"
+    "image": "/images/li-xi.png",
+    "image1": "/images/li-xi.png"
   }
 ]

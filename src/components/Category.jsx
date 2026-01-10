@@ -1,24 +1,38 @@
-
-
 const Category = ({ data = [] }) => {
   return (
     <div className="flex justify-center gap-10">
       {data.map((item) => (
         <div
           key={item.id}
-          className="group relative flex h-46 w-46 items-center justify-center overflow-hidden rounded-full border-4 border-(--primary-color) bg-white transition hover:-translate-y-1 hover:shadow-xl"
+          className="group border-4 border-white bg-(--primary-color) p-4"
         >
+          {/* Vùng tròn */}
+          <div className="perspective -mt-22 h-46 w-46">
+            {/* Flip container */}
+            <div className="transform-style-preserve-3d relative h-full w-full rounded-full transition-transform duration-700 group-hover:rotate-y-180">
+              {/* Mặt trước */}
+              <div className="absolute inset-0 flex items-center justify-center rounded-full border-4 border-(--primary-color) bg-white backface-hidden">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-36 w-36 object-contain"
+                />
+              </div>
 
-          <img
-            src={item.image}
-            alt={item.name}
-            className="h-36 w-36 object-contain transition-transform duration-300 group-hover:scale-110"
-          />
+              {/* Mặt sau */}
+              <div className="absolute inset-0 flex rotate-y-180 items-center justify-center rounded-full border-4 border-(--primary-color) bg-white backface-hidden">
+                <img
+                  src={item.image1}
+                  alt={`${item.name}-back`}
+                  className="h-36 w-36 object-contain"
+                />
+              </div>
+            </div>
+          </div>
 
-          <div className="absolute inset-0 flex translate-y-full items-end justify-center bg-white/80 transition-all duration-300 ease-out group-hover:translate-y-0">
-            <h3 className="mb-20 font-bold text-(--primary-color)">
-              {item.name}
-            </h3>
+          {/* Tên */}
+          <div className="mt-4 text-center text-lg font-bold text-white">
+            {item.name}
           </div>
         </div>
       ))}

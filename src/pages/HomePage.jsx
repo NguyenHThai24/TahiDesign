@@ -18,9 +18,11 @@ const HomePage = () => {
         <img src={bannerIMG} alt="" className="h-full w-full object-fill" />
       </section>
 
-      <main className="mx-auto -mt-22 flex max-w-7xl flex-col gap-14">
+      <main className="mx-auto -mt-10 flex max-w-7xl flex-col gap-4">
         <Category data={categories} />
-        <Introduce />
+        <section className="h-[450px] bg-(--primary-color)">
+          <Introduce />
+        </section>
       </main>
     </>
   );
