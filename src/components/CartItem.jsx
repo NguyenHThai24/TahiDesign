@@ -5,24 +5,33 @@ const CartItem = ({ item }) => {
     <div className="relative rounded bg-white p-2">
       {/* Discount badge */}
       {hasDiscount && (
-        <span className="clip-path-[polygon(0_0,100%_0,100%_100%,0_100%,8px_50%)] absolute top-2 right-0 z-10 bg-[var(--color-green)] px-3 py-1 text-xs font-semibold text-white">
+        <span className="absolute top-2 right-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-(--color-green) text-xs font-semibold text-white">
           -{item.promotion.discountPercent}%
         </span>
       )}
 
-      {/* Image */}
-      <div className="relative overflow-hidden rounded-t-2xl">
-        <img
-          src={item.image}
-          alt={item.name}
-          className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
+      {/* Vùng tròn */}
+      <div className="group perspective-1000 m-4 mx-auto h-50 w-50">
+        {/* Flip container */}
+        <div className="preserve-3d relative h-full w-full rounded-full transition-transform duration-700 group-hover:rotate-y-180">
+          {/* Mặt trước */}
+          <div className="absolute inset-0 flex items-center justify-center rounded-full border-4 border-(--secondary-color) bg-white backface-hidden">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="h-36 w-36 object-contain"
+            />
+          </div>
 
-        {!item.inStock && (
-          <span className="absolute top-2 left-2 rounded-full bg-red-500 px-3 py-1 text-xs text-white">
-            Hết hàng
-          </span>
-        )}
+          {/* Mặt sau */}
+          <div className="absolute inset-0 flex rotate-y-180 items-center justify-center rounded-full border-4 border-(--secondary-color) bg-white backface-hidden">
+            <img
+              src={item.image}
+              alt={`${item.name}-back`}
+              className="h-36 w-36 object-contain"
+            />
+          </div>
+        </div>
       </div>
 
       {/* Content */}

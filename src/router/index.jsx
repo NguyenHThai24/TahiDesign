@@ -8,8 +8,26 @@ import ProductDetailPage from "../pages/ProductDetailPage";
 import ContactPage from "../pages/ContactPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import CollectionPage from "../pages/CollectionPage";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
 
 const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: (
+      <MainLayout>
+        <LoginPage />
+      </MainLayout>
+    ),
+  },
+  {
+    path: "/register",
+    element: (
+      <MainLayout>
+        <RegisterPage />
+      </MainLayout>
+    ),
+  },
   {
     path: "/",
     element: (
