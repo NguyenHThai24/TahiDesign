@@ -13,18 +13,13 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <main className="flex flex-col gap-4">
       <section className="h-[600px]">
         <img src={bannerIMG} alt="" className="h-full w-full object-fill" />
       </section>
-
-      <main className="mx-auto -mt-10 flex max-w-7xl flex-col gap-4">
-        <Category data={categories} />
-        <section className="h-[450px] bg-(--primary-color)">
-          <Introduce />
-        </section>
-      </main>
-    </>
+      <Category data={categories} />
+      <Introduce title="About Us" />
+    </main>
   );
 };
 

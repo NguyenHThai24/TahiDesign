@@ -30,3 +30,33 @@
 .btn:hover {
   background: var(--primary-color);
 }
+
+/* section  */
+/* section lẻ */
+/* section:nth-child(odd) {
+  background-image:
+    linear-gradient(
+      to bottom right,
+      var(--color-bg),
+      var(--color-primary-variant)
+    ),
+    url("../src/assets/section-odd.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    center center,
+    right bottom;
+  background-size: cover, 20rem;
+} */
+
+/* section chẵn */
+/* section:nth-child(even) {
+  background-image:
+    linear-gradient(to top left, var(--color-bg), var(--color-primary-variant)),
+    url("../src/assets/section-even.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    center center,
+    left bottom;
+  background-size: cover, 20rem;
+} */
+/* end section  */
