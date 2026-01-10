@@ -3,6 +3,8 @@ import Category from "../components/Category";
 import categoriesData from "../data/Categories.json";
 import Introduce from "../components/Introduce";
 
+import bannerIMG from "/images/banner.jpg";
+
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
 
@@ -12,8 +14,8 @@ const HomePage = () => {
 
   return (
     <>
-      <section className="h-[450px] border-2 border-r-0 border-l-0 border-(--primary-color)">
-        Banner
+      <section className="h-[600px]">
+        <img src={bannerIMG} alt="" className="h-full w-full object-fill" />
       </section>
 
       <main className="mx-auto -mt-22 flex max-w-7xl flex-col gap-14">
