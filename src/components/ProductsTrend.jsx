@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import coffeeBeansData from "../data/CoffeeBeans.json";
+import teaData from "../data/ProductsTrend.json";
 import CartItem from "./CartItem";
 
-const CoffeeBeans = ({ title }) => {
-  const [coffeeBeans, setCoffeeBeans] = useState([]);
+const ProductsTrend = ({ title }) => {
+  const [teas, setTeas] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    setCoffeeBeans(coffeeBeansData);
+    setTeas(teaData);
   }, []);
 
   return (
@@ -25,7 +25,7 @@ const CoffeeBeans = ({ title }) => {
       </div>
 
       <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {coffeeBeans.slice(0, 8).map((item) => (
+        {teas.slice(0, 8).map((item) => (
           <CartItem key={item.id} item={item} />
         ))}
       </div>
@@ -33,4 +33,4 @@ const CoffeeBeans = ({ title }) => {
   );
 };
 
-export default CoffeeBeans;
+export default ProductsTrend;

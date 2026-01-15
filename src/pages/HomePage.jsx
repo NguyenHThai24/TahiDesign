@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Category from "../components/Category";
 import categoriesData from "../data/Categories.json";
 import Banner from "../components/Banner";
-import CoffeeBeans from "../components/CoffeeBeans";
+import ProductsTrend from "../components/ProductsTrend";
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
@@ -15,7 +15,7 @@ const HomePage = () => {
     <main className="flex flex-col gap-10">
       <Banner />
       <Category data={categories} />
-      <CoffeeBeans title="Cà phê hạt" />
+      <ProductsTrend title="Sản phẩm nổi bật" />
     </main>
   );
 };

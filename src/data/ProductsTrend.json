@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "Trà Xanh Thái Nguyên",
+    "origin": "Thái Nguyên, Việt Nam",
+    "type": "Green Tea",
+    "price": 180000,
+    "promotion": {
+      "isActive": true,
+      "discountPercent": 10,
+      "discountPrice": 162000
+    },
+    "weight": "500g",
+    "flavor": ["Chát nhẹ", "Hậu ngọt", "Hương cốm"],
+    "image": "/images/tea.png",
+    "inStock": true,
+    "createdAt": "2025-01-05"
+  },
+  {
+    "id": 2,
+    "name": "Trà Oolong Cao Sơn",
+    "origin": "Lâm Đồng, Việt Nam",
+    "type": "Oolong Tea",
+    "price": 260000,
+    "promotion": {
+      "isActive": true,
+      "discountPercent": 15,
+      "discountPrice": 221000
+    },
+    "weight": "500g",
+    "flavor": ["Hoa lan", "Ngọt dịu", "Hậu dài"],
+    "image": "/images/tea.png",
+    "inStock": true,
+    "createdAt": "2025-01-07"
+  },
+  {
+    "id": 3,
+    "name": "Trà Đen Assam",
+    "origin": "Assam, Ấn Độ",
+    "type": "Black Tea",
+    "price": 240000,
+    "promotion": {
+      "isActive": false,
+      "discountPercent": 0,
+      "discountPrice": null
+    },
+    "weight": "500g",
+    "flavor": ["Đậm", "Mạch nha", "Hậu mạnh"],
+    "image": "/images/tea.png",
+    "inStock": true,
+    "createdAt": "2025-01-10"
+  },
+  {
+    "id": 4,
+    "name": "Trà Hoa Cúc",
+    "origin": "Hà Giang, Việt Nam",
+    "type": "Herbal Tea",
+    "price": 200000,
+    "promotion": {
+      "isActive": true,
+      "discountPercent": 20,
+      "discountPrice": 160000
+    },
+    "weight": "300g",
+    "flavor": ["Thanh mát", "Hương hoa", "Dễ uống"],
+    "image": "/images/tea.png",
+    "inStock": false,
+    "createdAt": "2025-01-12"
+  },
+  {
+    "id": 5,
+    "name": "Trà Sen Tây Hồ",
+    "origin": "Hà Nội, Việt Nam",
+    "type": "Scented Tea",
+    "price": 320000,
+    "promotion": {
+      "isActive": false,
+      "discountPercent": 0,
+      "discountPrice": null
+    },
+    "weight": "500g",
+    "flavor": ["Hương sen", "Ngọt hậu", "Tinh tế"],
+    "image": "/images/tea.png",
+    "inStock": true,
+    "createdAt": "2025-01-15"
+  },
+  {
+    "id": 6,
+    "name": "Trà Earl Grey",
+    "origin": "Anh Quốc",
+    "type": "Black Tea",
+    "price": 280000,
+    "promotion": {
+      "isActive": true,
+      "discountPercent": 10,
+      "discountPrice": 252000
+    },
+    "weight": "500g",
+    "flavor": ["Cam bergamot", "Thơm", "Cân bằng"],
+    "image": "/images/tea.png",
+    "inStock": true,
+    "createdAt": "2025-01-18"
+  },
+  {
+    "id": 7,
+    "name": "Trà Phổ Nhĩ Chín",
+    "origin": "Vân Nam, Trung Quốc",
+    "type": "Pu-erh Tea",
+    "price": 350000,
+    "promotion": {
+      "isActive": false,
+      "discountPercent": 0,
+      "discountPrice": null
+    },
+    "weight": "500g",
+    "flavor": ["Đậm", "Đất", "Hậu sâu"],
+    "image": "/images/tea.png",
+    "inStock": true,
+    "createdAt": "2025-01-20"
+  },
+  {
+    "id": 8,
+    "name": "Trà Trái Cây Nhiệt Đới",
+    "origin": "Blend",
+    "type": "Fruit Tea",
+    "price": 190000,
+    "promotion": {
+      "isActive": true,
+      "discountPercent": 5,
+      "discountPrice": 180500
+    },
+    "weight": "400g",
+    "flavor": ["Chua ngọt", "Trái cây", "Dễ uống"],
+    "image": "/images/tea.png",
+    "inStock": true,
+    "createdAt": "2025-01-22"
+  }
+]

@@ -5,12 +5,12 @@
 @import "tailwindcss";
 
 :root {
-  --primary-color: #6f4e37;
-  --secondary-color: #c89b3c;
+  --primary-color: #2f772f;
+  --secondary-color: #38c544;
   --text-color: #000000;
   --color-green: #44bd26;
 
-  background: #e9d2a0;
+  background: #d7f5d1;
 }
 
 .title {
@@ -20,44 +20,41 @@
 }
 
 .btn {
-  background: var(--secondary-color);
-  color: #ffffff;
+  position: relative;
   padding: 4px 16px;
   border: 1px solid var(--secondary-color);
   border-radius: 30px;
   cursor: pointer;
+  background: transparent;
+  color: #ffffff;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.btn:hover {
+/* nền ban đầu */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--secondary-color);
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+/* lớp chạy khi hover */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: -1;
 }
 
-/* section  */
-/* section lẻ */
-/* section:nth-child(odd) {
-  background-image:
-    linear-gradient(
-      to bottom right,
-      var(--color-bg),
-      var(--color-primary-variant)
-    ),
-    url("../src/assets/section-odd.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position:
-    center center,
-    right bottom;
-  background-size: cover, 20rem;
-} */
-
-/* section chẵn */
-/* section:nth-child(even) {
-  background-image:
-    linear-gradient(to top left, var(--color-bg), var(--color-primary-variant)),
-    url("../src/assets/section-even.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position:
-    center center,
-    left bottom;
-  background-size: cover, 20rem;
-} */
-/* end section  */
+.btn:hover::after {
+  transform: scaleX(1);
+}

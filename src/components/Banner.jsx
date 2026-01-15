@@ -1,34 +1,34 @@
-import bannerIMG from "/images/banner.png";
+import bannerIMG1 from "/images/banner1.jpg";
+import bannerIMG2 from "/images/banner2.jpg";
+import bannerIMG3 from "/images/banner3.jpg";
+import bannerIMG4 from "/images/banner4.jpg";
 
-const images = [bannerIMG, bannerIMG, bannerIMG, bannerIMG];
+const images = [bannerIMG1, bannerIMG2, bannerIMG3, bannerIMG4];
 
 const Banner = () => {
   return (
     <section className="h-[300px] overflow-hidden">
-      <div
-        className="flex w-max gap-4"
-        style={{
-          animation: "marquee 30s linear infinite",
-        }}
-      >
-        {[bannerIMG, bannerIMG, bannerIMG, bannerIMG, bannerIMG, bannerIMG].map(
-          (img, i) => (
-            <img
-              key={i}
-              src={img}
-              className="h-[300px] w-auto object-contain"
-            />
-          ),
-        )}
+      <div className="marquee flex w-max gap-2">
+        {[...images, ...images].map((img, i) => (
+          <img key={i} src={img} className="h-[300px] w-auto object-contain" />
+        ))}
       </div>
 
       <style>
         {`
-      @keyframes marquee {
-        from { transform: translateX(0); }
-        to { transform: translateX(-50%); }
-      }
-    `}
+          .marquee {
+            animation: marquee 20s linear infinite;
+          }
+
+          @keyframes marquee {
+            from {
+              transform: translateX(0);
+            }
+            to {
+              transform: translateX(-50%);
+            }
+          }
+        `}
       </style>
     </section>
   );
