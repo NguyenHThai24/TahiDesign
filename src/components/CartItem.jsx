@@ -19,7 +19,7 @@ const CartItem = ({ item }) => {
             <img
               src={item.image}
               alt={item.name}
-              className="h-36 w-36 object-contain"
+              className="h-44 w-44 object-contain"
             />
           </div>
 
@@ -28,8 +28,8 @@ const CartItem = ({ item }) => {
             <img
               src={item.image}
               alt={`${item.name}-back`}
-              className="h-36 w-36 object-contain"
-            /> 
+              className="h-44 w-44 object-contain"
+            />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import coffeeLOGO from "/images/tea-logo.png";
+// import coffeeLOGO from "/images/tea-logo.png";
 
 import { CiSearch, CiShoppingCart, CiHeart, CiUser } from "react-icons/ci";
 import { MdOutlinePhone } from "react-icons/md";
@@ -28,10 +28,10 @@ const Header = () => {
             +84 123.456.789
           </div>
           <Link to="/" className="title flex items-center">
-            <img src={coffeeLOGO} alt="" width={60} />
+            {/* <img src={coffeeLOGO} alt="" width={60} /> */}
 
             <div className="flex items-baseline gap-2 text-5xl whitespace-nowrap">
-              <span className="text-(--primary-color)">Tahi Tea</span>
+              <span className="text-(--primary-color)">Tahi Design</span>
             </div>
           </Link>
           <div className="flex items-center gap-4 text-2xl">

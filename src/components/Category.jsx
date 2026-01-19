@@ -16,7 +16,7 @@ const Category = ({ data = [] }) => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="h-32 w-32 object-contain"
+                    className="h-36 w-36 object-contain"
                   />
                 </div>
 
@@ -25,7 +25,7 @@ const Category = ({ data = [] }) => {
                   <img
                     src={item.image1}
                     alt={`${item.name}-back`}
-                    className="h-32 w-32 object-contain"
+                    className="h-36 w-36 object-contain"
                   />
                 </div>
               </div>

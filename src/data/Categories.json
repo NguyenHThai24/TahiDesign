@@ -1,26 +1,32 @@
 [
   {
     "id": 1,
-    "name": "Trà xanh",
-    "image": "/images/tea.png",
-    "image1": "/images/tea.png"
+    "name": "Thiệp & Sự kiện",
+    "image": "/images/img1.png",
+    "image1": "/images/img2.png"
   },
   {
     "id": 2,
-    "name": "Trà đen",
-    "image": "/images/tea.png",
-    "image1": "/images/tea.png"
+    "name": "Bao lì xì & Tết",
+    "image": "/images/img2.png",
+    "image1": "/images/img1.png"
   },
   {
     "id": 3,
-    "name": "Trà thảo mộc",
-    "image": "/images/tea.png",
-    "image1": "/images/tea.png"
+    "name": "Ấn phẩm văn phòng",
+    "image": "/images/img3.png",
+    "image1": "/images/img2.png"
   },
   {
     "id": 4,
-    "name": "Phụ kiện pha trà",
-    "image": "/images/tea.png",
-    "image1": "/images/tea.png"
+    "name": "In ấn quảng cáo",
+    "image": "/images/img1.png",
+    "image1": "/images/img3.png"
+  },
+  {
+    "id": 5,
+    "name": "In theo yêu cầu",
+    "image": "/images/img2.png",
+    "image1": "/images/img3.png"
   }
 ]
