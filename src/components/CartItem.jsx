@@ -29,7 +29,7 @@ const CartItem = ({ item }) => {
               src={item.image}
               alt={`${item.name}-back`}
               className="h-36 w-36 object-contain"
-            />
+            /> 
           </div>
         </div>
       </div>

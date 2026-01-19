@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "name": "Cà phê hạt",
-    "image": "/images/cafe-hat.png",
-    "image1": "/images/cafe-hat.png"
+    "name": "Trà xanh",
+    "image": "/images/tea.png",
+    "image1": "/images/tea.png"
   },
   {
     "id": 2,
-    "name": "Cà phê rang xay",
-    "image": "/images/cafe-rang-xay.png",
-    "image1": "/images/cafe-rang-xay.png"
+    "name": "Trà đen",
+    "image": "/images/tea.png",
+    "image1": "/images/tea.png"
   },
   {
     "id": 3,
-    "name": "Trà",
+    "name": "Trà thảo mộc",
     "image": "/images/tea.png",
     "image1": "/images/tea.png"
   },
   {
     "id": 4,
-    "name": "Phụ kiện pha cà phê",
-    "image": "/images/phu-kien.png",
-    "image1": "/images/phu-kien.png"
+    "name": "Phụ kiện pha trà",
+    "image": "/images/tea.png",
+    "image1": "/images/tea.png"
   }
 ]

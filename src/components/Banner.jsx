@@ -7,8 +7,8 @@ const images = [bannerIMG1, bannerIMG2, bannerIMG3, bannerIMG4];
 
 const Banner = () => {
   return (
-    <section className="h-[300px] overflow-hidden">
-      <div className="marquee flex w-max gap-2">
+    <section className="h-[300px] overflow-hidden border border-r-0 border-l-0 border-(--primary-color)">
+      <div className="marquee flex w-max gap-0.5">
         {[...images, ...images].map((img, i) => (
           <img key={i} src={img} className="h-[300px] w-auto object-contain" />
         ))}
