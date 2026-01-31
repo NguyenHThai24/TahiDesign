@@ -34,7 +34,7 @@ const Banner = () => {
               key={index}
               src={img}
               alt=""
-              className={`absolute inset-0 h-full w-full rounded-xl object-cover transition-all duration-3000 ease-in-out ${
+              className={`absolute inset-0 h-full w-full rounded-xl object-contain transition-all duration-3000 ease-in-out ${
                 index === current
                   ? "scale-110 opacity-100"
                   : "scale-100 opacity-0"
