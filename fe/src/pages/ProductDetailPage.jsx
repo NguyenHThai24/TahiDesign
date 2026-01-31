@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FiX } from "react-icons/fi";
 import productsData from "../../public/data/productsData.json";
 import OrderForm from "../components/OrderForm";
@@ -100,7 +100,9 @@ const ProductDetailPage = () => {
             </p>
 
             <div className="mt-auto flex flex-col gap-6 md:flex-row md:gap-6">
-              <button className="btn-primary">Liên hệ đặt hàng</button>
+              <Link to={"/contact"} className="btn-primary">
+                Liên hệ đặt hàng
+              </Link>
 
               <button
                 className="btn-primary"
@@ -121,7 +123,7 @@ const ProductDetailPage = () => {
         >
           <button
             onClick={() => setIsZoomOpen(false)}
-            className="absolute top-6 right-6 text-3xl text-(--color-primary) hover:opacity-70"
+            className="absolute top-6 right-6 rounded-full text-3xl text-(--color-primary) hover:bg-red-100 hover:text-red-500 hover:opacity-70"
           >
             <FiX />
           </button>
