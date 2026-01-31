@@ -5,7 +5,7 @@ import {
   TiHome,
   TiThList,
 } from "react-icons/ti";
-import { MdPermPhoneMsg } from "react-icons/md";
+import { MdPermPhoneMsg, MdHomeRepairService } from "react-icons/md";
 
 import tulipIMG from "../assets/tulip.png";
 
@@ -63,6 +63,27 @@ function SideBar({ collapsed, onToggle }) {
             {collapsed && (
               <span className="pointer-events-none absolute top-1/2 left-full z-50 ml-2.5 -translate-y-1/2 rounded-md bg-(--color-primary) px-3 py-1.5 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-200 group-hover:opacity-100">
                 Product
+              </span>
+            )}
+          </NavLink>
+
+          <NavLink
+            to="/service"
+            className={({ isActive }) =>
+              `group relative flex items-center rounded-r-full py-2 transition-all duration-300 ${collapsed ? "justify-center px-0" : "gap-2 px-4"} ${isActive ? "border-l-8 border-(--color-secondary) bg-white font-bold text-(--color-primary)" : "text-white"}`
+            }
+          >
+            <MdHomeRepairService size={25} className="shrink-0" />
+
+            <span
+              className={`text-base whitespace-nowrap transition-all duration-300 ${collapsed ? "w-0 opacity-0" : "w-auto opacity-100"} `}
+            >
+              Service
+            </span>
+
+            {collapsed && (
+              <span className="pointer-events-none absolute top-1/2 left-full z-50 ml-2.5 -translate-y-1/2 rounded-md bg-(--color-primary) px-3 py-1.5 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-200 group-hover:opacity-100">
+                Service
               </span>
             )}
           </NavLink>
