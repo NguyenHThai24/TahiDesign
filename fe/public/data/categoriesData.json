@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cat_01",
+    "name": "Thiệp cưới",
+    "image": "/images/categories/thiep-cuoi.png"
+  },
+  {
+    "id": "cat_02",
+    "name": "Thiệp sinh nhật",
+    "image": "/images/categories/thiep-sinh-nhat.png"
+  },
+  {
+    "id": "cat_03",
+    "name": "Bao lì xì",
+    "image": "/images/categories/bao-li-xi.png"
+  },
+  {
+    "id": "cat_04",
+    "name": "Khác",
+    "image": "/images/categories/dich-vu.png"
+  }
+]

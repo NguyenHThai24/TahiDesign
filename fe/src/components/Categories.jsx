@@ -1,0 +1,35 @@
+import { Link } from "react-router-dom";
+
+const Categories = ({ categories }) => {
+  return (
+    <section className="flex flex-col gap-5 rounded-2xl bg-(--color-secondary) p-4 text-white">
+      <h1 className="text-2xl font-bold uppercase italic">Danh mục sản phẩm</h1>
+
+      <div className="grid flex-1 grid-cols-1 gap-4 overflow-hidden md:grid-cols-2 lg:grid-cols-4">
+        {categories.map((cat) => (
+          <Link
+            to={`/product?category=${cat.id}`}
+            key={cat.id}
+            className="group shadow_black flex h-75 w-full flex-col justify-between rounded-2xl bg-white text-(--color-primary)"
+          >
+            {/* IMAGE */}
+            <div className="h-full w-full overflow-hidden rounded-xl p-6">
+              <img
+                src={cat.image}
+                alt={cat.name}
+                className="h-full w-full object-contain group-hover:animate-[wobble_0.6s_ease-in-out]"
+              />
+            </div>
+
+            {/* TITLE */}
+            <h3 className="mx-auto flex h-12 w-[80%] items-center justify-center rounded-t-2xl bg-(--color-secondary) text-xl font-bold text-white">
+              {cat.name}
+            </h3>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Categories;

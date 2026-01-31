@@ -1,0 +1,167 @@
+/* font title  */
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+/* font content  */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --color-primary: #3d539f;
+  --color-secondary: #7b90e4;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none; /* hide scrollbar */
+}
+
+/* IE, Edge cũ */
+* {
+  -ms-overflow-style: none;
+}
+
+.title {
+  font-family: "Permanent Marker", cursive;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+}
+
+.shadow_white {
+  box-shadow:
+    inset 0 4px 8px rgba(255, 255, 255, 0.15),
+    inset 0 -4px 8px rgba(255, 255, 255, 0.15),
+    inset 4px 0 8px rgba(255, 255, 255, 0.15),
+    inset -4px 0 8px rgba(255, 255, 255, 0.15);
+}
+
+.shadow_black {
+  box-shadow:
+    inset 0 6px 12px rgba(0, 0, 0, 0.15),
+    inset 0 -6px 12px rgba(0, 0, 0, 0.15),
+    inset 6px 0 12px rgba(0, 0, 0, 0.15),
+    inset -6px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(8deg);
+  }
+  60% {
+    transform: rotate(-6deg);
+  }
+  80% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+
+  -webkit-text-fill-color: var(--color-primary) !important;
+
+  border: 1px solid var(--color-primary) !important; /* màu border bạn đang dùng */
+  border-color: var(--color-primary) !important;
+
+  outline: none !important;
+  outline-offset: 0 !important;
+
+  appearance: none !important;
+}
+
+/* zoom ảnh  */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.3s ease-out;
+}
+
+/* btn  */
+.btn-primary {
+  width: 10rem; /* w-40 */
+  padding: 0.25rem 0; /* py-1 */
+  border-radius: 9999px; /* rounded-full */
+  background-color: #fff;
+  text-align: center;
+  font-weight: 700;
+  color: var(--color-primary);
+
+  box-shadow: 0 6px 0 var(--color-primary);
+
+  transition: all 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hover */
+.btn-primary:hover {
+  transform: translateY(-4px);
+  background-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 10px 0 #fff;
+}
+
+/* Active (click) */
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 var(--color-primary);
+}
+
+/* icon  */
+.social-btn {
+  @apply flex h-9 w-9 items-center justify-center rounded-full bg-white text-(--color-primary) transition-all duration-300 hover:-translate-y-1 hover:bg-(--color-secondary) hover:text-white;
+}
