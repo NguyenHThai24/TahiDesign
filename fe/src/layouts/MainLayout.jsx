@@ -1,10 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import SideBar from "../components/SideBar";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 
 function MainLayout() {
   const [collapsed, setCollapsed] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Tailwind lg = 1024px
+      if (window.innerWidth < 1024) {
+        setCollapsed(true);
+      } else {
+        setCollapsed(false);
+      }
+    };
+
+    handleResize(); // chạy ngay khi load
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="flex h-screen overflow-hidden bg-(--color-surface)">
@@ -22,15 +39,14 @@ function MainLayout() {
 
       {/* Content */}
       <main className="mx-4 flex flex-1 flex-col text-(--color-text)">
-        {/* Header cố định */}
         <div className="sticky top-0 z-20 mb-4 flex h-16 items-center rounded-br-2xl rounded-bl-2xl bg-(--color-primary) px-5 text-white">
           <Header />
         </div>
 
-        {/* Body cuộn */}
         <div className="h-[85vh] flex-1 overflow-y-auto">
           <Outlet />
         </div>
+
         <div className="sticky bottom-0 z-20 flex w-full justify-end bg-transparent text-[12px] text-gray-400">
           Copyright © NguyenHoangThai
         </div>

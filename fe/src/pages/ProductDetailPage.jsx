@@ -96,10 +96,10 @@ const ProductDetailPage = () => {
               {product.price.toLocaleString("vi-VN")} đ
             </p>
 
-            <div className="mt-auto flex flex-col gap-3 md:flex-row md:gap-6">
-              <button className="btn-primary">Thêm yêu thích</button>
+            <div className="mt-auto flex flex-col gap-6 md:flex-row md:gap-6">
+              <button className="btn-primary">Liên hệ đặt hàng</button>
 
-              <button className="btn-primary">Thêm vào giỏ hàng</button>
+              <button className="btn-primary">Điền form đặt hàng</button>
             </div>
           </div>
         </div>
