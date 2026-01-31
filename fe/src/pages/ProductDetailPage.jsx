@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FiX } from "react-icons/fi";
 import productsData from "../../public/data/productsData.json";
+import OrderForm from "../components/OrderForm";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
@@ -9,6 +10,8 @@ const ProductDetailPage = () => {
   const product = productsData.find((item) => String(item.id) === String(id));
 
   const [selectedImage, setSelectedImage] = useState(product?.image || "");
+
+  const [isOrderOpen, setIsOrderOpen] = useState(false);
 
   const [isZoomOpen, setIsZoomOpen] = useState(false);
 
@@ -99,7 +102,12 @@ const ProductDetailPage = () => {
             <div className="mt-auto flex flex-col gap-6 md:flex-row md:gap-6">
               <button className="btn-primary">Liên hệ đặt hàng</button>
 
-              <button className="btn-primary">Điền form đặt hàng</button>
+              <button
+                className="btn-primary"
+                onClick={() => setIsOrderOpen(true)}
+              >
+                Điền thông tin đặt hàng
+              </button>
             </div>
           </div>
         </div>
@@ -125,6 +133,9 @@ const ProductDetailPage = () => {
             className="animate-zoomIn max-h-[90vh] max-w-[90vw] object-contain"
           />
         </div>
+      )}
+      {isOrderOpen && (
+        <OrderForm id={id} onClose={() => setIsOrderOpen(false)} />
       )}
     </>
   );

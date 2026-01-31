@@ -132,8 +132,7 @@ select:-webkit-autofill {
 
 /* btn  */
 .btn-primary {
-  width: 10rem; /* w-40 */
-  padding: 0.25rem 0; /* py-1 */
+  padding: 0.25rem 1rem; /* py-1 */
   border-radius: 9999px; /* rounded-full */
   background-color: #fff;
   text-align: center;
