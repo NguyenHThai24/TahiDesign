@@ -13,34 +13,60 @@ import videoBanner from "../../public/video/video-banner.png";
 
 const Banner = () => {
   const images = [videoBanner, videoBanner, videoBanner];
+  const loopImages = [...images, images[0]];
 
   const [current, setCurrent] = useState(0);
+  const [enableTransition, setEnableTransition] = useState(true);
 
   useEffect(() => {
-    if (images.length <= 1) return;
-
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 7000); // 3s đổi hình
+      setCurrent((prev) => prev + 1);
+      setEnableTransition(true);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, []);
+
+  const handleTransitionEnd = () => {
+    if (current === images.length) {
+      setEnableTransition(false);
+      setCurrent(0);
+    }
+  };
+
+  useEffect(() => {
+    if (current === images.length) {
+      setTimeout(() => {
+        setEnableTransition(false);
+        setCurrent(0);
+      }, 1000); // bằng duration animation
+    } else {
+      setEnableTransition(true);
+    }
+  }, [current]);
+
   return (
     <section className="h-full rounded-2xl bg-(--color-secondary) p-4">
       <div className="mx-auto flex h-full w-full flex-col gap-7 lg:flex-row lg:items-center">
         <div className="shadow_black relative h-100 w-full overflow-hidden rounded-2xl bg-white p-3">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt=""
-              className={`absolute inset-0 h-full w-full rounded-xl object-cover transition-all duration-3000 ease-in-out ${
-                index === current
-                  ? "scale-110 opacity-100"
-                  : "scale-100 opacity-0"
-              } `}
-            />
-          ))}
+          <div
+            onTransitionEnd={handleTransitionEnd}
+            className={`flex h-full w-full ${
+              enableTransition
+                ? "transition-transform duration-1000 ease-in-out"
+                : ""
+            }`}
+            style={{ transform: `translateX(-${current * 100}%)` }}
+          >
+            {loopImages.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt=""
+                className="h-full w-full shrink-0 rounded-xl object-cover"
+              />
+            ))}
+          </div>
         </div>
 
         {/* CONTENT */}
