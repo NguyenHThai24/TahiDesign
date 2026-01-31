@@ -151,7 +151,7 @@ const Header = () => {
 
           {/* Date */}
           <div
-            className="flex cursor-pointer items-center gap-2 rounded-full bg-(--color-secondary) px-4 py-2 font-bold text-white"
+            className="mb-4 flex cursor-pointer items-center gap-2 rounded-full bg-(--color-secondary) px-4 py-2 font-bold text-white"
             onClick={() => setCalendarOpen(true)}
           >
             <FaCalendarDays />
