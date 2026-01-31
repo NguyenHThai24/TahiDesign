@@ -10,7 +10,7 @@ function MainLayout() {
   useEffect(() => {
     const handleResize = () => {
       // Tailwind lg = 1024px
-      if (window.innerWidth < 1024) {
+      if (window.innerWidth < 1220) {
         setCollapsed(true);
       } else {
         setCollapsed(false);
