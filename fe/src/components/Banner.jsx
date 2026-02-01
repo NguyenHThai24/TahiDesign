@@ -43,7 +43,7 @@ const Banner = () => {
           ))}
         </div>
 
-        {/* CONTENT */}
+        {/* CONTENT  */}
         <div className="flex h-full w-full flex-col items-center justify-center gap-7 text-white">
           <h1 className="text-2xl font-bold uppercase italic">ABOUT US</h1>
 
