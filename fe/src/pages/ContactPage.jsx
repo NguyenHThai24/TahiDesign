@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import OrderingProcess from "../components/OrderingProcess";
 
 const ContactPage = () => {
   const [name, setName] = useState("");
@@ -29,7 +30,7 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="mx-auto h-full max-w-6xl px-6 py-4 text-(--color-primary)">
+    <section className="mx-auto h-full w-full py-4 text-(--color-primary)">
       {/* TITLE */}
       <div className="mb-7 text-center">
         <h1 className="title mb-4 text-4xl font-bold">LIÊN HỆ</h1>
@@ -41,7 +42,8 @@ const ContactPage = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="grid gap-10 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <OrderingProcess />
         {/* LEFT – INFO */}
         <div className="flex flex-col gap-6">
           <div className="flex w-full items-start justify-center rounded-2xl bg-(--color-primary)">
@@ -110,15 +112,6 @@ const ContactPage = () => {
           </form>
         </div>
       </div>
-      {/* TULIP DECORATION */}
-
-      {/* <div className="pointer-events-none fixed bottom-0 left-[50%] z-0">
-        <img
-          src={tulipIMG}
-          alt="Tulip decoration"
-          className="h-[50%] w-[100%] select-none"
-        />
-      </div> */}
     </section>
   );
 };
