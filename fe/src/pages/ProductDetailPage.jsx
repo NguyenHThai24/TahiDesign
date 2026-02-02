@@ -27,14 +27,6 @@ const ProductDetailPage = () => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
-  if (!product) {
-    return (
-      <div className="flex h-full items-center justify-center rounded-2xl bg-(--color-secondary)">
-        Không tìm thấy sản phẩm
-      </div>
-    );
-  }
-
   return (
     <>
       <div className="flex h-full flex-1 flex-col gap-4 overflow-hidden rounded-2xl bg-(--color-secondary) p-4 md:p-6 lg:flex-row">

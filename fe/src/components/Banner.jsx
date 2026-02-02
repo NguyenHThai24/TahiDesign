@@ -22,7 +22,7 @@ const Banner = () => {
 
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 7000); // 3s đổi hình
+    }, 5000);
 
     return () => clearInterval(timer);
   }, []);
