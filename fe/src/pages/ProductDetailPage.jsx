@@ -76,45 +76,48 @@ const ProductDetailPage = () => {
                 ))}
             </div>
           </div>
+          <div className="flex flex-1 flex-col gap-4">
+            {/* INFO SECTION */}
+            <div className="shadow_black flex flex-col gap-6 rounded-2xl bg-white p-8">
+              <h1 className="text-xl font-bold italic md:text-3xl">
+                {product.name}
+              </h1>
 
-          {/* INFO SECTION */}
-          <div className="shadow_black flex h-full flex-1 flex-col gap-6 rounded-2xl bg-white p-8">
-            <h1 className="text-xl font-bold italic md:text-3xl">
-              {product.name}
-            </h1>
+              <div className="space-y-2 text-base md:text-lg">
+                <p>
+                  <b>Chất liệu:</b> {product.material}
+                </p>
+                <p>
+                  <b>Kích thước:</b> {product.size}
+                </p>
+                <p>
+                  <b>Số lượng:</b> {product.quantity}
+                </p>
+              </div>
 
-            <div className="space-y-2 text-base md:text-lg">
-              <p>
-                <b>Chất liệu:</b> {product.material}
+              <p className="text-xl font-bold text-red-600 md:text-2xl">
+                {product.price.toLocaleString("vi-VN")} đ
               </p>
-              <p>
-                <b>Kích thước:</b> {product.size}
-              </p>
-              <p>
-                <b>Số lượng:</b> {product.quantity}
-              </p>
+
+              <div className="mt-auto flex flex-col gap-6 md:flex-row md:gap-6">
+                <Link to={"/contact"} className="btn-primary">
+                  Liên hệ đặt hàng
+                </Link>
+
+                <button
+                  className="btn-primary"
+                  onClick={() => setIsOrderOpen(true)}
+                >
+                  Đặt hàng
+                </button>
+              </div>
             </div>
-
-            <p className="text-xl font-bold text-red-600 md:text-2xl">
-              {product.price.toLocaleString("vi-VN")} đ
-            </p>
-
-            <div className="mt-auto flex flex-col gap-6 md:flex-row md:gap-6">
-              <Link to={"/contact"} className="btn-primary">
-                Liên hệ đặt hàng
-              </Link>
-
-              <button
-                className="btn-primary"
-                onClick={() => setIsOrderOpen(true)}
-              >
-                Đặt hàng
-              </button>
+            <div className="shadow_black flex h-full flex-col gap-6 rounded-2xl bg-white p-8">
+              <h3 className="text-2xl font-bold">Sản phẩm khác</h3>
             </div>
           </div>
         </div>
       </div>
-
       {/* ZOOM MODAL */}
       {isZoomOpen && (
         <div
