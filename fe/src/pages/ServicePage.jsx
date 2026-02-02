@@ -4,13 +4,13 @@ import mayIn from "../assets/muc-may-in.jpg";
 
 const ServicePage = () => {
   return (
-    <section className="flex h-full flex-col gap-4 overflow-y-auto rounded-2xl bg-(--color-primary) p-4 sm:p-6">
+    <section className="flex h-full flex-col gap-4 overflow-y-auto rounded-2xl bg-(--color-secondary) p-4 sm:p-6">
       {/* HEADER */}
-      <div className="max-w-xl text-white">
-        <h3 className="mb-4 text-2xl font-bold text-yellow-400 sm:text-3xl">
+      <div className="text-balck max-w-xl font-medium">
+        <h3 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
           Tahi Design
         </h3>
-        <p className="text-sm sm:text-base">
+        <p className="text-base">
           Ngoài thiết kế in ấn bán sản phẩm, chúng tôi còn làm các dịch vụ khác
           như chụp hình thẻ, photocopy, nạp mực máy in,...
         </p>

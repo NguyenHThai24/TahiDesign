@@ -47,7 +47,7 @@ const ProductDetailPage = () => {
             </div>
 
             {/* Thumbnails */}
-            <div className="flex gap-4 overflow-x-auto">
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
               {[product.image, product.image1, product.image2, product.image3]
                 .filter(Boolean)
                 .map((img, index) => (
@@ -63,7 +63,7 @@ const ProductDetailPage = () => {
                     <img
                       src={img}
                       alt=""
-                      className="h-16 w-16 object-contain md:h-20 md:w-20"
+                      className="h-16 w-full object-contain md:h-20"
                     />
                   </div>
                 ))}
