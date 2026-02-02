@@ -138,20 +138,20 @@ const Header = () => {
 
           {/* Social */}
           <div className="mb-4 flex justify-center gap-4">
-            <a className="social-btn">
+            <a className="social-btn border">
               <SiZalo size={18} />
             </a>
-            <a className="social-btn">
+            <a className="social-btn border">
               <FaFacebookF size={16} />
             </a>
-            <a className="social-btn">
+            <a className="social-btn border">
               <FaInstagram size={18} />
             </a>
           </div>
 
           {/* Date */}
           <div
-            className="mb-4 flex cursor-pointer items-center gap-2 rounded-full bg-(--color-secondary) px-4 py-2 font-bold text-white"
+            className="mb-4 flex cursor-pointer items-center justify-center gap-2 rounded-full bg-(--color-secondary) px-4 py-2 font-bold text-white"
             onClick={() => setCalendarOpen(true)}
           >
             <FaCalendarDays />
