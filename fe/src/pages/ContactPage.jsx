@@ -1,35 +1,9 @@
-import { useState } from "react";
 import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import OrderingProcess from "../components/OrderingProcess";
 import { useLanguage } from "../context/LanguageContext";
 
 const ContactPage = () => {
   const { t } = useLanguage();
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
-
-  const SCRIPT_URL = import.meta.env.VITE_GG_SCRIPT_URL;
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        sheet: "contact",
-        name,
-        phone,
-        message,
-      }),
-    });
-
-    alert("Gửi liên hệ thành công!");
-  };
 
   return (
     <section className="mx-auto h-full w-full py-4 text-(--color-primary)">
@@ -79,10 +53,9 @@ const ContactPage = () => {
         <div className="rounded-2xl border p-4">
           <h3 className="mb-4 text-2xl font-bold italic">{t("sendMessage")}</h3>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+          <form onSubmit="" className="flex flex-col gap-5">
             <input
               name="name"
-              onChange={(e) => setName(e.target.value)}
               type="text"
               placeholder={t("fullName")}
               className="rounded-lg border px-4 py-3 outline-none focus:border-(--color-primary)"
@@ -90,7 +63,6 @@ const ContactPage = () => {
 
             <input
               name="phone"
-              onChange={(e) => setPhone(e.target.value)}
               type="text"
               placeholder={t("phone")}
               className="rounded-lg border px-4 py-3 outline-none focus:border-(--color-primary)"
@@ -98,7 +70,6 @@ const ContactPage = () => {
 
             <textarea
               name="message"
-              onChange={(e) => setMessage(e.target.value)}
               rows="4"
               placeholder={t("description")}
               className="resize-none rounded-lg border px-4 py-3 outline-none focus:border-(--color-primary)"
