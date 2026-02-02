@@ -19,7 +19,7 @@ const ServicePage = () => {
       {/* SERVICES */}
       <div className="grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {/* ITEM */}
-        <div className="flex flex-col items-center justify-between gap-3 rounded-xl bg-white p-4 shadow">
+        <div className="flex h-fit flex-col items-center justify-between gap-3 rounded-xl bg-white p-4 shadow">
           <img
             src={anhThe}
             alt=""
@@ -30,7 +30,7 @@ const ServicePage = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-3 rounded-xl bg-white p-4 shadow">
+        <div className="flex h-fit flex-col items-center justify-between gap-3 rounded-xl bg-white p-4 shadow">
           <img
             src={photoCopy}
             alt=""
@@ -41,7 +41,7 @@ const ServicePage = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-3 rounded-xl bg-white p-4 shadow">
+        <div className="flex h-fit flex-col items-center justify-between gap-3 rounded-xl bg-white p-4 shadow">
           <img
             src={mayIn}
             alt=""
