@@ -63,6 +63,9 @@ const en = {
   fullName: "Full Name",
   description: "Description",
   submitContact: "Submit Contact",
+
+  // ===== NOTFOUND PAGE =====
+  backToHome: "Back to home",
 };
 
 export default en;
