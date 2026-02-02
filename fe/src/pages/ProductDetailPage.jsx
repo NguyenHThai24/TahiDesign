@@ -108,7 +108,7 @@ const ProductDetailPage = () => {
                 className="btn-primary"
                 onClick={() => setIsOrderOpen(true)}
               >
-                Điền thông tin đặt hàng
+                Đặt hàng
               </button>
             </div>
           </div>

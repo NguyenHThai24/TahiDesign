@@ -9,10 +9,11 @@ import {
   FaClock,
 } from "react-icons/fa";
 
-import videoBanner from "../../public/video/video-banner.png";
+import banner1 from "../../public/images/banner/banner1.jpg";
+import banner2 from "../../public/images/banner/banner2.jpg";
 
 const Banner = () => {
-  const images = [videoBanner, videoBanner, videoBanner];
+  const images = [banner1, banner2];
 
   const [current, setCurrent] = useState(0);
 
@@ -34,7 +35,7 @@ const Banner = () => {
               key={index}
               src={img}
               alt=""
-              className={`absolute inset-0 h-full w-full rounded-xl object-contain transition-all duration-3000 ease-in-out ${
+              className={`absolute inset-0 h-full w-full rounded-xl object-fill transition-all duration-3000 ease-in-out ${
                 index === current
                   ? "scale-110 opacity-100"
                   : "scale-100 opacity-0"
