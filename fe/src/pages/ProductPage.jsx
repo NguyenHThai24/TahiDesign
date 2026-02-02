@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import FilterProduct from "../components/FilterProduct";
 import ListItem from "../components/ListItem";
-import { useSearchParams } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 const ProductPage = () => {
+  const { t } = useLanguage();
+
   const [showFilter, setShowFilter] = useState(false);
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +22,6 @@ const ProductPage = () => {
 
   useEffect(() => {
     if (categoryFromUrl) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFilters((prev) => ({
         ...prev,
         categories: [categoryFromUrl],
@@ -35,7 +37,6 @@ const ProductPage = () => {
   }, []);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCurrentPage(1);
   }, [filters]);
 
@@ -50,11 +51,13 @@ const ProductPage = () => {
       if (filters.priceRanges.length) {
         const price = p.price;
         const match = filters.priceRanges.some((range) => {
-          if (range === "low") return price < 50000;
-          if (range === "medium") return price >= 50000 && price <= 200000;
-          if (range === "high") return price > 200000 && price <= 500000;
-          if (range === "premium") return price > 500000;
+          if (range === "price_low") return price < 50000;
+          if (range === "price_medium")
+            return price >= 50000 && price <= 200000;
+          if (range === "price_high") return price > 200000 && price <= 500000;
+          if (range === "price_premium") return price > 500000;
         });
+
         if (!match) return false;
       }
 
@@ -74,7 +77,7 @@ const ProductPage = () => {
           onClick={() => setShowFilter(!showFilter)}
           className="m-1 flex h-10 w-10 items-center justify-center rounded-full bg-white px-4 font-bold text-(--color-primary)"
         >
-          Lọc
+          {t("filterTitle")}
         </button>
 
         {showFilter && (

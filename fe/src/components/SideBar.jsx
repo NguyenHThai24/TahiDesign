@@ -8,8 +8,10 @@ import {
 import { MdPermPhoneMsg, MdHomeRepairService } from "react-icons/md";
 
 import tulipIMG from "../assets/tulip.png";
+import { useLanguage } from "../context/LanguageContext";
 
 function SideBar({ collapsed, onToggle }) {
+  const { t } = useLanguage();
   return (
     <aside className="flex h-full flex-col">
       {/* TOP */}
@@ -36,12 +38,12 @@ function SideBar({ collapsed, onToggle }) {
             <span
               className={`text-base whitespace-nowrap transition-all duration-300 ${collapsed ? "w-0 opacity-0" : "w-auto opacity-100"} `}
             >
-              Home
+              {t.home}
             </span>
 
             {collapsed && (
               <span className="pointer-events-none absolute top-1/2 left-full z-50 ml-2.5 -translate-y-1/2 rounded-md bg-(--color-primary) px-3 py-1.5 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-200 group-hover:opacity-100">
-                Home
+                {t.home}
               </span>
             )}
           </NavLink>
@@ -57,12 +59,12 @@ function SideBar({ collapsed, onToggle }) {
             <span
               className={`text-base whitespace-nowrap transition-all duration-300 ${collapsed ? "w-0 opacity-0" : "w-auto opacity-100"} `}
             >
-              Product
+              {t.product}
             </span>
 
             {collapsed && (
               <span className="pointer-events-none absolute top-1/2 left-full z-50 ml-2.5 -translate-y-1/2 rounded-md bg-(--color-primary) px-3 py-1.5 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-200 group-hover:opacity-100">
-                Product
+                {t.product}
               </span>
             )}
           </NavLink>
@@ -78,12 +80,12 @@ function SideBar({ collapsed, onToggle }) {
             <span
               className={`text-base whitespace-nowrap transition-all duration-300 ${collapsed ? "w-0 opacity-0" : "w-auto opacity-100"} `}
             >
-              Service
+              {t.service}
             </span>
 
             {collapsed && (
               <span className="pointer-events-none absolute top-1/2 left-full z-50 ml-2.5 -translate-y-1/2 rounded-md bg-(--color-primary) px-3 py-1.5 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-200 group-hover:opacity-100">
-                Service
+                {t.service}
               </span>
             )}
           </NavLink>
@@ -99,12 +101,12 @@ function SideBar({ collapsed, onToggle }) {
             <span
               className={`text-base whitespace-nowrap transition-all duration-300 ${collapsed ? "w-0 opacity-0" : "w-auto opacity-100"} `}
             >
-              Contact US
+              {t.contact}
             </span>
 
             {collapsed && (
               <span className="pointer-events-none absolute top-1/2 left-full z-50 ml-2.5 -translate-y-1/2 rounded-md bg-(--color-primary) px-3 py-1.5 text-sm whitespace-nowrap text-white opacity-0 transition-all duration-200 group-hover:opacity-100">
-                Contact US
+                {t.contact}
               </span>
             )}
           </NavLink>

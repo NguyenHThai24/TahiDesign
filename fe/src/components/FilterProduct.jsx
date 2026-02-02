@@ -1,20 +1,24 @@
+import { useLanguage } from "../context/LanguageContext";
+
 // ====== CONSTANTS ======
 const CATEGORY_OPTIONS = [
-  { label: "Thiệp cưới", value: "cat_01" },
-  { label: "Thiệp sinh nhật", value: "cat_02" },
-  { label: "Bao lì xì", value: "cat_03" },
-  { label: "Danh thiếp", value: "cat_04" },
+  { value: "cat_01" },
+  { value: "cat_02" },
+  { value: "cat_03" },
+  { value: "cat_04" },
 ];
 
 const PRICE_OPTIONS = [
-  { label: "Dưới 50.000đ", value: "low" },
-  { label: "50.000đ – 200.000đ", value: "medium" },
-  { label: "200.000đ – 500.000đ", value: "high" },
-  { label: "Trên 500.000đ", value: "premium" },
+  { value: "price_low" },
+  { value: "price_medium" },
+  { value: "price_high" },
+  { value: "price_premium" },
 ];
 
 // ====== COMPONENT ======
 const FilterProduct = ({ filters, onChange }) => {
+  const { t } = useLanguage();
+
   const toggleItem = (key, value) => {
     const list = filters[key];
     onChange({
@@ -27,11 +31,12 @@ const FilterProduct = ({ filters, onChange }) => {
 
   return (
     <div className="w-full rounded-2xl bg-white p-4 text-(--color-primary) shadow-md">
-      <div className="mb-4 font-bold uppercase">Bộ lọc</div>
+      {/* Title */}
+      <div className="mb-4 font-bold uppercase">{t("filterTitle")}</div>
 
       {/* Category */}
       <div className="mb-4">
-        <div className="mb-2 font-medium">Danh mục</div>
+        <div className="mb-2 font-medium">{t("categoryTitle")}</div>
         {CATEGORY_OPTIONS.map((item) => (
           <label key={item.value} className="flex items-center gap-2 pl-4">
             <input
@@ -39,14 +44,14 @@ const FilterProduct = ({ filters, onChange }) => {
               checked={filters.categories.includes(item.value)}
               onChange={() => toggleItem("categories", item.value)}
             />
-            {item.label}
+            {t(item.value)}
           </label>
         ))}
       </div>
 
       {/* Price */}
       <div className="mb-4">
-        <div className="mb-2 font-medium">Khoảng giá</div>
+        <div className="mb-2 font-medium">{t("priceRangeTitle")}</div>
         {PRICE_OPTIONS.map((item) => (
           <label key={item.value} className="flex items-center gap-2 pl-4">
             <input
@@ -54,17 +59,17 @@ const FilterProduct = ({ filters, onChange }) => {
               checked={filters.priceRanges.includes(item.value)}
               onChange={() => toggleItem("priceRanges", item.value)}
             />
-            {item.label}
+            {t(item.value)}
           </label>
         ))}
       </div>
 
       {/* Sort */}
       <div>
-        <div className="mb-2 font-medium">Sắp xếp</div>
+        <div className="mb-2 font-medium">{t("sort")}</div>
         {[
-          { label: "Giá tăng dần", value: "asc" },
-          { label: "Giá giảm dần", value: "desc" },
+          { label: t("priceLowToHigh"), value: "asc" },
+          { label: t("priceHighToLow"), value: "desc" },
         ].map((item) => (
           <label key={item.value} className="flex items-center gap-2 pl-4">
             <input

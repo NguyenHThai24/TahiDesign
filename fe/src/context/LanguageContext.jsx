@@ -12,10 +12,14 @@ export const LanguageProvider = ({ children }) => {
     localStorage.setItem("lang", lang);
   }, [lang]);
 
+  const t = (key) => {
+    return languages?.[lang]?.[key] ?? key;
+  };
+
   const value = {
     lang,
     setLang,
-    t: languages[lang],
+    t,
   };
 
   return (
@@ -25,7 +29,6 @@ export const LanguageProvider = ({ children }) => {
   );
 };
 
-// custom hook cho gọn
 export const useLanguage = () => {
   return useContext(LanguageContext);
 };
