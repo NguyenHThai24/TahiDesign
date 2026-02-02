@@ -48,48 +48,53 @@ const Banner = () => {
 
         {/* CONTENT  */}
         <div className="flex h-full w-full flex-col items-center justify-center gap-7 text-white">
-          <h1 className="text-2xl font-bold uppercase italic">{t.about}</h1>
+          <h1 className="text-2xl font-bold uppercase italic">{t("about")}</h1>
 
           <div className="grid w-full grid-cols-3 gap-4 text-center text-lg">
             <div className="flex flex-col items-center gap-2">
               <FaBolt className="text-2xl text-(--color-primary)" />
-              <span className="font-semibold italic">{t.fastPrinting}</span>
+              <span className="font-semibold italic">{t("fastPrinting")}</span>
             </div>
 
             <div className="flex flex-col items-center gap-2">
               <FaPrint className="text-2xl text-(--color-primary)" />
               <span className="font-semibold italic">
-                {t.clearImageQuality}
+                {t("clearImageQuality")}
               </span>
             </div>
 
             <div className="flex flex-col items-center gap-2">
               <FaMoneyBillWave className="text-2xl text-(--color-primary)" />
-              <span className="font-semibold italic">{t.reasonablePrices}</span>
+              <span className="font-semibold italic">
+                {t("reasonablePrices")}
+              </span>
             </div>
 
             <div className="flex flex-col items-center gap-2">
               <FaHeadset className="text-2xl text-(--color-primary)" />
               <span className="font-semibold italic">
-                {t.dedicatedConsultation}
+                {t("dedicatedConsultation")}
               </span>
             </div>
 
             <div className="flex flex-col items-center gap-2">
               <FaLayerGroup className="text-2xl text-(--color-primary)" />
-              <span className="font-semibold italic"> {t.diverseServices}</span>
+              <span className="font-semibold italic">
+                {" "}
+                {t("diverseServices")}
+              </span>
             </div>
 
             <div className="flex flex-col items-center gap-2">
               <FaClock className="text-2xl text-(--color-primary)" />
               <span className="font-semibold italic">
-                {t.onTimeAndReliable}
+                {t("onTimeAndReliable")}
               </span>
             </div>
           </div>
 
           <Link to="/product" className="btn-primary">
-            {t.exploreMore}
+            {t("exploreMore")}
           </Link>
         </div>
       </div>

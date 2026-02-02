@@ -6,7 +6,7 @@ const Categories = ({ categories }) => {
   return (
     <section className="flex flex-col gap-5 rounded-2xl bg-(--color-secondary) p-4 text-white">
       <h1 className="text-2xl font-bold uppercase italic">
-        {t.productCatalog}
+        {t("productCatalog")}
       </h1>
 
       <div className="grid flex-1 grid-cols-1 gap-4 overflow-hidden md:grid-cols-2 lg:grid-cols-4">

@@ -75,7 +75,7 @@ const ProductPage = () => {
       <div className="relative shrink-0">
         <button
           onClick={() => setShowFilter(!showFilter)}
-          className="m-1 flex h-10 w-10 items-center justify-center rounded-full bg-white px-4 font-bold text-(--color-primary)"
+          className="m-1 flex h-12 w-12 items-center justify-center rounded-full bg-white px-4 font-bold text-(--color-primary)"
         >
           {t("filterTitle")}
         </button>

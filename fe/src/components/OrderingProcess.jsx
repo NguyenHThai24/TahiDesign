@@ -1,7 +1,10 @@
+import { useLanguage } from "../context/LanguageContext";
+
 const OrderingProcess = () => {
+  const { t } = useLanguage();
   return (
     <div className="rounded-2xl bg-(--color-primary) p-6 text-white">
-      <h2 className="mb-4 text-2xl font-bold italic">Quy trình đặt hàng</h2>
+      <h2 className="mb-4 text-2xl font-bold italic">{t("orderProcess")}</h2>
       <div className="flex flex-col gap-3">
         <p>
           <b className="text-yellow-400">Bước 1:</b> Liên hệ với chúng tôi qua

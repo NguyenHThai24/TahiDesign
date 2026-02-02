@@ -3,10 +3,11 @@ import { Link, useParams } from "react-router-dom";
 import { FiX } from "react-icons/fi";
 import productsData from "../../public/data/productsData.json";
 import OrderForm from "../components/OrderForm";
+import { useLanguage } from "../context/LanguageContext";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
-
+  const { t } = useLanguage();
   const product = productsData.find((item) => String(item.id) === String(id));
 
   const [selectedImage, setSelectedImage] = useState(product?.image || "");
@@ -93,19 +94,19 @@ const ProductDetailPage = () => {
 
               <div className="mt-auto flex flex-col gap-6 md:flex-row md:gap-6">
                 <Link to={"/contact"} className="btn-primary">
-                  Liên hệ đặt hàng
+                  {t("contactToOrder")}
                 </Link>
 
                 <button
                   className="btn-primary"
                   onClick={() => setIsOrderOpen(true)}
                 >
-                  Đặt hàng
+                  {t("orderNow")}
                 </button>
               </div>
             </div>
             <div className="shadow_black flex h-full flex-col gap-6 rounded-2xl bg-white p-8">
-              <h3 className="text-2xl font-bold">Sản phẩm khác</h3>
+              <h3 className="text-2xl font-bold">{t("otherProducts")}</h3>
             </div>
           </div>
         </div>

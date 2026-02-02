@@ -47,7 +47,7 @@ const Header = () => {
       {/* TOP BAR */}
       <div className="flex items-center justify-between">
         {/* Left */}
-        <div className="hidden text-lg md:block">{t.hello}</div>
+        <div className="hidden text-lg md:block">{t("hello")}</div>
 
         {/* Desktop Right */}
         <div className="hidden items-center gap-7 md:flex">
