@@ -1,15 +1,15 @@
 import CardItem from "./CardItem";
-import tulipIMG from "../assets/tulip-login.png";
+// import tulipIMG from "../assets/tulip-login.png";
 const ListItem = ({ products }) => {
   if (!products.length) {
     return (
-      <div className="shadow_black flex max-w-80 flex-col justify-between rounded-2xl bg-white text-center text-lg text-(--color-primary) italic">
+      <div className="shadow_black flex h-fit max-w-80 flex-col justify-between rounded-2xl bg-white text-center text-lg text-(--color-primary) italic">
         <p className="p-6">
           Chúng tôi xin lỗi vì sự bất tiện này. Hiện tại chưa có sản phẩm nào
           đáp ứng đúng tiêu chí mà quý khách đã chọn. Xin vui lòng điều chỉnh bộ
           lọc hoặc tham khảo các sản phẩm khác của cửa hàng.
         </p>
-        <img src={tulipIMG} alt="" />
+        {/* <img src={tulipIMG} alt="" /> */}
       </div>
     );
   }
