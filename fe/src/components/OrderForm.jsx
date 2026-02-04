@@ -18,80 +18,78 @@ const OrderForm = ({ id, onClose }) => {
   }, [id]);
 
   return (
-    <div className="fixed inset-0 z-999 flex items-center justify-center bg-black/40">
-      <div className="w-full max-w-xl rounded-2xl bg-white p-6 shadow-xl">
-        <div className="mb-4 flex justify-between">
-          <h2 className="text-xl font-bold">Thông tin đặt hàng</h2>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-3">
+      <div className="max-h-[95vh] w-full overflow-y-auto rounded-2xl bg-white p-4 shadow-xl sm:p-6 md:max-w-2xl">
+        {/* HEADER */}
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-lg font-bold sm:text-xl">Thông tin đặt hàng</h2>
           <button
             onClick={onClose}
-            className="rounded-full p-1 hover:bg-red-100 hover:text-red-500"
+            className="rounded-full p-2 hover:bg-red-100 hover:text-red-500"
           >
-            <FaTimes size={14} />
+            <FaTimes size={16} />
           </button>
         </div>
-        <div className="flex w-full gap-4">
-          {/* ID có sẵn */}
-          {/* <div className="w-fit">
-            <label className="font-semibold">ID Sản phẩm</label>
-            <input
-              value={id}
-              readOnly
-              className="w-full rounded bg-(--color-primary) p-2 font-bold text-white outline-0 focus:outline-0"
-            />
-          </div> */}{" "}
+
+        {/* PRODUCT INFO */}
+        <div className="mb-4 flex flex-col gap-3 sm:flex-row">
+          {/* TÊN */}
           <div className="w-full">
             <label className="font-semibold">Tên sản phẩm</label>
             <input
               value={product?.name || ""}
               readOnly
-              className="w-full rounded bg-(--color-primary) p-2 font-bold text-white outline-0"
+              className="w-full rounded bg-(--color-primary) p-2 font-bold text-white"
             />
           </div>
-          {/* giá sản phẩm*/}
-          <div className="w-fit">
+
+          {/* GIÁ */}
+          <div className="w-full sm:w-56">
             <label className="font-semibold">Giá</label>
-            <p className="flex gap-1 rounded bg-(--color-primary) p-2 font-bold text-white outline-0">
-              {product?.price ? product.price.toLocaleString("vi-VN") : ""}{" "}
+            <p className="flex h-[42px] items-center gap-1 rounded bg-(--color-primary) p-2 font-bold text-white">
+              {product?.price ? product.price.toLocaleString("vi-VN") : ""}
               <span>đ/cái</span>
             </p>
           </div>
         </div>
-        <form class="shadow_black mx-auto mt-2 max-w-xl space-y-4 rounded bg-white p-6">
-          <div className="flex w-full justify-between gap-4">
-            {/* <!-- Họ và tên --> */}
-            <div className="w-full">
-              <label class="mb-1 block font-medium">Họ và tên</label>
+
+        {/* FORM */}
+        <form className="space-y-4 rounded bg-white p-3 shadow sm:p-5">
+          {/* HỌ TÊN + SĐT */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label className="mb-1 block font-medium">Họ và tên</label>
               <input
                 type="text"
                 placeholder="Nhập họ và tên"
-                class="w-full rounded-lg border px-3 py-2"
+                className="w-full rounded-lg border px-3 py-2"
               />
             </div>
-            {/* <!-- Số điện thoại --> */}
-            <div className="w-full">
-              <label class="mb-1 block font-medium">Số điện thoại</label>
+
+            <div>
+              <label className="mb-1 block font-medium">Số điện thoại</label>
               <input
                 type="tel"
                 placeholder="Nhập số điện thoại"
-                class="w-full rounded-lg border px-3 py-2"
-              />
-            </div>
-          </div>
-          <div className="flex w-full justify-between gap-4">
-            {/* <!-- Địa chỉ --> */}
-            <div className="w-full">
-              <label class="mb-1 block font-medium">Địa chỉ</label>
-              <input
-                type="text"
-                placeholder="Nhập địa chỉ"
-                class="w-full rounded-lg border px-3 py-2"
+                className="w-full rounded-lg border px-3 py-2"
               />
             </div>
           </div>
 
-          <div className="flex w-full justify-between gap-4">
-            {/* <!-- Số lượng --> */}
-            <div className="w-fit">
+          {/* ĐỊA CHỈ */}
+          <div>
+            <label className="mb-1 block font-medium">Địa chỉ</label>
+            <input
+              type="text"
+              placeholder="Nhập địa chỉ"
+              className="w-full rounded-lg border px-3 py-2"
+            />
+          </div>
+
+          {/* SỐ LƯỢNG – TƯ VẤN – NGÀY */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {/* SỐ LƯỢNG */}
+            <div>
               <label className="mb-1 block font-medium">Số lượng</label>
               <input
                 type="number"
@@ -104,62 +102,57 @@ const OrderForm = ({ id, onClose }) => {
               />
             </div>
 
-            {/* <!-- Nhận tư vấn --> */}
-            <div className="w-fit">
-              <label class="mb-2 block font-medium">Nhận tư vấn qua</label>
-              <div class="flex gap-4">
-                <label class="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="contact"
-                    value="phone"
-                    class="accent-blue-500"
-                  />
+            {/* TƯ VẤN */}
+            <div>
+              <label className="mb-1 block font-medium">Nhận tư vấn qua</label>
+              <div className="flex gap-4">
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="contact" value="phone" />
                   SĐT
                 </label>
-                <label class="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    name="contact"
-                    value="zalo"
-                    class="accent-blue-500"
-                  />
+                <label className="flex items-center gap-2">
+                  <input type="radio" name="contact" value="zalo" />
                   Zalo
                 </label>
               </div>
             </div>
 
-            {/* <!-- Thời gian nhận hàng --> */}
-            <div className="w-full">
-              <label class="mb-1 block font-medium">Thời gian nhận hàng</label>
-              <input type="date" class="w-full rounded-lg border px-3 py-2" />
+            {/* NGÀY */}
+            <div>
+              <label className="mb-1 block font-medium">
+                Thời gian nhận hàng
+              </label>
+              <input
+                type="date"
+                className="w-full rounded-lg border px-3 py-2"
+              />
             </div>
           </div>
-          {/* <!-- Ghi chú --> */}
+
+          {/* GHI CHÚ */}
           <div>
-            <label class="mb-1 block font-medium">Ghi chú</label>
+            <label className="mb-1 block font-medium">Ghi chú</label>
             <textarea
               rows="3"
               placeholder="Nhập ghi chú thêm..."
-              class="w-full rounded-lg border px-3 py-2"
+              className="w-full rounded-lg border px-3 py-2"
             ></textarea>
           </div>
 
-          {/* <!-- Button --> */}
-          <button type="submit" className="btn-primary">
+          {/* BUTTON */}
+          <button type="submit" className="btn-primary w-full">
             Gửi thông tin
           </button>
         </form>
 
-        {/* các field khác bạn tự thêm */}
-
-        <div className="mt-4 w-full text-center">
-          <p className="">
+        {/* FOOTER */}
+        <div className="mt-4 text-center text-sm sm:text-base">
+          <p>
             Cảm ơn quý khách đã tin tưởng và đặt hàng từ chúng tôi. Chúng tôi sẽ
-            cố gắn tiếp nhận thông tin và tư vấn cho quý khách sớm nhất có thể.
+            cố gắng tiếp nhận thông tin sớm nhất.
           </p>
           <Link
-            to={"/contact"}
+            to="/contact"
             className="text-(--color-primary) italic underline"
           >
             Xem quy trình đặt hàng
