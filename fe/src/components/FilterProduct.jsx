@@ -30,7 +30,7 @@ const FilterProduct = ({ filters, onChange }) => {
   };
 
   return (
-    <div className="w-full rounded-2xl bg-white p-4 text-(--color-primary) shadow-md">
+    <div className="w-full rounded-2xl border bg-white p-4 text-(--color-primary) shadow-md">
       {/* Title */}
       <div className="mb-4 font-bold uppercase">{t("filterTitle")}</div>
 

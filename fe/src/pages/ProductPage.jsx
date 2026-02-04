@@ -70,18 +70,18 @@ const ProductPage = () => {
     });
 
   return (
-    <div className="relative flex h-full flex-col rounded-2xl bg-(--color-secondary)">
+    <div className="relative flex h-full flex-col rounded-2xl">
       {/* Header */}
       <div className="relative shrink-0">
         <button
           onClick={() => setShowFilter(!showFilter)}
-          className="m-1 flex h-12 w-12 items-center justify-center rounded-full bg-white px-4 font-bold text-(--color-primary)"
+          className="m-1 flex h-13 w-13 items-center justify-center rounded-full bg-(--color-primary) p-0.5 text-base font-bold text-white"
         >
           {t("filterTitle")}
         </button>
 
         {showFilter && (
-          <div className="absolute top-12 left-32 z-50 w-60 -translate-x-1/2">
+          <div className="absolute top-14 left-32 z-50 w-60 -translate-x-1/2">
             <FilterProduct filters={filters} onChange={setFilters} />
           </div>
         )}
