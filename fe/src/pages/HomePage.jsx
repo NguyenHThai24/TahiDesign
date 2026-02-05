@@ -22,7 +22,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="flex h-full flex-col gap-12">
+    <main className="flex h-full flex-col gap-17">
       <Banner />
 
       <Categories categories={categories} />

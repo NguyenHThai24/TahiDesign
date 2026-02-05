@@ -31,7 +31,7 @@ const Banner = () => {
   return (
     <section className="h-full">
       <div className="mx-auto flex h-full w-full flex-col gap-7 lg:flex-row lg:items-center">
-        <div className="relative h-100 w-full overflow-hidden rounded-2xl bg-white p-6">
+        <div className="relative h-100 w-full overflow-hidden bg-white p-6">
           {images.map((img, index) => (
             <img
               key={index}

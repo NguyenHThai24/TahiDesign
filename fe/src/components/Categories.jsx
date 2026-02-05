@@ -9,12 +9,12 @@ const Categories = ({ categories }) => {
         {t("productCatalog")}
       </h1>
 
-      <div className="grid flex-1 grid-cols-1 gap-4 overflow-hidden md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid flex-1 grid-cols-1 gap-7 overflow-hidden md:grid-cols-2 lg:grid-cols-4">
         {categories.map((cat) => (
           <Link
             to={`/product?category=${cat.id}`}
             key={cat.id}
-            className="group shadow_black flex h-75 w-full flex-col justify-between rounded-2xl bg-white text-(--color-primary)"
+            className="group shadow_black flex h-75 w-full flex-col justify-between rounded border border-b-0 border-(--color-primary) bg-white text-(--color-primary)"
           >
             {/* IMAGE */}
             <div className="h-full w-full overflow-hidden rounded-xl p-6">
@@ -26,7 +26,7 @@ const Categories = ({ categories }) => {
             </div>
 
             {/* TITLE */}
-            <h3 className="mx-auto flex h-12 w-[80%] items-center justify-center rounded-t-2xl bg-(--color-secondary) text-xl font-bold text-white">
+            <h3 className="mx-auto flex h-12 w-[80%] items-center justify-center rounded-t-2xl bg-white text-xl font-bold text-(--color-primary)">
               {cat.name}
             </h3>
           </Link>
