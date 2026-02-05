@@ -2,21 +2,25 @@
   {
     "id": "cat_01",
     "name": "Thiệp cưới",
+    "description": "Thiết kế và in thiệp cưới sang trọng, đa dạng mẫu mã, chất liệu cao cấp.",
     "image": "/images/categories/thiep-cuoi.png"
   },
   {
     "id": "cat_02",
     "name": "Thiệp sinh nhật",
+    "description": "Thiệp sinh nhật sáng tạo, màu sắc tươi vui, phù hợp mọi lứa tuổi.",
     "image": "/images/categories/thiep-sinh-nhat.png"
   },
   {
     "id": "cat_03",
     "name": "Bao lì xì",
+    "description": "Bao lì xì thiết kế độc quyền, in ấn sắc nét, phù hợp dịp Tết và sự kiện.",
     "image": "/images/categories/bao-li-xi.png"
   },
   {
     "id": "cat_04",
     "name": "Khác",
+    "description": "Các sản phẩm và dịch vụ in ấn – thiết kế theo yêu cầu riêng.",
     "image": "/images/categories/dich-vu.png"
   }
 ]

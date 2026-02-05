@@ -3,34 +3,50 @@ import { useLanguage } from "../context/LanguageContext";
 
 const Categories = ({ categories }) => {
   const { t } = useLanguage();
+
   return (
-    <section className="mx-4 flex flex-col gap-5 py-12 text-(--color-primary)">
-      <h1 className="title text-center text-3xl font-bold uppercase italic">
+    <section className="mx-auto flex max-w-6xl flex-col gap-2 text-(--color-primary)">
+      {/* <h1 className="title text-center text-3xl font-bold uppercase italic">
         {t("productCatalog")}
-      </h1>
+      </h1> */}
 
-      <div className="grid flex-1 grid-cols-1 gap-7 overflow-hidden md:grid-cols-2 lg:grid-cols-4">
-        {categories.map((cat) => (
-          <Link
-            to={`/product?category=${cat.id}`}
-            key={cat.id}
-            className="group shadow_black flex h-75 w-full flex-col justify-between rounded border border-b-0 border-(--color-primary) bg-white text-(--color-primary)"
-          >
-            {/* IMAGE */}
-            <div className="h-full w-full overflow-hidden rounded-xl p-6">
-              <img
-                src={cat.image}
-                alt={cat.name}
-                className="h-full w-full object-contain group-hover:animate-[wobble_0.6s_ease-in-out]"
-              />
-            </div>
+      <div className="flex flex-col gap-2">
+        {categories.map((cat, index) => {
+          const isReverse = index % 2 === 1;
 
-            {/* TITLE */}
-            <h3 className="mx-auto flex h-12 w-[80%] items-center justify-center rounded-t-2xl bg-white text-xl font-bold text-(--color-primary)">
-              {cat.name}
-            </h3>
-          </Link>
-        ))}
+          return (
+            <Link
+              to={`/product?category=${cat.id}`}
+              key={cat.id}
+              className="group grid overflow-hidden border bg-white transition-all hover:shadow-xl lg:grid-cols-2"
+            >
+              {/* IMAGE */}
+              <div
+                className={`flex items-center justify-center p-10 ${
+                  isReverse ? "lg:order-2" : "lg:order-1"
+                }`}
+              >
+                <img
+                  src={cat.image}
+                  alt={cat.name}
+                  className="h-60 w-full object-contain transition-all duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              {/* TEXT */}
+              <div
+                className={`flex flex-col items-center justify-center gap-7 bg-(--color-secondary) p-10 text-center text-white ${
+                  isReverse ? "lg:order-1" : "lg:order-2"
+                }`}
+              >
+                <h3 className="text-3xl font-bold">{cat.name}</h3>
+                <p className="text-white">{cat.description}</p>
+
+                <span className="btn-primary">{t("viewMore")}</span>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

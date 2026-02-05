@@ -66,6 +66,7 @@ const vi = {
 
   // ===== NOTFOUND PAGE =====
   backToHome: "Về trang chủ",
+  viewMore: "Xem thêm",
 };
 
 export default vi;

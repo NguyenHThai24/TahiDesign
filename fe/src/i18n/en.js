@@ -66,6 +66,7 @@ const en = {
 
   // ===== NOTFOUND PAGE =====
   backToHome: "Back to home",
+  viewMore: "View more",
 };
 
 export default en;

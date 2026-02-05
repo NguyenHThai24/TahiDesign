@@ -11,7 +11,7 @@ import {
 const AboutMe = () => {
   const { t } = useLanguage();
   return (
-    <div className="flex h-full w-full flex-col items-center justify-between gap-17 bg-(--color-primary) px-4 py-12 text-white">
+    <div className="flex h-full w-full flex-col items-center justify-between gap-17 px-4 py-12 text-(--color-primary)">
       <h1 className="title text-3xl font-bold uppercase italic">
         {t("about")}
       </h1>
