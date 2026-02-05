@@ -29,7 +29,7 @@ const Banner = () => {
     return () => clearInterval(timer);
   }, []);
   return (
-    <section className="h-full rounded-2xl bg-(--color-secondary) p-4">
+    <section className="h-full bg-(--color-secondary) p-4">
       <div className="mx-auto flex h-full w-full flex-col gap-7 lg:flex-row lg:items-center">
         <div className="relative h-100 w-full overflow-hidden rounded-2xl bg-white p-6">
           {images.map((img, index) => (
