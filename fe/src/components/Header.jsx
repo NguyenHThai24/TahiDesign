@@ -213,7 +213,7 @@ const Header = () => {
       <div className="lg:hidden">
         <div className="flex items-center justify-between px-4 py-4">
           {/* Mobile Logo */}
-          <Link to="/" className="title text-xl font-bold text-white">
+          <Link to="/" className="title text-2xl font-bold text-white">
             TAHI DESIGN
           </Link>
 
