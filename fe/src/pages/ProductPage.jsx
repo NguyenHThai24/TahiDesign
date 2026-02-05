@@ -75,13 +75,13 @@ const ProductPage = () => {
       <div className="relative shrink-0">
         <button
           onClick={() => setShowFilter(!showFilter)}
-          className="m-1 flex h-13 w-13 items-center justify-center rounded-full bg-(--color-primary) p-0.5 text-base font-bold text-white md:hidden"
+          className="fixed top-12 left-2 z-50 flex h-12 w-12 items-center justify-center rounded-full border-2 border-(--color-primary) bg-white font-bold text-(--color-primary) shadow-lg md:hidden"
         >
           {t("filterTitle")}
         </button>
 
         <div
-          className={` ${showFilter ? "block" : "hidden"} absolute top-14 left-32 z-50 w-60 -translate-x-1/2 md:static md:block md:translate-x-0`}
+          className={`fixed right-0 bottom-0 left-0 z-50 w-full transition-transform duration-300 ease-in-out md:static md:translate-y-0 md:rounded-none md:shadow-none ${showFilter ? "translate-y-0" : "translate-y-full"} `}
         >
           <FilterProduct filters={filters} onChange={setFilters} />
         </div>
