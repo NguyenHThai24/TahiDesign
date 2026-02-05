@@ -88,7 +88,7 @@ const ProductPage = () => {
       </div>
 
       {/* List Wrapper */}
-      <div className="my-2 flex flex-1 justify-center overflow-y-auto scroll-smooth">
+      <div className="my-7 flex flex-1 justify-center overflow-y-auto scroll-smooth">
         <ListItem products={filteredProducts} />
       </div>
     </div>

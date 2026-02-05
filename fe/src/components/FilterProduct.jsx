@@ -30,7 +30,7 @@ const FilterProduct = ({ filters, onChange }) => {
   };
 
   return (
-    <div className="w-full rounded-t-2xl border-t-6 border-amber-500 bg-white px-8 py-4 text-(--color-primary) shadow-md">
+    <div className="w-full rounded-t-2xl rounded-b-2xl border-t-6 border-r border-b-6 border-l bg-white px-8 py-4 text-(--color-primary) shadow-md">
       {/* Category */}
       <div className="mb-4">
         <div className="mb-2 font-medium">{t("categoryTitle")}</div>

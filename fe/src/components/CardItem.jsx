@@ -4,7 +4,7 @@ const CardItem = ({ product }) => {
   return (
     <Link
       to={`/product/${product.id}`}
-      className="group flex h-74 w-62.5 cursor-pointer flex-col items-center justify-between rounded-2xl bg-(--color-primary)"
+      className="group flex max-h-74 max-w-62.5 cursor-pointer flex-col items-center justify-between rounded-2xl bg-(--color-primary)"
     >
       <div className="w-full p-2">
         <div className="shadow_black h-50 w-full rounded-2xl bg-white p-4">
