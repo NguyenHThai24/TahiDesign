@@ -1,23 +1,24 @@
-import { useRef, useState } from "react";
-
+import { useRef, useState, useEffect } from "react";
+import { NavLink, Link } from "react-router-dom";
 import flagVN from "../assets/flag-vn.png";
 import flagUK from "../assets/flag-uk.png";
 import { useLanguage } from "../context/LanguageContext";
 import { FaCalendarDays } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
-
 import { SiZalo } from "react-icons/si";
 import { getLunarDate } from "../utils/lunar";
 import CalendarModal from "./CalendarModal";
+import { TiHome, TiThList } from "react-icons/ti";
+import { MdPermPhoneMsg, MdHomeRepairService } from "react-icons/md";
+
 const Header = () => {
   const { lang, setLang, t } = useLanguage();
   const currentLang = lang?.toLowerCase() || "vi";
   const [mobileOpen, setMobileOpen] = useState(false);
   const [calendarOpen, setCalendarOpen] = useState(false);
-
-  const selectRef = useRef(null);
-
   const [open, setOpen] = useState(false);
+  const selectRef = useRef(null);
+  const mobileMenuRef = useRef(null);
 
   const today = new Date();
   const formattedDate = today.toLocaleDateString("vi-VN", {
@@ -42,61 +43,131 @@ const Header = () => {
     },
   };
 
+  const menuItems = [
+    { path: "/", label: t("home"), icon: TiHome },
+    { path: "/product", label: t("product"), icon: TiThList },
+    { path: "/service", label: t("service"), icon: MdHomeRepairService },
+    { path: "/contact", label: t("contact"), icon: MdPermPhoneMsg },
+  ];
+
+  const navLinkClasses = (isActive) =>
+    `flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
+      isActive
+        ? "bg-white text-(--color-primary) font-bold shadow-md"
+        : "text-white hover:bg-white/20"
+    }`;
+
+  // Close language dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (selectRef.current && !selectRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [mobileOpen]);
+
+  const handleMobileLinkClick = () => {
+    // Navigation links will not close the menu - only the X button will
+    // We're intentionally NOT calling setMobileOpen(false) here
+  };
+
+  const handleLanguageChange = (key) => {
+    setLang(key);
+    setOpen(false);
+    // Don't close mobile menu when changing language
+  };
+
   return (
     <header className="relative w-full">
-      {/* TOP BAR */}
-      <div className="flex items-center justify-between">
-        {/* Left */}
-        <div className="hidden text-lg md:block">{t("hello")}</div>
-
-        {/* Desktop Right */}
-        <div className="hidden items-center gap-7 md:flex">
-          {/* Social */}
-          <div className="flex items-center gap-3">
-            <a className="social-btn">
-              <SiZalo size={18} />
-            </a>
-            <a className="social-btn">
-              <FaFacebookF size={16} />
-            </a>
-            <a className="social-btn">
-              <FaInstagram size={18} />
-            </a>
+      {/* Desktop Header */}
+      <div className="hidden lg:block">
+        {/* Top Row - Logo and Right Section */}
+        <div className="flex h-16 items-center justify-between px-6">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link
+              to="/"
+              className="title text-4xl font-bold tracking-wider text-white hover:text-white/90"
+            >
+              TAHI DESIGN
+            </Link>
           </div>
 
-          {/* Date */}
-          <div
-            className="flex h-9 cursor-pointer items-center gap-2 rounded-full bg-white px-6 font-bold text-(--color-primary) italic"
-            onClick={() => setCalendarOpen(true)}
-          >
-            <span className="pt-1 text-[0.9rem]">
-              {formattedDate}
-              <span className="mx-1 text-sm font-normal text-gray-500">
-                ({lunarText})
+          {/* Right Section - Social, Date, Language */}
+          <div className="flex items-center gap-4">
+            {/* Social */}
+            <div className="flex items-center gap-3">
+              <a className="social-btn group hover:bg-(--color-primary)">
+                <SiZalo
+                  size={18}
+                  className="text-(--color-primary) group-hover:text-white"
+                />
+              </a>
+
+              <a className="social-btn group hover:bg-(--color-primary)">
+                <FaFacebookF
+                  size={16}
+                  className="text-(--color-primary) group-hover:text-white"
+                />
+              </a>
+
+              <a className="social-btn group hover:bg-(--color-primary)">
+                <FaInstagram
+                  size={18}
+                  className="text-(--color-primary) group-hover:text-white"
+                />
+              </a>
+            </div>
+
+            {/* Date */}
+            <div
+              className="flex h-9 min-w-45 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-4 font-bold text-(--color-primary) italic"
+              onClick={() => setCalendarOpen(true)}
+            >
+              <span className="pt-1 text-sm">
+                {formattedDate}
+                <span className="mx-1 text-xs font-normal text-gray-500">
+                  ({lunarText})
+                </span>
               </span>
-            </span>
-            <FaCalendarDays />
-          </div>
+              <FaCalendarDays />
+            </div>
 
-          {/* Language */}
-          <div
-            className="relative flex h-9 w-40 cursor-pointer items-center gap-2"
-            onClick={() => selectRef.current?.click()}
-          >
-            <div className="relative h-full w-full">
+            {/* Language */}
+            <div className="relative w-40" ref={selectRef}>
               <button
                 onClick={() => setOpen(!open)}
-                className="flex h-full w-full items-center gap-2 rounded-full border bg-white px-4 py-1 text-(--color-primary)"
+                className="flex h-9 w-full items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1 text-white backdrop-blur-sm hover:bg-white/20"
               >
                 <img
                   src={languageConfig[currentLang].flag}
                   className="h-4 w-5"
+                  alt="flag"
                 />
-                <span>{languageConfig[currentLang].label}</span>
+                <span className="flex-1 text-left text-sm">
+                  {languageConfig[currentLang].label}
+                </span>
               </button>
 
               {open && (
-                <div className="absolute right-0 mt-2 w-full rounded-xl border bg-white shadow-lg">
+                <div className="absolute right-0 z-50 mt-2 w-full rounded-xl border border-white/20 bg-(--color-primary) shadow-lg backdrop-blur-md">
                   {Object.entries(languageConfig).map(([key, value]) => (
                     <div
                       key={key}
@@ -104,10 +175,10 @@ const Header = () => {
                         setLang(key);
                         setOpen(false);
                       }}
-                      className="flex cursor-pointer items-center gap-2 px-4 py-2 text-(--color-primary) hover:rounded-xl hover:bg-(--color-secondary) hover:text-white"
+                      className="flex cursor-pointer items-center gap-2 px-4 py-2 text-white first:rounded-t-xl last:rounded-b-xl hover:bg-white/20"
                     >
-                      <img src={value.flag} className="h-4 w-5" />
-                      <span>{value.label}</span>
+                      <img src={value.flag} className="h-4 w-5" alt="flag" />
+                      <span className="text-sm">{value.label}</span>
                     </div>
                   ))}
                 </div>
@@ -116,88 +187,156 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
-        </button>
+        {/* Bottom Row - Navigation */}
+        <div className="flex h-16 items-center justify-center border-t border-white/20">
+          <nav className="flex items-center gap-2">
+            {menuItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) => navLinkClasses(isActive)}
+                >
+                  <Icon size={20} />
+                  <span className="text-sm font-medium">{item.label}</span>
+                </NavLink>
+              );
+            })}
+          </nav>
+        </div>
       </div>
 
-      {/* MOBILE DROPDOWN */}
-      {mobileOpen && (
-        <div className="absolute top-full right-0 z-50 mt-3 w-full rounded-2xl bg-white p-4 shadow-xl md:hidden">
-          {/* Hello */}
-          <div className="mb-4 text-center text-lg font-semibold text-(--color-primary)">
-            {t.hello}
-          </div>
+      {/* Mobile Header */}
+      <div className="lg:hidden">
+        <div className="flex items-center justify-between px-4 py-4">
+          {/* Mobile Logo */}
+          <Link to="/" className="title text-xl font-bold text-white">
+            TAHI DESIGN
+          </Link>
 
-          {/* Divider (optional) */}
-          <div className="mb-4 h-px bg-gray-200" />
+          {/* Mobile Menu Button */}
+          <button className="p-2" onClick={() => setMobileOpen(!mobileOpen)}>
+            {mobileOpen ? (
+              <FaTimes size={24} className="text-white" />
+            ) : (
+              <FaBars size={24} className="text-white" />
+            )}
+          </button>
+        </div>
 
-          {/* Social */}
-          <div className="mb-4 flex justify-center gap-4">
-            <a className="social-btn border">
-              <SiZalo size={18} />
-            </a>
-            <a className="social-btn border">
-              <FaFacebookF size={16} />
-            </a>
-            <a className="social-btn border">
-              <FaInstagram size={18} />
-            </a>
-          </div>
-
-          {/* Date */}
+        {/* Mobile Menu Overlay */}
+        <div
+          className={`fixed inset-0 top-0 z-50 lg:hidden ${
+            mobileOpen
+              ? "visible opacity-100"
+              : "pointer-events-none invisible opacity-0"
+          }`}
+        >
+          {/* Backdrop */}
           <div
-            className="mb-4 flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-(--color-secondary) px-2 py-2 font-bold text-white"
-            onClick={() => setCalendarOpen(true)}
-          >
-            <FaCalendarDays />
-            <span className="text-sm">
-              {formattedDate} ({lunarText})
-            </span>
-          </div>
+            className={`absolute inset-0 bg-black transition-all duration-300 ${
+              mobileOpen ? "opacity-50" : "opacity-0"
+            }`}
+            onClick={() => setMobileOpen(false)}
+          />
 
-          {/* Language */}
+          {/* Mobile Menu Content - Slides from bottom */}
           <div
-            className="relative mx-auto flex h-9 w-40 cursor-pointer items-center justify-center gap-2"
-            onClick={() => selectRef.current?.click()}
+            ref={mobileMenuRef}
+            className={`absolute top-16 right-0 bottom-0 left-0 transform overflow-y-auto bg-(--color-primary) shadow-xl transition-all duration-300 ${
+              mobileOpen ? "translate-y-0" : "translate-y-full"
+            }`}
           >
-            <div className="relative h-full w-full">
-              <button
-                onClick={() => setOpen(!open)}
-                className="flex h-full w-full items-center gap-2 rounded-full border bg-white px-4 py-1 text-(--color-primary)"
+            {/* Navigation Links */}
+            <div className="flex flex-col border-b border-white/20 p-4">
+              {menuItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    onClick={handleMobileLinkClick}
+                    className={({ isActive }) =>
+                      `mb-2 flex items-center gap-3 rounded-lg px-4 py-3 last:mb-0 ${
+                        isActive
+                          ? "bg-white font-bold text-(--color-primary)"
+                          : "text-white hover:bg-white/10"
+                      }`
+                    }
+                  >
+                    <Icon size={22} />
+                    <span className="text-base">{item.label}</span>
+                  </NavLink>
+                );
+              })}
+            </div>
+
+            {/* Social, Date, Language */}
+            <div className="p-4">
+              {/* Social */}
+              <div className="mb-4 flex justify-center gap-4">
+                <a className="rounded-full bg-white/20 p-3">
+                  <SiZalo size={20} className="text-white" />
+                </a>
+                <a className="rounded-full bg-white/20 p-3 hover:bg-white/30">
+                  <FaFacebookF size={18} className="text-white" />
+                </a>
+                <a className="rounded-full bg-white/20 p-3 hover:bg-white/30">
+                  <FaInstagram size={20} className="text-white" />
+                </a>
+              </div>
+
+              {/* Date */}
+              <div
+                className="mb-4 flex cursor-pointer items-center justify-center gap-2 rounded-xl bg-white/10 p-3 text-white"
+                onClick={() => {
+                  setCalendarOpen(true);
+                }}
               >
-                <img
-                  src={languageConfig[currentLang].flag}
-                  className="h-4 w-5"
-                />
-                <span>{languageConfig[currentLang].label}</span>
-              </button>
+                <FaCalendarDays />
+                <span className="text-sm">
+                  {formattedDate} ({lunarText})
+                </span>
+              </div>
 
-              {open && (
-                <div className="absolute right-0 mt-2 w-full rounded-xl border bg-white shadow-lg">
-                  {Object.entries(languageConfig).map(([key, value]) => (
-                    <div
-                      key={key}
-                      onClick={() => {
-                        setLang(key);
-                        setOpen(false);
-                      }}
-                      className="flex cursor-pointer items-center gap-2 px-4 py-2 text-(--color-primary) hover:rounded-xl hover:bg-(--color-secondary) hover:text-white"
-                    >
-                      <img src={value.flag} className="h-4 w-5" />
-                      <span>{value.label}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
+              {/* Language */}
+              <div className="relative" ref={selectRef}>
+                <button
+                  onClick={() => setOpen(!open)}
+                  className="flex h-12 w-full items-center gap-3 rounded-xl border border-white/30 bg-white/10 px-4 text-white"
+                >
+                  <img
+                    src={languageConfig[currentLang].flag}
+                    className="h-5 w-6"
+                    alt="flag"
+                  />
+                  <span className="flex-1 text-left">
+                    {languageConfig[currentLang].label}
+                  </span>
+                </button>
+
+                {open && (
+                  <div className="absolute top-full mt-2 w-full rounded-xl border border-white/20 bg-(--color-primary) shadow-lg backdrop-blur-md">
+                    {Object.entries(languageConfig).map(([key, value]) => (
+                      <div
+                        key={key}
+                        onClick={() => handleLanguageChange(key)}
+                        className="flex cursor-pointer items-center gap-3 px-4 py-3 text-white first:rounded-t-xl last:rounded-b-xl hover:bg-white/20"
+                      >
+                        <img src={value.flag} className="h-5 w-6" alt="flag" />
+                        <span>{value.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
+
+      {/* Calendar Modal */}
       {calendarOpen && <CalendarModal onClose={() => setCalendarOpen(false)} />}
     </header>
   );
