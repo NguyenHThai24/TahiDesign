@@ -27,7 +27,7 @@ const AboutMe = () => {
         {t("about")}
       </h1>
 
-      <div className="grid w-full grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-x-10 gap-y-5 md:grid-cols-2 md:gap-y-10 lg:grid-cols-3 lg:gap-y-16">
         {features.map((item, index) => {
           const Icon = item.icon;
 
