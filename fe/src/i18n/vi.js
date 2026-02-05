@@ -28,7 +28,7 @@ const vi = {
   other: "Khác",
 
   // ===== PRODUCT FILTER =====
-  filterTitle: "Bộ lọc",
+  filterTitle: "Lọc",
   categoryTitle: "Danh mục",
   priceRangeTitle: "Khoảng giá",
   sort: "Sắp xếp",

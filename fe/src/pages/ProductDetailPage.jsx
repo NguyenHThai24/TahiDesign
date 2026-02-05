@@ -89,7 +89,7 @@ const ProductDetailPage = () => {
               </div>
 
               <p className="text-xl font-bold text-red-600 md:text-2xl">
-                {product.price.toLocaleString("vi-VN")} đ
+                {product?.price?.toLocaleString("vi-VN")} đ
               </p>
 
               <div className="mt-auto flex flex-col gap-6 md:flex-row md:gap-6">
