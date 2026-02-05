@@ -244,7 +244,7 @@ const Header = () => {
           {/* Mobile Menu Content - Slides from bottom */}
           <div
             ref={mobileMenuRef}
-            className={`absolute top-16 right-0 bottom-0 left-0 transform overflow-y-auto bg-(--color-primary) shadow-xl transition-all duration-300 ${
+            className={`absolute top-19 right-4 bottom-0 h-full w-fit transform overflow-y-auto rounded-2xl bg-(--color-primary) shadow-xl transition-all duration-300 ${
               mobileOpen ? "translate-y-0" : "translate-y-full"
             }`}
           >
@@ -258,7 +258,7 @@ const Header = () => {
                     to={item.path}
                     onClick={handleMobileLinkClick}
                     className={({ isActive }) =>
-                      `mb-2 flex items-center gap-3 rounded-lg px-4 py-3 last:mb-0 ${
+                      `mb-2 flex items-center gap-3 rounded-full px-4 py-2 last:mb-0 ${
                         isActive
                           ? "bg-white font-bold text-(--color-primary)"
                           : "text-white hover:bg-white/10"
