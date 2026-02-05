@@ -12,7 +12,7 @@ const vi = {
   // ===== HOME BANNER =====
   about: "Về chúng tôi",
   fastPrinting: "In nhanh",
-  clearImageQuality: "Chất lượng in rõ nét",
+  clearImageQuality: "Chất lượng rõ nét",
   reasonablePrices: "Giá cả hợp lý",
   dedicatedConsultation: "Tư vấn tận tâm",
   diverseServices: "Dịch vụ đa dạng",

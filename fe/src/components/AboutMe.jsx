@@ -27,26 +27,26 @@ const AboutMe = () => {
         {t("about")}
       </h1>
 
-      <div className="mx-1 grid w-full grid-cols-2 gap-x-3 gap-y-5 md:grid-cols-2 md:gap-x-10 md:gap-y-10 lg:grid-cols-3 lg:gap-y-16">
+      <div className="mx-2 grid w-full grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-2 md:grid-cols-3 md:gap-x-8 md:gap-y-10 lg:grid-cols-3 lg:gap-y-14 xl:grid-cols-4">
         {features.map((item, index) => {
           const Icon = item.icon;
 
           return (
             <div
               key={index}
-              className="relative mx-auto w-fit min-w-48 rounded-2xl bg-(--color-primary) p-4 text-center text-white transition"
+              className="relative w-full rounded-2xl bg-(--color-primary) p-4 text-center text-white transition hover:-translate-y-1 hover:shadow-xl"
             >
               {/* BRACKET TOP LEFT */}
-              <div className="absolute top-2 left-2 h-10 w-10 rounded-tl-xl border-t-4 border-l-4 border-white" />
+              <div className="absolute top-2 left-2 h-8 w-8 rounded-tl-lg border-t-4 border-l-4 border-white md:h-10 md:w-10" />
 
               {/* BRACKET BOTTOM RIGHT */}
-              <div className="absolute right-2 bottom-2 h-10 w-10 rounded-br-xl border-r-4 border-b-4 border-white" />
+              <div className="absolute right-2 bottom-2 h-8 w-8 rounded-br-lg border-r-4 border-b-4 border-white md:h-10 md:w-10" />
 
-              <div className="mb-4 flex justify-center">
-                <Icon className="text-3xl" />
+              <div className="mb-3 flex justify-center">
+                <Icon className="text-2xl md:text-3xl" />
               </div>
 
-              <h3 className="mb-2 text-lg font-semibold italic">
+              <h3 className="text-sm font-semibold italic md:text-lg">
                 {item.label}
               </h3>
             </div>
