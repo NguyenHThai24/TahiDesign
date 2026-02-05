@@ -10,7 +10,7 @@ function MainLayout() {
           <Header />
         </div>
 
-        <div className="my-1">
+        <div className="">
           <Outlet />
         </div>
         <Footer />
