@@ -4,7 +4,7 @@ import mayIn from "../assets/muc-may-in.jpg";
 
 const ServicePage = () => {
   return (
-    <section className="flex h-full flex-col gap-4 overflow-y-auto rounded-2xl p-4 sm:p-6">
+    <section className="flex h-full flex-col gap-4 overflow-y-auto rounded-2xl pt-12">
       {/* HEADER */}
       <div className="">
         <h3 className="title mb-4 text-center text-4xl font-bold text-(--color-primary)">
