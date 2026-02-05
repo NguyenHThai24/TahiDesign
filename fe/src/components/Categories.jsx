@@ -10,7 +10,7 @@ const Categories = ({ categories }) => {
         {t("productCatalog")}
       </h1> */}
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col">
         {categories.map((cat, index) => {
           const isReverse = index % 2 === 1;
 
