@@ -81,14 +81,14 @@ const ProductPage = () => {
         </button>
 
         <div
-          className={`fixed right-0 bottom-0 left-0 z-50 w-full pt-2 transition-transform duration-300 ease-in-out md:static md:translate-y-0 md:rounded-none md:shadow-none ${showFilter ? "translate-y-0" : "translate-y-full"} `}
+          className={`fixed right-0 bottom-0 left-0 z-50 w-full py-2 transition-transform duration-300 ease-in-out md:static md:translate-y-0 md:rounded-none md:shadow-none ${showFilter ? "translate-y-0" : "translate-y-full"} `}
         >
           <FilterProduct filters={filters} onChange={setFilters} />
         </div>
       </div>
 
       {/* List Wrapper */}
-      <div className="my-7 flex flex-1 justify-center overflow-y-auto scroll-smooth">
+      <div className="mx-2 my-7 flex flex-1 justify-center overflow-y-auto scroll-smooth">
         <ListItem products={filteredProducts} />
       </div>
     </div>
