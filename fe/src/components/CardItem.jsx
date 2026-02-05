@@ -20,7 +20,7 @@ const CardItem = ({ product }) => {
         </h3>
       </div>
 
-      <p className="h-7 w-40 rounded-t-2xl bg-white text-center font-bold text-red-700">
+      <p className="h-7 max-w-50 rounded-t-xl bg-white px-2 py-1 text-center font-bold text-red-700">
         {product?.price?.toLocaleString("vi-VN")} đ/cái
       </p>
     </Link>
