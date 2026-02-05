@@ -4,16 +4,12 @@ import mayIn from "../assets/muc-may-in.jpg";
 
 const ServicePage = () => {
   return (
-    <section className="flex h-full flex-col gap-4 overflow-y-auto rounded-2xl pt-12">
+    <section className="flex h-full flex-col gap-4 overflow-y-auto rounded-2xl py-4">
       {/* HEADER */}
       <div className="">
         <h3 className="title mb-4 text-center text-4xl font-bold text-(--color-primary)">
           Dịch vụ khác
         </h3>
-        {/* <p className="text-base">
-          Ngoài thiết kế in ấn bán sản phẩm, chúng tôi còn làm các dịch vụ khác
-          như chụp hình thẻ, photocopy, nạp mực máy in,...
-        </p> */}
       </div>
 
       {/* SERVICES */}

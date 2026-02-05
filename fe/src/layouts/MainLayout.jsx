@@ -9,7 +9,7 @@ function MainLayout() {
           <Header />
         </div>
 
-        <div className="mx-2 mb-4 md:mx-2 lg:mx-4">
+        <div className="mx-2 my-2 md:mx-2 lg:mx-4">
           <Outlet />
         </div>
       </main>
