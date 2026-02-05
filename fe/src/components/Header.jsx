@@ -244,7 +244,7 @@ const Header = () => {
           {/* Mobile Menu Content - Slides from bottom */}
           <div
             ref={mobileMenuRef}
-            className={`absolute top-19 right-4 bottom-0 h-full w-fit transform overflow-y-auto rounded-2xl bg-(--color-primary) shadow-xl transition-all duration-300 ${
+            className={`absolute top-19 right-0 bottom-0 h-full w-fit transform overflow-y-auto bg-(--color-primary) shadow-xl transition-all duration-300 ${
               mobileOpen ? "translate-y-0" : "translate-y-full"
             }`}
           >
