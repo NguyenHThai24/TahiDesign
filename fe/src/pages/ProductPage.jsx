@@ -70,7 +70,7 @@ const ProductPage = () => {
     });
 
   return (
-    <div className="relative flex h-full">
+    <div className="relative mx-4 flex h-full">
       {/* Header */}
       <div className="relative shrink-0">
         <button

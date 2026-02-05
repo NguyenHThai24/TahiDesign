@@ -6,7 +6,7 @@ const ContactPage = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="mb-4 h-full w-full py-4 text-(--color-primary)">
+    <section className="my-4 h-full w-full px-4 text-(--color-primary)">
       {/* TITLE */}
       <div className="mb-7 text-center">
         <h1 className="title mb-4 text-4xl font-bold">{t("contact")}</h1>
@@ -14,7 +14,7 @@ const ContactPage = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-7 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <OrderingProcess />
         {/* LEFT – INFO */}
         <div className="flex flex-col gap-6">

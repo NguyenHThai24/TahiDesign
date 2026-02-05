@@ -23,10 +23,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="flex h-full flex-col">
+    <main className="flex h-full flex-col gap-4">
       <Banner />
-      <AboutMe />
       <Categories categories={categories} />
+      <AboutMe />
     </main>
   );
 };
