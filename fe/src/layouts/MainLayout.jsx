@@ -9,7 +9,7 @@ function MainLayout() {
           <Header />
         </div>
 
-        <div className="my-2">
+        <div className="my-1">
           <Outlet />
         </div>
       </main>

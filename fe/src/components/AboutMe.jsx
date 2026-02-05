@@ -8,46 +8,50 @@ import {
   FaLayerGroup,
   FaClock,
 } from "react-icons/fa";
+
 const AboutMe = () => {
   const { t } = useLanguage();
+
+  const features = [
+    { icon: FaBolt, label: t("fastPrinting") },
+    { icon: FaPrint, label: t("clearImageQuality") },
+    { icon: FaMoneyBillWave, label: t("reasonablePrices") },
+    { icon: FaHeadset, label: t("dedicatedConsultation") },
+    { icon: FaLayerGroup, label: t("diverseServices") },
+    { icon: FaClock, label: t("onTimeAndReliable") },
+  ];
+
   return (
-    <div className="flex h-full w-full flex-col items-center justify-between gap-17 px-4 py-12 text-(--color-primary)">
+    <div className="mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-between gap-17 px-4 py-12 text-(--color-primary)">
       <h1 className="title text-3xl font-bold uppercase italic">
         {t("about")}
       </h1>
 
-      <div className="grid w-full grid-cols-3 gap-17 text-center text-lg">
-        <div className="flex flex-col items-center gap-2">
-          <FaBolt className="text-2xl text-yellow-400" />
-          <span className="font-semibold italic">{t("fastPrinting")}</span>
-        </div>
+      <div className="grid w-full grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 lg:grid-cols-3">
+        {features.map((item, index) => {
+          const Icon = item.icon;
 
-        <div className="flex flex-col items-center gap-2">
-          <FaPrint className="text-2xl text-yellow-400" />
-          <span className="font-semibold italic">{t("clearImageQuality")}</span>
-        </div>
+          return (
+            <div
+              key={index}
+              className="relative mx-auto w-fit min-w-40 p-4 text-left transition"
+            >
+              {/* BRACKET TOP LEFT */}
+              <div className="absolute -top-2 -left-2 h-10 w-10 rounded-tl-xl border-t-4 border-l-4 border-(--color-primary)" />
 
-        <div className="flex flex-col items-center gap-2">
-          <FaMoneyBillWave className="text-2xl text-yellow-400" />
-          <span className="font-semibold italic">{t("reasonablePrices")}</span>
-        </div>
+              {/* BRACKET BOTTOM RIGHT */}
+              <div className="absolute -right-2 -bottom-2 h-10 w-10 rounded-br-xl border-r-4 border-b-4 border-(--color-primary)" />
 
-        <div className="flex flex-col items-center gap-2">
-          <FaHeadset className="text-2xl text-yellow-400" />
-          <span className="font-semibold italic">
-            {t("dedicatedConsultation")}
-          </span>
-        </div>
+              <div className="mb-4 flex justify-start">
+                <Icon className="text-3xl text-(--color-primary)" />
+              </div>
 
-        <div className="flex flex-col items-center gap-2">
-          <FaLayerGroup className="text-2xl text-yellow-400" />
-          <span className="font-semibold italic">{t("diverseServices")}</span>
-        </div>
-
-        <div className="flex flex-col items-center gap-2">
-          <FaClock className="text-2xl text-yellow-400" />
-          <span className="font-semibold italic">{t("onTimeAndReliable")}</span>
-        </div>
+              <h3 className="mb-2 text-lg font-semibold italic">
+                {item.label}
+              </h3>
+            </div>
+          );
+        })}
       </div>
 
       <Link to="/product" className="btn-primary">
