@@ -27,23 +27,23 @@ const AboutMe = () => {
         {t("about")}
       </h1>
 
-      <div className="grid w-full grid-cols-2 gap-x-10 gap-y-20 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 lg:grid-cols-3">
         {features.map((item, index) => {
           const Icon = item.icon;
 
           return (
             <div
               key={index}
-              className="relative mx-auto w-fit min-w-40 p-4 text-left transition"
+              className="relative mx-auto w-fit min-w-48 rounded-2xl bg-(--color-primary) p-4 text-center text-white transition"
             >
               {/* BRACKET TOP LEFT */}
-              <div className="absolute -top-2 -left-2 h-10 w-10 rounded-tl-xl border-t-4 border-l-4 border-(--color-primary)" />
+              <div className="absolute top-2 left-2 h-10 w-10 rounded-tl-xl border-t-4 border-l-4 border-white" />
 
               {/* BRACKET BOTTOM RIGHT */}
-              <div className="absolute -right-2 -bottom-2 h-10 w-10 rounded-br-xl border-r-4 border-b-4 border-(--color-primary)" />
+              <div className="absolute right-2 bottom-2 h-10 w-10 rounded-br-xl border-r-4 border-b-4 border-white" />
 
-              <div className="mb-4 flex justify-start">
-                <Icon className="text-3xl text-(--color-primary)" />
+              <div className="mb-4 flex justify-center">
+                <Icon className="text-3xl" />
               </div>
 
               <h3 className="mb-2 text-lg font-semibold italic">
