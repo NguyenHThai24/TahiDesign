@@ -29,7 +29,7 @@ const Banner = () => {
     return () => clearInterval(timer);
   }, []);
   return (
-    <section className="h-full bg-(--color-secondary) p-4">
+    <section className="h-full">
       <div className="mx-auto flex h-full w-full flex-col gap-7 lg:flex-row lg:items-center">
         <div className="relative h-100 w-full overflow-hidden rounded-2xl bg-white p-6">
           {images.map((img, index) => (
@@ -37,7 +37,7 @@ const Banner = () => {
               key={index}
               src={img}
               alt=""
-              className={`absolute inset-0 h-full w-full rounded-xl object-contain transition-all duration-3000 ease-in-out ${
+              className={`absolute inset-0 h-full w-full rounded-xl object-fill transition-all duration-3000 ease-in-out ${
                 index === current
                   ? "scale-110 opacity-100"
                   : "scale-100 opacity-0"
@@ -47,8 +47,10 @@ const Banner = () => {
         </div>
 
         {/* CONTENT  */}
-        <div className="flex h-full w-full flex-col items-center justify-center gap-7 text-white">
-          <h1 className="text-2xl font-bold uppercase italic">{t("about")}</h1>
+        <div className="flex h-full w-full flex-col items-center justify-evenly gap-7 text-(--color-primary)">
+          <h1 className="title text-3xl font-bold uppercase italic">
+            {t("about")}
+          </h1>
 
           <div className="grid w-full grid-cols-3 gap-4 text-center text-lg">
             <div className="flex flex-col items-center gap-2">

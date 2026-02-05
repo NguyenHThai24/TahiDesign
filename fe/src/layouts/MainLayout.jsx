@@ -10,7 +10,7 @@ function MainLayout() {
           <Header />
         </div>
 
-        <div className="mx-2 flex-1 overflow-y-auto">
+        <div className="mx-2 mb-4 flex-1 overflow-y-auto">
           <Outlet />
         </div>
       </main>

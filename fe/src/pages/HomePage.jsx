@@ -22,14 +22,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="flex h-full flex-col gap-4">
-      <div className="">
-        <Banner />
-      </div>
+    <main className="flex h-full flex-col gap-12">
+      <Banner />
 
-      <div className="">
-        <Categories categories={categories} />
-      </div>
+      <Categories categories={categories} />
     </main>
   );
 };
