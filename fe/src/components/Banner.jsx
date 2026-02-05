@@ -80,7 +80,6 @@ const Banner = () => {
             <div className="flex flex-col items-center gap-2">
               <FaLayerGroup className="text-2xl text-(--color-primary)" />
               <span className="font-semibold italic">
-                {" "}
                 {t("diverseServices")}
               </span>
             </div>

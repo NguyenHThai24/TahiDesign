@@ -51,7 +51,7 @@ const Header = () => {
   ];
 
   const navLinkClasses = (isActive) =>
-    `flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
+    `flex items-center gap-2 px-4 py-1.5 rounded-full transition-all duration-300 ${
       isActive
         ? "bg-white text-(--color-primary) font-bold shadow-md"
         : "text-white hover:bg-white/20"
@@ -199,7 +199,7 @@ const Header = () => {
                   className={({ isActive }) => navLinkClasses(isActive)}
                 >
                   <Icon size={20} />
-                  <span className="text-sm font-medium">{item.label}</span>
+                  <span className="pt-0.5 text-base">{item.label}</span>
                 </NavLink>
               );
             })}
