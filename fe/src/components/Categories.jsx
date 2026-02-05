@@ -4,7 +4,7 @@ import { useLanguage } from "../context/LanguageContext";
 const Categories = ({ categories }) => {
   const { t } = useLanguage();
   return (
-    <section className="flex flex-col gap-5 text-(--color-primary)">
+    <section className="flex flex-col gap-5 py-12 text-(--color-primary)">
       <h1 className="title text-center text-3xl font-bold uppercase italic">
         {t("productCatalog")}
       </h1>

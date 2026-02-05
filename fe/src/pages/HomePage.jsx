@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import Categories from "../components/Categories";
+import AboutMe from "../components/AboutMe";
 
 const HomePage = () => {
   const [categories, setCategories] = useState([]);
@@ -22,9 +23,9 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="flex h-full flex-col gap-17">
+    <main className="flex h-full flex-col">
       <Banner />
-
+      <AboutMe />
       <Categories categories={categories} />
     </main>
   );
