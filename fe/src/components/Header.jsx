@@ -151,40 +151,35 @@ const Header = () => {
             </div>
 
             {/* Language */}
-            <div
-              className="relative flex h-9 w-40 cursor-pointer items-center gap-2"
-              onClick={() => selectRef.current?.click()}
-            >
-              <div className="relative h-full w-full">
-                <button
-                  onClick={() => setOpen(!open)}
-                  className="flex h-full w-full items-center gap-2 rounded-full border bg-white px-4 py-1 text-(--color-primary)"
-                >
-                  <img
-                    src={languageConfig[currentLang].flag}
-                    className="h-4 w-5"
-                  />
-                  <span>{languageConfig[currentLang].label}</span>
-                </button>
+            <div className="relative" ref={selectRef}>
+              <button
+                onClick={() => setOpen(!open)}
+                className="flex h-9 w-full items-center gap-3 rounded-full border border-white bg-white px-4 text-(--color-primary)"
+              >
+                <img
+                  src={languageConfig[currentLang].flag}
+                  className="h-5 w-6"
+                  alt="flag"
+                />
+                <span className="flex-1 text-left">
+                  {languageConfig[currentLang].label}
+                </span>
+              </button>
 
-                {open && (
-                  <div className="absolute right-0 mt-2 w-full rounded-xl border bg-white shadow-lg">
-                    {Object.entries(languageConfig).map(([key, value]) => (
-                      <div
-                        key={key}
-                        onClick={() => {
-                          setLang(key);
-                          setOpen(false);
-                        }}
-                        className="flex cursor-pointer items-center gap-2 px-4 py-2 text-(--color-primary) hover:rounded-xl hover:bg-(--color-secondary) hover:text-white"
-                      >
-                        <img src={value.flag} className="h-4 w-5" />
-                        <span>{value.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+              {open && (
+                <div className="absolute top-full mt-2 w-full rounded-xl border border-white/20 bg-(--color-primary) shadow-lg backdrop-blur-md">
+                  {Object.entries(languageConfig).map(([key, value]) => (
+                    <div
+                      key={key}
+                      onClick={() => handleLanguageChange(key)}
+                      className="flex cursor-pointer items-center gap-3 px-4 py-3 text-white first:rounded-t-xl last:rounded-b-xl hover:bg-white/20"
+                    >
+                      <img src={value.flag} className="h-5 w-6" alt="flag" />
+                      <span>{value.label}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
