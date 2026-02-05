@@ -70,7 +70,7 @@ const ProductPage = () => {
     });
 
   return (
-    <div className="relative mx-2 flex h-screen md:mx-4">
+    <div className="relative mx-2 flex h-full md:mx-4">
       {/* Header */}
       <div className="relative shrink-0">
         <button
@@ -81,7 +81,7 @@ const ProductPage = () => {
         </button>
 
         <div
-          className={`fixed right-0 bottom-0 left-0 z-50 w-full transition-transform duration-300 ease-in-out md:static md:translate-y-0 md:rounded-none md:shadow-none ${showFilter ? "translate-y-0" : "translate-y-full"} `}
+          className={`fixed right-0 bottom-0 left-0 z-50 w-full pt-2 transition-transform duration-300 ease-in-out md:static md:translate-y-0 md:rounded-none md:shadow-none ${showFilter ? "translate-y-0" : "translate-y-full"} `}
         >
           <FilterProduct filters={filters} onChange={setFilters} />
         </div>

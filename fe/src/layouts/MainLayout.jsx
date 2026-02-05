@@ -4,18 +4,18 @@ import Footer from "../components/Footer1";
 
 function MainLayout() {
   return (
-    <div className="flex h-screen bg-(--color-surface)">
-      <main className="w-full overflow-y-auto text-(--color-text)">
-        <div className="sticky top-0 z-20 flex items-center bg-(--color-primary) px-5 text-white">
-          <Header />
-        </div>
+    <main className="flex min-h-screen w-full flex-col text-(--color-text)">
+      <div className="sticky top-0 z-20 flex items-center bg-(--color-primary) px-5 text-white">
+        <Header />
+      </div>
 
-        <div className="">
-          <Outlet />
-        </div>
-        <Footer />
-      </main>
-    </div>
+      {/* CONTENT */}
+      <div className="flex-1">
+        <Outlet />
+      </div>
+
+      <Footer />
+    </main>
   );
 }
 

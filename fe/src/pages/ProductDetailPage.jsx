@@ -30,10 +30,10 @@ const ProductDetailPage = () => {
 
   return (
     <>
-      <div className="flex h-full flex-1 flex-col gap-4 overflow-hidden rounded-2xl bg-(--color-secondary) p-4 md:p-6 lg:flex-row">
-        <div className="flex min-h-0 flex-1 flex-col gap-6 overflow-hidden overflow-y-auto lg:flex-row">
+      <div className="flex h-full flex-1 flex-col gap-4 overflow-hidden rounded-2xl p-4 md:p-6 lg:flex-row">
+        <div className="mx-auto flex min-h-0 max-w-6xl flex-1 flex-col gap-6 overflow-hidden overflow-y-auto lg:flex-row">
           {/* IMAGE SECTION */}
-          <div className="shadow_black flex h-full flex-1 flex-col gap-4 rounded-2xl bg-white p-6">
+          <div className="flex h-fit flex-1 flex-col gap-4">
             {/* Main Image */}
             <div
               onClick={() => setIsZoomOpen(true)}
@@ -45,33 +45,10 @@ const ProductDetailPage = () => {
                 className="max-h-full max-w-full object-contain transition duration-300 hover:scale-105"
               />
             </div>
-
-            {/* Thumbnails */}
-            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-              {[product.image, product.image1, product.image2, product.image3]
-                .filter(Boolean)
-                .map((img, index) => (
-                  <div
-                    key={index}
-                    onClick={() => setSelectedImage(img)}
-                    className={`cursor-pointer rounded-xl border-2 p-2 ${
-                      selectedImage === img
-                        ? "border-(--color-primary)"
-                        : "border-transparent"
-                    } bg-(--color-secondary)`}
-                  >
-                    <img
-                      src={img}
-                      alt=""
-                      className="h-16 w-full object-contain md:h-20"
-                    />
-                  </div>
-                ))}
-            </div>
           </div>
           <div className="flex flex-1 flex-col gap-4">
             {/* INFO SECTION */}
-            <div className="shadow_black flex flex-col gap-6 rounded-2xl bg-white p-8">
+            <div className="flex flex-col gap-6 rounded-2xl border bg-white p-8 shadow">
               <h1 className="text-xl font-bold italic md:text-3xl">
                 {product.name}
               </h1>
@@ -105,8 +82,27 @@ const ProductDetailPage = () => {
                 </button>
               </div>
             </div>
-            <div className="shadow_black flex h-full flex-col gap-6 rounded-2xl bg-white p-8">
-              <h3 className="text-2xl font-bold">{t("otherProducts")}</h3>
+            {/* Thumbnails */}
+            <div className="grid h-fit grid-cols-2 gap-3 md:grid-cols-4">
+              {[product.image, product.image1, product.image2, product.image3]
+                .filter(Boolean)
+                .map((img, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setSelectedImage(img)}
+                    className={`cursor-pointer rounded-xl border-2 p-2 ${
+                      selectedImage === img
+                        ? "border-(--color-primary)"
+                        : "border-transparent"
+                    } bg-(--color-secondary)`}
+                  >
+                    <img
+                      src={img}
+                      alt=""
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                ))}
             </div>
           </div>
         </div>

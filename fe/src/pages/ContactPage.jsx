@@ -6,7 +6,7 @@ const ContactPage = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="my-4 h-screen w-full px-4 text-(--color-primary)">
+    <section className="my-4 h-full w-full px-4 text-(--color-primary)">
       {/* TITLE */}
       <div className="mb-7 text-center">
         <h1 className="title mb-4 text-4xl font-bold">{t("contact")}</h1>
