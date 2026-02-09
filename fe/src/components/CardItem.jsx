@@ -11,7 +11,7 @@ const CardItem = ({ product }) => {
           <img
             src={product?.image}
             alt={product?.name}
-            className="h-full w-full group-hover:animate-[wobble_0.7s_ease-in-out]"
+            className="h-full w-full object-contain group-hover:animate-[wobble_0.7s_ease-in-out]"
           />
         </div>
 

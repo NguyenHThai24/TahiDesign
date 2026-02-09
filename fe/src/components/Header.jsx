@@ -17,8 +17,9 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [calendarOpen, setCalendarOpen] = useState(false);
   const [open, setOpen] = useState(false);
-  const selectRef = useRef(null);
-  const mobileMenuRef = useRef(null);
+
+  const desktopLangRef = useRef(null);
+  const mobileLangRef = useRef(null);
 
   const today = new Date();
   const formattedDate = today.toLocaleDateString("vi-VN", {
@@ -60,7 +61,12 @@ const Header = () => {
   // Close language dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (selectRef.current && !selectRef.current.contains(event.target)) {
+      if (
+        desktopLangRef.current &&
+        !desktopLangRef.current.contains(event.target) &&
+        mobileLangRef.current &&
+        !mobileLangRef.current.contains(event.target)
+      ) {
         setOpen(false);
       }
     };
@@ -151,10 +157,10 @@ const Header = () => {
             </div>
 
             {/* Language */}
-            <div className="relative" ref={selectRef}>
+            <div className="relative" ref={desktopLangRef}>
               <button
                 onClick={() => setOpen(!open)}
-                className="flex h-9 w-full items-center gap-3 rounded-full border border-white bg-white px-4 text-(--color-primary)"
+                className="flex h-9 w-40 items-center gap-3 rounded-full border border-white bg-white px-4 text-(--color-primary)"
               >
                 <img
                   src={languageConfig[currentLang].flag}
@@ -240,7 +246,7 @@ const Header = () => {
 
           {/* Mobile Menu Content - Slides from bottom */}
           <div
-            ref={mobileMenuRef}
+            ref={mobileLangRef}
             className={`absolute top-19 right-0 bottom-0 h-full w-fit transform overflow-y-auto bg-(--color-primary) shadow-xl transition-all duration-300 ${
               mobileOpen ? "translate-y-0" : "translate-y-full"
             }`}
@@ -298,7 +304,7 @@ const Header = () => {
               </div>
 
               {/* Language */}
-              <div className="relative" ref={selectRef}>
+              <div className="relative" ref={mobileLangRef}>
                 <button
                   onClick={() => setOpen(!open)}
                   className="flex h-12 w-full items-center gap-3 rounded-xl border border-white/30 bg-white/10 px-4 text-white"
