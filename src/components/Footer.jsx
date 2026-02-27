@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM */}
-        <div className="mt-8 bg-(--color-primary) py-2 text-center text-sm text-white">
+        <div className="mt-8 bg-[#6f984d] py-2 text-center text-sm text-white">
           © 2026 Tahi Design. All rights reserved.
         </div>
       </div>

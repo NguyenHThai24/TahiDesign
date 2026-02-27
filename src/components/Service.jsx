@@ -35,7 +35,7 @@ const Service = ({ title }) => {
       {/* Content */}
       <div className="mx-auto mt-12 grid max-w-6xl items-center gap-8 md:grid-cols-2">
         {/* Left */}
-        <div className="w-full justify-self-end rounded border bg-white p-6">
+        <div className="w-full justify-self-end rounded border border-gray-200 bg-[radial-gradient(circle_at_top_right,#dff1d8_0%,#ffffff_30%)] p-6">
           <ul className="space-y-4">
             {servicesLeft.map((item, index) => (
               <li key={index} className="flex items-center gap-3">
@@ -47,7 +47,7 @@ const Service = ({ title }) => {
         </div>
 
         {/* Right */}
-        <div className="w-full justify-self-start rounded border bg-white p-6">
+        <div className="w-full justify-self-start rounded border border-gray-200 bg-[radial-gradient(circle_at_bottom_right,#dff1d8_0%,#ffffff_30%)] p-6">
           <ul className="space-y-4">
             {servicesRight.map((item, index) => (
               <li key={index} className="flex items-center gap-3">

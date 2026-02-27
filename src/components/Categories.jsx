@@ -27,10 +27,10 @@ const Categories = ({ title }) => {
             key={item.id}
             className="group relative w-full text-center sm:w-[45%] md:w-[30%]"
           >
-            <div className="rounded-lg bg-gray-100 px-6 pt-30 pb-7 transition hover:shadow-lg">
+            <div className="rounded-lg bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-6 pt-30 pb-7 transition">
               {/* Image */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[50%]">
-                <div className="h-52 w-52 overflow-hidden rounded-full border-4 border-gray-200 bg-white p-5 shadow">
+                <div className="h-52 w-52 overflow-hidden rounded-full border-4 border-gray-200 bg-white p-5 shadow hover:shadow-lg">
                   <img
                     src={item.image}
                     alt={item.name}

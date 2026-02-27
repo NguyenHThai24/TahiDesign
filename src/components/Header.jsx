@@ -51,7 +51,11 @@ const Header = () => {
           <a
             href="https://facebook.com"
             target="_blank"
-            className="hover-gold flex h-10 w-10 items-center justify-center rounded border text-lg text-blue-600 transition"
+            className="hover-gold flex h-10 w-10 items-center justify-center rounded-full border text-lg text-blue-600 transition"
+            style={{
+              boxShadow:
+                "inset 2px 2px 6px rgba(37, 99, 235, 0.4), inset -2px -2px 6px rgba(147, 197, 253, 0.6)",
+            }}
           >
             <span className="font-extrabold">FB</span>
           </a>
@@ -59,7 +63,13 @@ const Header = () => {
           <a
             href="https://zalo.me"
             target="_blank"
-            className="hover-gold flex h-10 w-10 items-center justify-center rounded border text-lg text-blue-500 transition"
+            className="hover-gold flex h-10 w-10 items-center justify-center rounded-full border text-lg text-blue-500 transition"
+            style={{
+              boxShadow: `
+                inset 2px 2px 6px rgba(59, 130, 246, 0.25),
+                inset -2px -2px 6px rgba(219, 234, 254, 0.9)
+              `,
+            }}
           >
             <span className="font-extrabold">ZL</span>
           </a>
@@ -67,7 +77,13 @@ const Header = () => {
           <a
             href="https://instagram.com"
             target="_blank"
-            className="hover-gold flex h-10 w-10 items-center justify-center rounded border text-lg text-pink-600 transition"
+            className="hover-gold flex h-10 w-10 items-center justify-center rounded-full border text-lg text-pink-600 transition"
+            style={{
+              boxShadow: `
+                inset 2px 2px 6px rgba(236, 72, 153, 0.3),
+                inset -2px -2px 6px rgba(252, 231, 243, 0.9)
+              `,
+            }}
           >
             <span className="font-extrabold">IG</span>
           </a>
