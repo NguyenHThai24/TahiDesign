@@ -2,6 +2,9 @@ import { useState } from "react";
 import logoImg from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
 
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { SiZalo } from "react-icons/si";
+
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -34,8 +37,8 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="">
-              <NavLink to="/tin-tuc" className={navLinkClass}>
-                <span className="">Tin tức</span>
+              <NavLink to="/bo-suu-tap" className={navLinkClass}>
+                <span className="">Bộ sưu tập</span>
               </NavLink>
             </li>
             <li className="">
@@ -49,43 +52,22 @@ const Header = () => {
         {/* SOCIAL */}
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="https://facebook.com"
-            target="_blank"
-            className="hover-gold flex h-10 w-10 items-center justify-center rounded-full border text-lg text-blue-600 transition"
-            style={{
-              boxShadow:
-                "inset 2px 2px 6px rgba(37, 99, 235, 0.4), inset -2px -2px 6px rgba(147, 197, 253, 0.6)",
-            }}
+            href="#"
+            className="rounded-full bg-white p-2 shadow-lg shadow-blue-600 transition hover:scale-110"
           >
-            <span className="font-extrabold">FB</span>
+            <FaFacebookF />
           </a>
-
           <a
-            href="https://zalo.me"
-            target="_blank"
-            className="hover-gold flex h-10 w-10 items-center justify-center rounded-full border text-lg text-blue-500 transition"
-            style={{
-              boxShadow: `
-                inset 2px 2px 6px rgba(59, 130, 246, 0.25),
-                inset -2px -2px 6px rgba(219, 234, 254, 0.9)
-              `,
-            }}
+            href="#"
+            className="rounded-full bg-white p-2 shadow-lg shadow-fuchsia-600 transition hover:scale-110"
           >
-            <span className="font-extrabold">ZL</span>
+            <FaInstagram />
           </a>
-
           <a
-            href="https://instagram.com"
-            target="_blank"
-            className="hover-gold flex h-10 w-10 items-center justify-center rounded-full border text-lg text-pink-600 transition"
-            style={{
-              boxShadow: `
-                inset 2px 2px 6px rgba(236, 72, 153, 0.3),
-                inset -2px -2px 6px rgba(252, 231, 243, 0.9)
-              `,
-            }}
+            href="#"
+            className="rounded-full bg-white p-2 shadow-lg shadow-blue-500 transition hover:scale-110"
           >
-            <span className="font-extrabold">IG</span>
+            <SiZalo />
           </a>
         </div>
 
@@ -125,11 +107,11 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/tin-tuc"
+                to="/bo-suu-tap"
                 className={navLinkClass}
                 onClick={() => setOpen(false)}
               >
-                Tin tức
+                Bộ sưu tập
               </NavLink>
             </li>
             <li>

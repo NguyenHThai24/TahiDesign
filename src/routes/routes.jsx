@@ -4,7 +4,8 @@ import MainLayout from "../layouts/MainLayout";
 
 // lazy load pages
 const HomePage = lazy(() => import("../pages/HomePage"));
-const AboutPage = lazy(() => import("../pages/AboutPage"));
+const ProductPage = lazy(() => import("../pages/ProductPage"));
+const ContactPage = lazy(() => import("../pages/ContactPage"));
 const AlbumPage = lazy(() => import("../pages/AlbumPage"));
 
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
@@ -19,12 +20,17 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
+        path: "san-pham",
+        element: <ProductPage />,
+      },
+      {
         path: "bo-suu-tap",
         element: <AlbumPage />,
       },
+
       {
-        path: "gioi-thieu",
-        element: <AboutPage />,
+        path: "lien-he",
+        element: <ContactPage />,
       },
 
       {
