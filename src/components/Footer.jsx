@@ -7,7 +7,7 @@ import logoImg from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-blue-100">
+    <footer className="border-t border-blue-100 bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)]">
       <div className="mx-auto pt-10">
         {/* TOP */}
         <div className="grid grid-cols-1 gap-8 px-7 md:grid-cols-3">
