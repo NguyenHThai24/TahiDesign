@@ -8,9 +8,9 @@ const HomePage = () => {
   return (
     <>
       <Banner />
-      <Categories title="Danh mục sản phẩm" />
-      <Service title="Dịch vụ" />
-      <OrderingProcess title="Quy trình mua hàng" />
+      <Categories />
+      <Service />
+      <OrderingProcess />
     </>
   );
 };

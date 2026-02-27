@@ -34,13 +34,15 @@ const steps = [
   },
 ];
 
-const OrderingProcess = ({ title }) => {
+const OrderingProcess = () => {
   return (
-    <section className="my-14">
+    <section className="my-16">
       {/* Title */}
       <h3 className="text-center text-2xl font-bold uppercase">
-        {title}
-        <span className="mx-auto mt-1 block h-0.75 w-42 rounded-full bg-black"></span>
+        <span className="bg-linear-to-r from-(--color-primary) to-black bg-clip-text text-transparent">
+          Quy trình mua hàng
+        </span>
+        <span className="mx-auto mt-2 block h-1 w-42 rounded-full bg-linear-to-r from-black to-(--color-primary)"></span>{" "}
       </h3>
 
       {/* Steps */}
@@ -57,10 +59,12 @@ const OrderingProcess = ({ title }) => {
             <p className="font-semibold">{step.title}</p>
 
             {/* Short desc */}
-            <p className="text-lg font-bold text-black">{step.desc}</p>
+            <p className="text-lg font-bold text-(--color-primary)">
+              {step.desc}
+            </p>
 
             {/* Detail */}
-            <p className="mt-4 text-base leading-relaxed text-gray-700">
+            <p className="mt-4 text-base leading-relaxed text-gray-900">
               {step.detail}
             </p>
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Categories = ({ title }) => {
+const Categories = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -14,9 +14,12 @@ const Categories = ({ title }) => {
   return (
     <section className="my-16 px-4">
       {/* Title */}
+
       <h3 className="mb-36 text-center text-2xl font-bold uppercase">
-        {title}
-        <span className="mx-auto mt-1 block h-0.5 w-40 rounded-full bg-black"></span>
+        <span className="bg-linear-to-r from-(--color-primary) to-black bg-clip-text text-transparent">
+          Danh mục sản phẩm
+        </span>
+        <span className="mx-auto mt-2 block h-1 w-42 rounded-full bg-linear-to-r from-black to-(--color-primary)"></span>{" "}
       </h3>
 
       {/* List */}
@@ -32,7 +35,7 @@ const Categories = ({ title }) => {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[50%]">
                 <div className="relative h-52 w-52 rounded-full bg-white p-5 shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-4 ring-white transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.25)]">
                   {/* Light effect */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/70 via-transparent to-black/10"></div>
+                  <div className="absolute inset-0 rounded-full bg-linear-to-br from-white/70 via-transparent to-black/10"></div>
 
                   <img
                     src={item.image}

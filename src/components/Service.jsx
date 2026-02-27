@@ -23,13 +23,15 @@ const servicesRight = [
   { icon: <FaPaintBrush />, text: "Thiết kế theo yêu cầu" },
 ];
 
-const Service = ({ title }) => {
+const Service = () => {
   return (
     <section className="my-16 px-4">
       {/* Title */}
-      <h3 className="relative mx-auto inline-block w-full text-center text-2xl font-bold tracking-wide uppercase">
-        {title}
-        <span className="mx-auto mt-1 block h-0.5 w-16 rounded-full bg-black"></span>
+      <h3 className="text-center text-2xl font-bold uppercase">
+        <span className="bg-linear-to-r from-black to-(--color-primary) bg-clip-text text-transparent">
+          Dịch vụ
+        </span>
+        <span className="mx-auto mt-2 block h-1 w-20 rounded-full bg-linear-to-r from-(--color-primary) to-black"></span>{" "}
       </h3>
 
       {/* Content */}
