@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "/images/categori/thiep-cuoi.png",
+    "name": "Thiệp cưới",
+    "description": "Lời mời trân trọng cho ngày trọng đại, thể hiện sự gắn kết và hạnh phúc của đôi uyên ương."
+  },
+  {
+    "id": 2,
+    "image": "/images/categori/thiep-sinh-nhat.png",
+    "name": "Thiệp sinh nhật",
+    "description": "Gửi gắm những lời chúc ý nghĩa và niềm vui đến người thân yêu trong ngày đặc biệt."
+  },
+  {
+    "id": 3,
+    "image": "/images/categori/bao-li-xi.png",
+    "name": "Bao lì xì",
+    "description": "Biểu tượng của may mắn và tài lộc, trao gửi những điều tốt đẹp trong dịp năm mới."
+  },
+  {
+    "id": 4,
+    "image": "/images/categori/bao-li-xi.png",
+    "name": "Lịch",
+    "description": "Không chỉ để xem ngày tháng, mà còn là món quà trang trí mang ý nghĩa khởi đầu mới."
+  },
+  {
+    "id": 5,
+    "image": "/images/categori/bao-li-xi.png",
+    "name": "Danh mục 5",
+    "description": "Sản phẩm độc đáo, mang thông điệp riêng giúp bạn thể hiện cảm xúc một cách tinh tế."
+  }
+]

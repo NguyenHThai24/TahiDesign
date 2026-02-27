@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --color-primary: #11b62d;
+  --color-secondary: #c6e10214;
+
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .hover-gold {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+  }
+
+  .hover-gold::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #11b62d;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: -1;
+  }
+
+  .hover-gold:hover::before {
+    transform: scaleX(1);
+  }
+
+  .hover-gold:hover {
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .container-limit {
+    max-width: 1280px; /* hoặc 1440px tuỳ bạn */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

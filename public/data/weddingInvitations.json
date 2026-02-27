@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Thiệp cưới hoa hồng pastel",
+    "price": 12000,
+    "images": [
+      "/images/wedding/wedding1.jpg",
+      "/images/wedding/wedding1.1.jpg",
+      "/images/wedding/wedding1.2.jpg",
+      "/images/wedding/wedding1.3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Thiệp cưới tối giản sang trọng",
+    "price": 10000,
+    "images": [
+      "/images/wedding/wedding2.jpg",
+      "/images/wedding/wedding2.1.jpg",
+      "/images/wedding/wedding2.2.jpg",
+      "/images/wedding/wedding2.3.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Thiệp cưới vintage cổ điển",
+    "price": 15000,
+    "images": [
+      "/images/wedding/wedding3.jpg",
+      "/images/wedding/wedding3.1.jpg",
+      "/images/wedding/wedding3.2.jpg",
+      "/images/wedding/wedding3.3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Thiệp cưới hiện đại màu xanh",
+    "price": 11000,
+    "images": [
+      "/images/wedding/wedding4.jpg",
+      "/images/wedding/wedding4.1.jpg",
+      "/images/wedding/wedding4.2.jpg",
+      "/images/wedding/wedding4.3.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Thiệp cưới ép kim cao cấp",
+    "price": 20000,
+    "images": [
+      "/images/wedding/wedding5.jpg",
+      "/images/wedding/wedding5.1.jpg",
+      "/images/wedding/wedding5.2.jpg",
+      "/images/wedding/wedding5.3.jpg"
+    ]
+  }
+]
