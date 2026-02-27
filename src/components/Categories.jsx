@@ -30,11 +30,14 @@ const Categories = ({ title }) => {
             <div className="rounded-lg bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-6 pt-30 pb-7 transition">
               {/* Image */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[50%]">
-                <div className="h-52 w-52 overflow-hidden rounded-full border-4 border-gray-200 bg-white p-5 shadow hover:shadow-lg">
+                <div className="relative h-52 w-52 rounded-full bg-white p-5 shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-4 ring-white transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.25)]">
+                  {/* Light effect */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/70 via-transparent to-black/10"></div>
+
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="h-full w-full object-contain transition duration-300"
+                    className="relative h-full w-full object-contain"
                   />
                 </div>
               </div>
