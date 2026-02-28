@@ -23,7 +23,7 @@ const Categories = () => {
       </h3>
 
       {/* List */}
-      <div className="mx-auto flex flex-wrap justify-center gap-x-12 gap-y-36">
+      <div className="mx-auto flex flex-wrap justify-center gap-x-7 gap-y-323">
         {categories.map((item) => (
           <Link
             to="/"
