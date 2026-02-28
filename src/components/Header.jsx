@@ -16,7 +16,7 @@ const Header = () => {
     } hover:italic`;
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-white">
+    <header className="fixed top-0 left-0 z-50 w-full bg-white shadow">
       <div className="container-limit flex h-16 items-center justify-between">
         {/* LOGO */}
         <div className="flex items-center">

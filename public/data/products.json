@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "categoryId": 1,
+    "name": "Thiệp cưới hoa hồng pastel",
+    "price": 12000,
+    "images": [
+      "/images/wedding/wedding1.jpg",
+      "/images/wedding/wedding1.1.jpg",
+      "/images/wedding/wedding1.2.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "categoryId": 1,
+    "name": "Thiệp cưới tối giản sang trọng",
+    "price": 10000,
+    "images": [
+      "/images/wedding/wedding2.jpg",
+      "/images/wedding/wedding2.1.jpg",
+      "/images/wedding/wedding2.2.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "categoryId": 1,
+    "name": "Thiệp cưới vintage cổ điển",
+    "price": 15000,
+    "images": [
+      "/images/wedding/wedding3.jpg",
+      "/images/wedding/wedding3.1.jpg",
+      "/images/wedding/wedding3.2.jpg"
+    ]
+  },
+
+  {
+    "id": 101,
+    "categoryId": 2,
+    "name": "Thiệp sinh nhật dễ thương",
+    "price": 8000,
+    "images": [
+      "/images/birthday/birthday1.jpg",
+      "/images/birthday/birthday1.1.jpg"
+    ]
+  },
+  {
+    "id": 102,
+    "categoryId": 2,
+    "name": "Thiệp sinh nhật tối giản",
+    "price": 9000,
+    "images": [
+      "/images/birthday/birthday2.jpg",
+      "/images/birthday/birthday2.1.jpg"
+    ]
+  },
+
+  {
+    "id": 201,
+    "categoryId": 3,
+    "name": "Bao lì xì truyền thống đỏ vàng",
+    "price": 5000,
+    "images": ["/images/lixi/lixi1.jpg", "/images/lixi/lixi1.1.jpg"]
+  },
+  {
+    "id": 202,
+    "categoryId": 3,
+    "name": "Bao lì xì hiện đại tối giản",
+    "price": 6000,
+    "images": ["/images/lixi/lixi2.jpg", "/images/lixi/lixi2.1.jpg"]
+  },
+
+  {
+    "id": 301,
+    "categoryId": 4,
+    "name": "Lịch để bàn phong cảnh",
+    "price": 25000,
+    "images": [
+      "/images/calendar/calendar1.jpg",
+      "/images/calendar/calendar1.1.jpg"
+    ]
+  },
+  {
+    "id": 302,
+    "categoryId": 4,
+    "name": "Lịch để bàn tối giản",
+    "price": 22000,
+    "images": [
+      "/images/calendar/calendar2.jpg",
+      "/images/calendar/calendar2.1.jpg"
+    ]
+  }
+]

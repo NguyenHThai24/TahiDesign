@@ -19,11 +19,11 @@ const Categories = () => {
         <span className="bg-linear-to-r from-(--color-primary) to-black bg-clip-text text-transparent">
           Danh mục sản phẩm
         </span>
-        <span className="mx-auto mt-2 block h-1 w-42 rounded-full bg-linear-to-r from-black to-(--color-primary)"></span>{" "}
+        <span className="mx-auto mt-2 block h-1 w-42 rounded-full bg-linear-to-r from-black to-(--color-primary)"></span>
       </h3>
 
       {/* List */}
-      <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-x-12 gap-y-36">
+      <div className="mx-auto flex flex-wrap justify-center gap-x-12 gap-y-36">
         {categories.map((item) => (
           <Link
             to="/"
