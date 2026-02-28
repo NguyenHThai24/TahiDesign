@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import img1 from "../assets/banner.jpg";
 import img2 from "../assets/banner1.jpg";
 import img3 from "../assets/banner.png";
+import { Link } from "react-router-dom";
 
 const images = [img1, img2, img3];
 const Banner = () => {
@@ -31,7 +32,10 @@ const Banner = () => {
           </p>
 
           <div className="flex items-center gap-4">
-            <button className="hover-gold relative cursor-pointer overflow-hidden rounded-full bg-linear-to-br from-[#7ed957] via-[#52c234] to-[#38b000] font-semibold text-white">
+            <Link
+              to={"/san-pham"}
+              className="hover-gold relative cursor-pointer overflow-hidden rounded-full bg-linear-to-br from-[#7ed957] via-[#52c234] to-[#38b000] font-semibold text-white"
+            >
               {/* Soft shine */}
               <span className="absolute inset-0 rounded-full bg-linear-to-t from-white/10 via-white/20 to-transparent opacity-60"></span>
 
@@ -39,7 +43,7 @@ const Banner = () => {
               <span className="absolute -inset-1 rounded-full bg-white/20 opacity-0 blur-xl transition-opacity duration-300 hover:opacity-40"></span>
 
               <span className="relative z-10">Xem sản phẩm</span>
-            </button>
+            </Link>
           </div>
         </div>
 

@@ -11,7 +11,7 @@ const Header = () => {
   const navLinkClass = ({ isActive }) =>
     `relative transition ${
       isActive
-        ? "text-(--color-primary) font-bold"
+        ? "text-white border bg-(--color-primary) px-4 py-1 rounded-full font-bold"
         : "border-transparent text-black"
     } hover:italic`;
 
