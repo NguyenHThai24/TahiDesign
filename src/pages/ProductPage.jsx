@@ -32,7 +32,7 @@ const ProductPage = () => {
             onClick={() => setActiveCate(item.id)}
             className={`rounded-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-5 py-2 text-sm font-semibold uppercase transition-all duration-300 ${
               activeCate === item.id
-                ? "text-(--color-primary) shadow-lg shadow-green-300"
+                ? "text-(--color-primary) shadow-lg shadow-green-200"
                 : ""
             }`}
           >

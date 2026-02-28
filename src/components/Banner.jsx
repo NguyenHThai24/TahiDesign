@@ -45,7 +45,7 @@ const Banner = () => {
 
         {/* RIGHT IMAGE */}
         <div className="relative flex items-center justify-center">
-          <div className="relative flex h-60 w-60 items-center justify-center overflow-hidden rounded-full bg-linear-to-br from-white to-[#f0f7ec] shadow-[0_25px_50px_rgba(0,0,0,0.25)] md:h-80 md:w-80">
+          <div className="relative flex h-68 w-68 items-center justify-center overflow-hidden rounded-full bg-linear-to-br from-white to-[#f0f7ec] shadow-[0_25px_50px_rgba(0,0,0,0.25)] md:h-80 md:w-80">
             {/* Inner Ring */}
             <div className="pointer-events-none absolute inset-4 rounded-full border-[6px] border-white shadow-inner"></div>
 
