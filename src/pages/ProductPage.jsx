@@ -1,10 +1,20 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import CardItem from "../components/CardItem";
 
 const ProductPage = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [activeCate, setActiveCate] = useState(null);
+
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const cateId = searchParams.get("danh-muc");
+    if (cateId) {
+      setActiveCate(Number(cateId));
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     fetch("/data/categories.json")
@@ -26,7 +36,6 @@ const ProductPage = () => {
     <main className="container mx-auto px-4 py-6">
       {/* CATEGORY */}
       <section className="mb-12 flex flex-wrap justify-center gap-3">
-        {/* BUTTON ALL */}
         <button
           onClick={() => setActiveCate(null)}
           className={`rounded-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-5 py-2 text-sm font-semibold uppercase transition-all duration-300 ${
@@ -37,6 +46,7 @@ const ProductPage = () => {
         >
           Tất cả
         </button>
+
         {categories.map((item) => (
           <button
             key={item.id}

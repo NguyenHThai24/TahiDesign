@@ -42,7 +42,7 @@ const Categories = () => {
       <div className="mx-auto flex flex-wrap justify-center gap-x-7 gap-y-32">
         {categories.map((item) => (
           <Link
-            to="/"
+            to={`/san-pham?danh-muc=${item.id}`}
             key={item.id}
             className="group relative w-full text-center sm:w-[45%] md:w-[30%]"
           >
