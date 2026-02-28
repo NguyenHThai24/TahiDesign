@@ -1,30 +1,52 @@
 import { useEffect, useState } from "react";
+import CardItem from "../components/CardItem";
 
 const ProductPage = () => {
   const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [activeCate, setActiveCate] = useState(null);
 
   useEffect(() => {
     fetch("/data/categories.json")
       .then((res) => res.json())
-      .then((data) => setCategories(data))
-      .catch((err) => console.log(err));
+      .then((data) => setCategories(data));
   }, []);
 
+  useEffect(() => {
+    fetch("/data/products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
+
+  const filteredProducts = activeCate
+    ? products.filter((p) => p.categoryId === activeCate)
+    : products;
+
   return (
-    <main className="">
-      <section className="my-7 flex flex-wrap items-center justify-evenly gap-3 py-2">
+    <main className="container mx-auto px-4 py-6">
+      {/* CATEGORY */}
+      <section className="mb-12 flex flex-wrap justify-center gap-3">
         {categories.map((item) => (
-          <div
+          <button
             key={item.id}
-            className="cursor-pointer bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] py-3 text-center sm:w-[30%] md:w-[22%] lg:w-[18%] xl:w-[14%]"
+            onClick={() => setActiveCate(item.id)}
+            className={`rounded-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-5 py-2 text-sm font-semibold uppercase transition-all duration-300 ${
+              activeCate === item.id
+                ? "text-(--color-primary) shadow-lg shadow-green-300"
+                : ""
+            }`}
           >
-            <p className="bg-linear-to-r from-(--color-primary) to-black bg-clip-text text-sm font-bold text-transparent uppercase hover:scale-105 sm:text-base md:text-lg">
-              {item.name}
-            </p>
-          </div>
+            {item.name}
+          </button>
         ))}
       </section>
-      <section>Danh sách sản phẩm</section>
+
+      {/* PRODUCT GRID */}
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-7 lg:grid-cols-4">
+        {filteredProducts.map((item) => (
+          <CardItem key={item.id} item={item} />
+        ))}
+      </section>
     </main>
   );
 };
