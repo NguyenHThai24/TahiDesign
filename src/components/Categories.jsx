@@ -1,8 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
 
   useEffect(() => {
     fetch("/data/categories.json")
@@ -10,6 +18,14 @@ const Categories = () => {
       .then((data) => setCategories(data))
       .catch((err) => console.log(err));
   }, []);
+
+  const productCountMap = useMemo(() => {
+    const map = {};
+    products.forEach((p) => {
+      map[p.categoryId] = (map[p.categoryId] || 0) + 1;
+    });
+    return map;
+  }, [products]);
 
   return (
     <section className="my-16 px-4">
@@ -23,7 +39,7 @@ const Categories = () => {
       </h3>
 
       {/* List */}
-      <div className="mx-auto flex flex-wrap justify-center gap-x-7 gap-y-323">
+      <div className="mx-auto flex flex-wrap justify-center gap-x-7 gap-y-32">
         {categories.map((item) => (
           <Link
             to="/"
@@ -46,7 +62,9 @@ const Categories = () => {
               </div>
 
               <p className="text-lg font-semibold uppercase">{item.name}</p>
-              <p className="mt-1 text-sm text-gray-500">18 items</p>
+              <p className="mt-1 text-sm text-gray-500">
+                {productCountMap[item.id] || 0} sản phẩm
+              </p>
             </div>
           </Link>
         ))}
