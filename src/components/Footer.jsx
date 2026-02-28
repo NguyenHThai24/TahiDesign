@@ -52,22 +52,22 @@ const Footer = () => {
             </p>
 
             {/* SOCIAL */}
-            <div className="flex gap-4">
+            <div className="hidden items-center gap-3 md:flex">
               <a
                 href="#"
-                className="rounded-full bg-white p-2 shadow transition hover:scale-110"
+                className="rounded-full bg-white p-2 shadow-lg shadow-blue-600 transition hover:scale-110"
               >
                 <FaFacebookF />
               </a>
               <a
                 href="#"
-                className="rounded-full bg-white p-2 shadow transition hover:scale-110"
+                className="rounded-full bg-white p-2 shadow-lg shadow-fuchsia-600 transition hover:scale-110"
               >
                 <FaInstagram />
               </a>
               <a
                 href="#"
-                className="rounded-full bg-white p-2 shadow transition hover:scale-110"
+                className="rounded-full bg-white p-2 shadow-lg shadow-blue-500 transition hover:scale-110"
               >
                 <SiZalo />
               </a>

@@ -26,6 +26,17 @@ const ProductPage = () => {
     <main className="container mx-auto px-4 py-6">
       {/* CATEGORY */}
       <section className="mb-12 flex flex-wrap justify-center gap-3">
+        {/* BUTTON ALL */}
+        <button
+          onClick={() => setActiveCate(null)}
+          className={`rounded-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-5 py-2 text-sm font-semibold uppercase transition-all duration-300 ${
+            activeCate === null
+              ? "text-(--color-primary) shadow-lg shadow-green-200"
+              : ""
+          }`}
+        >
+          Tất cả
+        </button>
         {categories.map((item) => (
           <button
             key={item.id}
@@ -42,7 +53,7 @@ const ProductPage = () => {
       </section>
 
       {/* PRODUCT GRID */}
-      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-7 lg:grid-cols-4">
+      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-7 lg:grid-cols-4 lg:gap-12">
         {filteredProducts.map((item) => (
           <CardItem key={item.id} item={item} />
         ))}
