@@ -31,7 +31,7 @@ const Banner = () => {
           </p>
 
           <div className="flex items-center gap-4">
-            <button className="hover-gold relative overflow-hidden rounded-full bg-linear-to-br from-[#7ed957] via-[#52c234] to-[#38b000] font-semibold text-white">
+            <button className="hover-gold relative cursor-pointer overflow-hidden rounded-full bg-linear-to-br from-[#7ed957] via-[#52c234] to-[#38b000] font-semibold text-white">
               {/* Soft shine */}
               <span className="absolute inset-0 rounded-full bg-linear-to-t from-white/10 via-white/20 to-transparent opacity-60"></span>
 
