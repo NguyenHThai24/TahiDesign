@@ -1,13 +1,21 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import CardItem from "../components/CardItem";
+import ModalProduct from "../components/ModalProduct";
 
 const ProductPage = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [activeCate, setActiveCate] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
 
   const [searchParams] = useSearchParams();
+
+  const handleOpenModal = (product) => {
+    setSelectedProduct(product);
+    setOpenModal(true);
+  };
 
   useEffect(() => {
     const cateId = searchParams.get("danh-muc");
@@ -63,10 +71,20 @@ const ProductPage = () => {
       </section>
 
       {/* PRODUCT GRID */}
-      <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-4">
+      <section className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-4">
         {filteredProducts.map((item) => (
-          <CardItem key={item.id} item={item} />
+          <CardItem
+            key={item.id}
+            item={item}
+            onClick={() => handleOpenModal(item)}
+          />
         ))}
+        {openModal && (
+          <ModalProduct
+            product={selectedProduct}
+            onClose={() => setOpenModal(false)}
+          />
+        )}
       </section>
     </main>
   );
