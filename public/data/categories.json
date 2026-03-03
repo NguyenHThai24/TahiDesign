@@ -18,5 +18,10 @@
     "id": 4,
     "name": "Lịch để bàn",
     "image": "/images/categori/calendar.png"
+  },
+  {
+    "id": 5,
+    "name": "Thiệp cưới Online",
+    "image": "/images/categori/wedding.png"
   }
 ]

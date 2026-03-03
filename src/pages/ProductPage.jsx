@@ -63,7 +63,7 @@ const ProductPage = () => {
       </section>
 
       {/* PRODUCT GRID */}
-      <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-7 lg:grid-cols-4 lg:gap-12">
+      <section className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-4">
         {filteredProducts.map((item) => (
           <CardItem key={item.id} item={item} />
         ))}

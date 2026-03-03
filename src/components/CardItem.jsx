@@ -2,31 +2,23 @@ const CardItem = ({ item }) => {
   return (
     <div className="group cursor-pointer">
       <div className="flex justify-center py-4">
-        <div className="relative h-52 w-52 md:h-60 md:w-60 lg:h-68 lg:w-68">
-          {/* Background */}
-          <div className="rounded-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] pt-28 pb-6">
-            {/* Image wrapper */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2">
-              <div className="relative h-52 w-52 md:h-60 md:w-60 lg:h-68 lg:w-68">
-                {/* FAKE SHADOW */}
-                <div className="absolute -bottom-2.5 left-1/2 h-6 w-32 -translate-x-1/2 rounded-full bg-black/20 blur-xl transition-all duration-300 group-hover:w-40 group-hover:opacity-30"></div>
+        <div className="relative w-52 md:w-60 lg:w-68">
+          {/* Card */}
+          <div className="relative overflow-hidden rounded-2xl bg-white p-4 shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_30px_70px_rgba(0,0,0,0.25)]">
+            {/* Image */}
+            <div className="flex justify-center">
+              <img
+                src={item.images[0]}
+                alt={item.name}
+                className="h-48 object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
 
-                {/* Circle */}
-                <div className="relative z-10 h-52 w-52 rounded-full bg-white p-5 shadow-[0_25px_60px_rgba(0,0,0,0.25)] ring-4 ring-white transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.35)] md:h-60 md:w-60 lg:h-68 lg:w-68">
-                  <img
-                    src={item.images[0]}
-                    alt={item.name}
-                    className="h-full w-full object-contain"
-                  />
-
-                  {/* NAME nằm trong nhưng trồi ra */}
-                  <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                    <div className="translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                      <div className="rounded-full bg-white px-4 py-2 text-sm font-semibold whitespace-nowrap shadow-lg">
-                        {item.name}
-                      </div>
-                    </div>
-                  </div>
+            {/* NAME (hiện từ dưới lên, nằm trong card) */}
+            <div className="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2">
+              <div className="translate-y-4 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold whitespace-nowrap shadow-md backdrop-blur">
+                  {item.name}
                 </div>
               </div>
             </div>
