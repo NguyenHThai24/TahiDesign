@@ -29,10 +29,10 @@ const Footer = () => {
                 <Link to="/">Trang chủ</Link>
               </li>
               <li>
-                <Link to="/story">Câu chuyện</Link>
+                <Link to="/story">Sản phẩm</Link>
               </li>
               <li>
-                <Link to="/album">Album</Link>
+                <Link to="/album">Bộ sưu tập</Link>
               </li>
               <li>
                 <Link to="/contact">Liên hệ</Link>
