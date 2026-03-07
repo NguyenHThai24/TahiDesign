@@ -53,7 +53,7 @@ const ModalProduct = ({ product, onClose }) => {
                 src={img}
                 alt=""
                 onClick={() => setActiveImg(img)}
-                className={`h-14 w-14 flex-shrink-0 cursor-pointer rounded-lg border object-cover sm:h-16 sm:w-16 ${
+                className={`h-14 w-14 shrink-0 cursor-pointer rounded-lg border object-cover sm:h-16 sm:w-16 ${
                   activeImg === img ? "border-black" : "border-gray-200"
                 }`}
               />
@@ -78,7 +78,7 @@ const ModalProduct = ({ product, onClose }) => {
       {/* ZOOM FULL SCREEN */}
       {zoom && (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black p-4"
+          className="fixed inset-0 z-60 flex items-center justify-center bg-black p-4"
           onClick={() => setZoom(false)}
         >
           <img

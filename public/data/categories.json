@@ -7,7 +7,7 @@
   {
     "id": 2,
     "name": "Thiệp sinh nhật",
-    "image": "/images/categori/birthday.png"
+    "image": "/images/categori/thiep-sinh-nhat.png"
   },
   {
     "id": 3,
@@ -17,11 +17,11 @@
   {
     "id": 4,
     "name": "Lịch để bàn",
-    "image": "/images/categori/calendar.png"
+    "image": "/images/categori/lich-de-ban.png"
   },
   {
     "id": 5,
     "name": "Thiệp cưới Online",
-    "image": "/images/categori/wedding.png"
+    "image": "/images/categori/thiep-cuoi.png"
   }
 ]

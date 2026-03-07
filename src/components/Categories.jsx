@@ -31,7 +31,7 @@ const Categories = () => {
     <section className="my-16 px-4">
       {/* Title */}
 
-      <h3 className="mb-36 text-center text-2xl font-bold uppercase">
+      <h3 className="mb-12 text-center text-2xl font-bold uppercase">
         <span className="bg-linear-to-r from-(--color-primary) to-black bg-clip-text text-transparent">
           Danh mục sản phẩm
         </span>
@@ -44,22 +44,23 @@ const Categories = () => {
           <Link
             to={`/san-pham?danh-muc=${item.id}`}
             key={item.id}
-            className="group w-full border sm:w-[45%] md:w-[30%]"
+            className="group w-full border border-gray-100 sm:w-[45%] md:w-[30%]"
           >
-            <div className="relative h-80 overflow-hidden transition hover:shadow-xl">
+            <div className="relative overflow-hidden transition hover:shadow-xl">
               {/* Image */}
               <img
                 src={item.image}
                 alt={item.name}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full object-contain transition-transform duration-300 group-hover:scale-105"
               />
 
-              {/* Overlay (optional cho chữ dễ đọc) */}
-              <div className="absolute right-0 bottom-0 left-0 h-25 bg-black/30"></div>
+              {/* Overlay */}
+              <div className="absolute right-0 bottom-0 left-0 h-24 bg-black/30"></div>
+
               {/* Content */}
               <div className="absolute bottom-0 z-10 w-full p-6 text-center text-white">
-                <p className="text-lg font-semibold uppercase">{item.name}</p>
-                <p className="mt-1 text-sm">
+                <p className="text-xl font-semibold uppercase">{item.name}</p>
+                <p className="mt-1 text-base">
                   {productCountMap[item.id] || 0} sản phẩm
                 </p>
               </div>
