@@ -39,32 +39,30 @@ const Categories = () => {
       </h3>
 
       {/* List */}
-      <div className="mx-auto flex flex-wrap justify-center gap-x-7 gap-y-32">
+      <div className="mx-auto flex flex-wrap justify-center gap-8">
         {categories.map((item) => (
           <Link
             to={`/san-pham?danh-muc=${item.id}`}
             key={item.id}
-            className="group relative w-full text-center sm:w-[45%] md:w-[30%]"
+            className="group w-full border sm:w-[45%] md:w-[30%]"
           >
-            <div className="rounded-lg bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-6 pt-30 pb-7 transition">
+            <div className="relative h-80 overflow-hidden transition hover:shadow-xl">
               {/* Image */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[50%]">
-                <div className="relative h-52 w-52 rounded-full bg-white p-5 shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-4 ring-white transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_25px_50px_rgba(0,0,0,0.25)]">
-                  {/* Light effect */}
-                  <div className="absolute inset-0 rounded-full bg-linear-to-br from-white/70 via-transparent to-black/10"></div>
+              <img
+                src={item.image}
+                alt={item.name}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
 
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="relative h-full w-full object-contain"
-                  />
-                </div>
+              {/* Overlay (optional cho chữ dễ đọc) */}
+              <div className="absolute right-0 bottom-0 left-0 h-25 bg-black/30"></div>
+              {/* Content */}
+              <div className="absolute bottom-0 z-10 w-full p-6 text-center text-white">
+                <p className="text-lg font-semibold uppercase">{item.name}</p>
+                <p className="mt-1 text-sm">
+                  {productCountMap[item.id] || 0} sản phẩm
+                </p>
               </div>
-
-              <p className="text-lg font-semibold uppercase">{item.name}</p>
-              <p className="mt-1 text-sm text-gray-500">
-                {productCountMap[item.id] || 0} sản phẩm
-              </p>
             </div>
           </Link>
         ))}
