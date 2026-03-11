@@ -7,10 +7,12 @@ import Service from "../components/Service";
 const HomePage = () => {
   return (
     <>
-      <Banner />
-      <Categories />
-      <Service />
-      <OrderingProcess />
+      <main className="mx-auto w-full max-w-7xl py-6">
+        <Banner />
+        <Categories />
+        <Service />
+        <OrderingProcess />
+      </main>
     </>
   );
 };

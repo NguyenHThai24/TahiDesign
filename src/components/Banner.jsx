@@ -17,10 +17,10 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] py-12">
+    <section className="w-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-4 py-12">
       <div className="container-limit grid items-center gap-8 md:grid-cols-2">
         {/* LEFT CONTENT */}
-        <div className="space-y-5">
+        <div className="space-y-5 pl-7">
           <h1 className="text-4xl leading-tight font-bold md:text-5xl">
             Thiết kế &{" "}
             <span className="text-(--color-primary)">In ấn chuyên nghiệp</span>

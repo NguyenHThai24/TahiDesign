@@ -38,7 +38,7 @@ const Header = () => {
     }`;
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-white shadow">
+    <header className="fixed top-0 left-1/2 z-50 w-full max-w-7xl -translate-x-1/2 bg-white px-4 shadow">
       <div className="container-limit flex h-16 items-center justify-between">
         {/* LOGO */}
         <div className="flex items-center">
@@ -88,7 +88,6 @@ const Header = () => {
           </button>
         </div>
       </div>
-
       {/* MOBILE MENU */}
       {open && (
         <div className="bg-white shadow-md md:hidden">

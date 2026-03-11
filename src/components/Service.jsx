@@ -25,7 +25,7 @@ const servicesRight = [
 
 const Service = () => {
   return (
-    <section className="my-16 px-4">
+    <section className="my-16">
       {/* Title */}
       <h3 className="text-center text-2xl font-bold uppercase">
         <span className="bg-linear-to-r from-black to-(--color-primary) bg-clip-text text-transparent">
@@ -35,9 +35,9 @@ const Service = () => {
       </h3>
 
       {/* Content */}
-      <div className="mx-auto mt-12 grid max-w-6xl items-center gap-8 md:grid-cols-2">
+      <div className="mx-auto mt-12 grid max-w-7xl items-center gap-8 md:grid-cols-2">
         {/* Left */}
-        <div className="w-full justify-self-end rounded border border-gray-200 bg-[radial-gradient(circle_at_top_right,#dff1d8_0%,#ffffff_30%)] p-6">
+        <div className="w-full justify-self-end border border-gray-200 bg-[radial-gradient(circle_at_top_right,#dff1d8_0%,#ffffff_30%)] p-6">
           <ul className="space-y-4">
             {servicesLeft.map((item, index) => (
               <li key={index} className="flex items-center gap-3">
@@ -49,7 +49,7 @@ const Service = () => {
         </div>
 
         {/* Right */}
-        <div className="w-full justify-self-start rounded border border-gray-200 bg-[radial-gradient(circle_at_bottom_right,#dff1d8_0%,#ffffff_30%)] p-6">
+        <div className="w-full justify-self-start border border-gray-200 bg-[radial-gradient(circle_at_bottom_right,#dff1d8_0%,#ffffff_30%)] p-6">
           <ul className="space-y-4">
             {servicesRight.map((item, index) => (
               <li key={index} className="flex items-center gap-3">

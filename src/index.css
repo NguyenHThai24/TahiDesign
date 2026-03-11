@@ -79,16 +79,6 @@ html {
   transition: transform 1.2s ease;
 }
 
-@layer utilities {
-  .container-limit {
-    max-width: 1280px; /* hoặc 1440px tuỳ bạn */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
 @keyframes slideUp {
   from {
     transform: translateY(100%);

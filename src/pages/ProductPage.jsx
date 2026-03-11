@@ -24,6 +24,7 @@ const ProductPage = () => {
   /* GET CATEGORY FROM URL */
   useEffect(() => {
     const cateId = searchParams.get("danh-muc");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (cateId) setActiveCate(Number(cateId));
   }, [searchParams]);
 
@@ -47,73 +48,62 @@ const ProductPage = () => {
 
   return (
     <>
-      <main className="container-limit w-full py-6">
-        <div className="grid grid-cols-12 gap-6">
-          {/* SIDEBAR DESKTOP */}
-          <aside className="col-span-3 hidden min-h-screen bg-white lg:block">
-            <div className="p-4">
-              <h3 className="mb-3 text-xl font-bold uppercase">
-                Danh mục sản phẩm
-              </h3>
+      <main className="mx-auto grid w-full max-w-7xl grid-cols-12 gap-6 py-6">
+        <div className="col-span-3 hidden min-h-screen w-full bg-white p-4 lg:block">
+          <h3 className="mb-3 text-xl font-bold uppercase">
+            Danh mục sản phẩm
+          </h3>
 
-              <div className="flex flex-col gap-2">
-                <button
-                  onClick={() => setActiveCate(null)}
-                  className={`border-b border-gray-200 px-3 py-2 text-left text-lg font-semibold transition ${
-                    activeCate === null
-                      ? " text-(--color-primary)"
-                      : "hover:text-(--color-primary)"
-                  }`}
-                >
-                  Tất cả
-                </button>
-
-                {categories.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => setActiveCate(item.id)}
-                    className={`border-b border-gray-200 px-3 py-2 text-left text-lg font-semibold transition ${
-                      activeCate === item.id
-                        ? "text-(--color-primary)"
-                        : "hover:text-(--color-primary)"
-                    }`}
-                  >
-                    {item.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </aside>
-
-          {/* MOBILE FILTER BUTTON */}
-          <div className="col-span-12 lg:hidden">
+          <div className="flex flex-col gap-2">
             <button
-              onClick={() => {
-                setTempCate(activeCate);
-                setOpenFilter(true);
-              }}
-              className="w-full rounded-lg border py-3 font-semibold hover:bg-gray-50"
+              onClick={() => setActiveCate(null)}
+              className={`border-b border-gray-200 px-3 py-2 text-left text-lg transition ${
+                activeCate === null
+                  ? "font-extrabold"
+                  : "hover:text-(--color-primary)"
+              }`}
             >
-              Lọc sản phẩm
+              Tất cả
             </button>
-          </div>
 
-          {/* PRODUCT GRID */}
-          <section className="col-span-12 lg:col-span-9">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {filteredProducts.map((item) => (
-                <CardItem
-                  key={item.id}
-                  item={item}
-                  onClick={() => handleOpenModal(item)}
-                />
-              ))}
-            </div>
-          </section>
+            {categories.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => setActiveCate(item.id)}
+                className={`border-b border-gray-200 px-3 py-2 text-left text-lg transition ${
+                  activeCate === item.id
+                    ? "font-extrabold"
+                    : "hover:text-(--color-primary)"
+                }`}
+              >
+                {item.name}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="col-span-12 flex w-full justify-center lg:hidden">
+          <button
+            onClick={() => {
+              setTempCate(activeCate);
+              setOpenFilter(true);
+            }}
+            className="rounded-lg border px-6 py-2 font-semibold shadow-sm hover:bg-gray-50"
+          >
+            Lọc sản phẩm
+          </button>
+        </div>
+        <div className="col-span-12 bg-white p-4 lg:col-span-9">
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6">
+            {filteredProducts.map((item) => (
+              <CardItem
+                key={item.id}
+                item={item}
+                onClick={() => handleOpenModal(item)}
+              />
+            ))}
+          </div>
         </div>
       </main>
-
-      {/* MODAL PRODUCT */}
       {openModal && (
         <ModalProduct
           product={selectedProduct}
@@ -121,11 +111,9 @@ const ProductPage = () => {
         />
       )}
 
-      {/* MOBILE FILTER MODAL */}
       {openFilter && (
         <div className="fixed inset-0 z-50 flex items-end bg-black/40">
           <div className="animate-slideUp w-full rounded-t-2xl bg-white p-5">
-            {/* HEADER */}
             <div className="mb-4 flex items-center justify-between">
               <h3 className="text-lg font-bold">Lọc sản phẩm</h3>
 
@@ -137,7 +125,6 @@ const ProductPage = () => {
               </button>
             </div>
 
-            {/* CATEGORY */}
             <div className="flex flex-col gap-2">
               <button
                 onClick={() => setTempCate(null)}
@@ -165,7 +152,6 @@ const ProductPage = () => {
               ))}
             </div>
 
-            {/* APPLY */}
             <button
               onClick={() => {
                 setActiveCate(tempCate);

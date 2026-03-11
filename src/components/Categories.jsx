@@ -28,7 +28,7 @@ const Categories = () => {
   }, [products]);
 
   return (
-    <section className="my-16 px-4">
+    <section className="my-16">
       {/* Title */}
 
       <h3 className="mb-12 text-center text-2xl font-bold uppercase">

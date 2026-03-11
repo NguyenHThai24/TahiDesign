@@ -46,7 +46,7 @@ const OrderingProcess = () => {
       </h3>
 
       {/* Steps */}
-      <div className="mt-10 grid grid-cols-1 gap-6 bg-gray-100 p-4 md:grid-cols-4">
+      <div className="mt-10 grid grid-cols-1 gap-6 bg-white p-4 md:grid-cols-4">
         {steps.map((step, index) => (
           <div
             key={step.id}
