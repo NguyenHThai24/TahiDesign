@@ -50,16 +50,16 @@ const ProductPage = () => {
       <main className="mx-auto w-full max-w-7xl py-6">
         <div className="grid grid-cols-12 gap-6">
           {/* SIDEBAR DESKTOP */}
-          <aside className="col-span-3 hidden lg:block">
-            <div className="border border-gray-200 p-4">
-              <h3 className="mb-3 font-bold text-gray-700 uppercase">
+          <aside className="col-span-3 hidden bg-white lg:block">
+            <div className="p-4">
+              <h3 className="mb-3 text-xl font-bold uppercase">
                 Danh mục sản phẩm
               </h3>
 
               <div className="flex flex-col gap-2">
                 <button
                   onClick={() => setActiveCate(null)}
-                  className={`border-b border-gray-200 px-3 py-2 text-left text-base font-semibold transition ${
+                  className={`border-b border-gray-200 px-3 py-2 text-left text-lg font-semibold transition ${
                     activeCate === null
                       ? " text-(--color-primary)"
                       : "hover:text-(--color-primary)"
@@ -72,7 +72,7 @@ const ProductPage = () => {
                   <button
                     key={item.id}
                     onClick={() => setActiveCate(item.id)}
-                    className={`border-b border-gray-200 px-3 py-2 text-left text-base font-semibold transition ${
+                    className={`border-b border-gray-200 px-3 py-2 text-left text-lg font-semibold transition ${
                       activeCate === item.id
                         ? "text-(--color-primary)"
                         : "hover:text-(--color-primary)"

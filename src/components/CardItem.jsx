@@ -4,7 +4,7 @@ const CardItem = ({ item, onClick }) => {
       <div className="flex justify-center">
         <div className="relative w-full">
           {/* Card */}
-          <div className="relative overflow-hidden border border-gray-200 bg-white p-4">
+          <div className="shine-hover relative overflow-hidden border border-gray-200 bg-white p-4">
             {/* Image */}
             <div className="flex justify-center">
               <img

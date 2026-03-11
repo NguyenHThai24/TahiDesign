@@ -8,9 +8,9 @@ import logoImg from "../assets/logo.png";
 const Footer = () => {
   return (
     <footer className="border-t border-blue-100 bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)]">
-      <div className="mx-auto pt-10">
+      <div className="container-limit mx-auto pt-10">
         {/* TOP */}
-        <div className="grid grid-cols-1 gap-8 px-7 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* LOGO + MÔ TẢ */}
           <div>
             <Link to="/" className="mb-4 flex items-center">
@@ -74,11 +74,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* BOTTOM */}
-        <div className="mt-8 bg-[#6f984d] py-2 text-center text-sm text-white">
-          © 2026 Tahi Design. All rights reserved.
-        </div>
+      </div>{" "}
+      {/* BOTTOM */}
+      <div className="mt-8 bg-[#6f984d] py-2 text-center text-sm text-white">
+        © 2026 Tahi Design. All rights reserved.
       </div>
     </footer>
   );

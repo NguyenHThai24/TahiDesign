@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 
 const MainLayout = () => {
   return (
-    <div className="container-limit flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col">
       <Header />
 
-      <main className="mt-16 flex-1">
+      <main className="container-limit mt-16 flex-1">
         <Outlet />
       </main>
 
