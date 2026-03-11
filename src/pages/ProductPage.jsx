@@ -7,8 +7,12 @@ const ProductPage = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [activeCate, setActiveCate] = useState(null);
+
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [openModal, setOpenModal] = useState(false);
+
+  const [openFilter, setOpenFilter] = useState(false);
+  const [tempCate, setTempCate] = useState(null);
 
   const [searchParams] = useSearchParams();
 
@@ -17,19 +21,20 @@ const ProductPage = () => {
     setOpenModal(true);
   };
 
+  /* GET CATEGORY FROM URL */
   useEffect(() => {
     const cateId = searchParams.get("danh-muc");
-    if (cateId) {
-      setActiveCate(Number(cateId));
-    }
+    if (cateId) setActiveCate(Number(cateId));
   }, [searchParams]);
 
+  /* FETCH CATEGORY */
   useEffect(() => {
     fetch("/data/categories.json")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
 
+  /* FETCH PRODUCTS */
   useEffect(() => {
     fetch("/data/products.json")
       .then((res) => res.json())
@@ -41,52 +46,139 @@ const ProductPage = () => {
     : products;
 
   return (
-    <main className="container mx-auto px-4 py-6">
-      {/* CATEGORY */}
-      <section className="mb-12 flex flex-wrap justify-center gap-3">
-        <button
-          onClick={() => setActiveCate(null)}
-          className={`rounded-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-5 py-2 text-sm font-semibold uppercase transition-all duration-300 ${
-            activeCate === null
-              ? "text-(--color-primary) shadow-lg shadow-green-200"
-              : ""
-          }`}
-        >
-          Tất cả
-        </button>
+    <>
+      <main className="mx-auto w-full max-w-7xl py-6">
+        <div className="grid grid-cols-12 gap-6">
+          {/* SIDEBAR DESKTOP */}
+          <aside className="col-span-3 hidden lg:block">
+            <div className="border border-gray-200 p-4">
+              <h3 className="mb-3 font-bold text-gray-700 uppercase">
+                Danh mục sản phẩm
+              </h3>
 
-        {categories.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => setActiveCate(item.id)}
-            className={`rounded-full bg-[radial-gradient(circle_at_center,#dff1d8_0%,#ffffff_70%)] px-5 py-2 text-sm font-semibold uppercase transition-all duration-300 ${
-              activeCate === item.id
-                ? "text-(--color-primary) shadow-lg shadow-green-200"
-                : ""
-            }`}
-          >
-            {item.name}
-          </button>
-        ))}
-      </section>
+              <div className="flex flex-col gap-2">
+                <button
+                  onClick={() => setActiveCate(null)}
+                  className={`border-b border-gray-200 px-3 py-2 text-left text-base font-semibold transition ${
+                    activeCate === null
+                      ? " text-(--color-primary)"
+                      : "hover:text-(--color-primary)"
+                  }`}
+                >
+                  Tất cả
+                </button>
 
-      {/* PRODUCT GRID */}
-      <section className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4 lg:gap-4">
-        {filteredProducts.map((item) => (
-          <CardItem
-            key={item.id}
-            item={item}
-            onClick={() => handleOpenModal(item)}
-          />
-        ))}
-        {openModal && (
-          <ModalProduct
-            product={selectedProduct}
-            onClose={() => setOpenModal(false)}
-          />
-        )}
-      </section>
-    </main>
+                {categories.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => setActiveCate(item.id)}
+                    className={`border-b border-gray-200 px-3 py-2 text-left text-base font-semibold transition ${
+                      activeCate === item.id
+                        ? "text-(--color-primary)"
+                        : "hover:text-(--color-primary)"
+                    }`}
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </aside>
+
+          {/* MOBILE FILTER BUTTON */}
+          <div className="col-span-12 lg:hidden">
+            <button
+              onClick={() => {
+                setTempCate(activeCate);
+                setOpenFilter(true);
+              }}
+              className="w-full rounded-lg border py-3 font-semibold hover:bg-gray-50"
+            >
+              Lọc sản phẩm
+            </button>
+          </div>
+
+          {/* PRODUCT GRID */}
+          <section className="col-span-12 lg:col-span-9">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {filteredProducts.map((item) => (
+                <CardItem
+                  key={item.id}
+                  item={item}
+                  onClick={() => handleOpenModal(item)}
+                />
+              ))}
+            </div>
+          </section>
+        </div>
+      </main>
+
+      {/* MODAL PRODUCT */}
+      {openModal && (
+        <ModalProduct
+          product={selectedProduct}
+          onClose={() => setOpenModal(false)}
+        />
+      )}
+
+      {/* MOBILE FILTER MODAL */}
+      {openFilter && (
+        <div className="fixed inset-0 z-50 flex items-end bg-black/40">
+          <div className="animate-slideUp w-full rounded-t-2xl bg-white p-5">
+            {/* HEADER */}
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="text-lg font-bold">Lọc sản phẩm</h3>
+
+              <button
+                onClick={() => setOpenFilter(false)}
+                className="text-xl font-bold"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* CATEGORY */}
+            <div className="flex flex-col gap-2">
+              <button
+                onClick={() => setTempCate(null)}
+                className={`rounded-lg border px-4 py-2 text-left ${
+                  tempCate === null
+                    ? "bg-gray-100 font-bold"
+                    : "hover:bg-gray-50"
+                }`}
+              >
+                Tất cả
+              </button>
+
+              {categories.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => setTempCate(item.id)}
+                  className={`rounded-lg border px-4 py-2 text-left ${
+                    tempCate === item.id
+                      ? "bg-gray-100 font-bold"
+                      : "hover:bg-gray-50"
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+
+            {/* APPLY */}
+            <button
+              onClick={() => {
+                setActiveCate(tempCate);
+                setOpenFilter(false);
+              }}
+              className="mt-5 w-full rounded-lg bg-black py-3 font-semibold text-white"
+            >
+              Áp dụng
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

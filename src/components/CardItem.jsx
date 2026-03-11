@@ -2,15 +2,15 @@ const CardItem = ({ item, onClick }) => {
   return (
     <div className="group cursor-pointer" onClick={onClick}>
       <div className="flex justify-center">
-        <div className="relative w-60 md:w-68 lg:w-72">
+        <div className="relative w-full">
           {/* Card */}
-          <div className="relative overflow-hidden rounded border border-gray-200 bg-white p-4">
+          <div className="relative overflow-hidden border border-gray-200 bg-white p-4">
             {/* Image */}
             <div className="flex justify-center">
               <img
                 src={item.images[0]}
                 alt={item.name}
-                className="h-48 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-64 object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
 

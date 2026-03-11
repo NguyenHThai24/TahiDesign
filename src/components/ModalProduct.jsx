@@ -19,7 +19,7 @@ const ModalProduct = ({ product, onClose }) => {
           <div className="relative">
             <h3 className="mb-4 text-center text-lg font-bold uppercase sm:text-2xl">
               <span className="bg-linear-to-r from-black to-(--color-primary) bg-clip-text text-transparent">
-                {product.name}
+                Mã sản phẩm: {product.id}
               </span>
               <span className="mx-auto mt-2 block h-1 w-16 rounded-full bg-linear-to-r from-(--color-primary) to-black sm:w-20"></span>
             </h3>
@@ -61,16 +61,31 @@ const ModalProduct = ({ product, onClose }) => {
           </div>
 
           {/* BUTTONS */}
-          <div className="mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:justify-center">
-            {/* PRIMARY */}
-            <button className="w-full rounded-full bg-(--color-primary) px-6 py-2 text-white transition hover:opacity-90 sm:w-auto">
-              Liên hệ
-            </button>
+          <div className="mt-6 rounded-xl bg-green-50 p-4 text-gray-700 shadow-sm sm:mt-7">
+            <p className="mb-2 text-xl font-semibold text-green-700">
+              Thông tin đặt hàng
+            </p>
 
-            {/* SECONDARY */}
-            <button className="w-full rounded-full border border-(--color-primary) px-6 py-2 text-(--color-primary) transition hover:bg-(--color-primary) hover:text-white sm:w-auto">
-              Nhận tư vấn
-            </button>
+            <div className="flex flex-col gap-2 text-base">
+              <p>
+                - Quý khách đặt hàng vui lòng liên hệ qua{" "}
+                <span className="font-semibold text-green-600">
+                  Zalo / Điện thoại:
+                </span>{" "}
+                <span className="text-lg font-bold">0123 456 789</span>
+              </p>
+
+              <p>
+                - Hoặc liên hệ qua{" "}
+                <span className="font-semibold text-blue-600">Facebook:</span>{" "}
+                <a
+                  href="https://facebook.com"
+                  className="text-lg font-medium text-blue-500 underline hover:text-blue-600"
+                >
+                  facebook.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
