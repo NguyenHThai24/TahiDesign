@@ -76,7 +76,7 @@ html {
 
 .shine-hover:hover::before {
   transform: rotate(25deg) translateX(400%);
-  transition: transform 2s ease;
+  transition: transform 1.2s ease;
 }
 
 @layer utilities {

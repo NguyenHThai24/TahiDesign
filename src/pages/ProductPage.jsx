@@ -47,10 +47,10 @@ const ProductPage = () => {
 
   return (
     <>
-      <main className="mx-auto w-full max-w-7xl py-6">
+      <main className="container-limit w-full py-6">
         <div className="grid grid-cols-12 gap-6">
           {/* SIDEBAR DESKTOP */}
-          <aside className="col-span-3 hidden bg-white lg:block">
+          <aside className="col-span-3 hidden min-h-screen bg-white lg:block">
             <div className="p-4">
               <h3 className="mb-3 text-xl font-bold uppercase">
                 Danh mục sản phẩm

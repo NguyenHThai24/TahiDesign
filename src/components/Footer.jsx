@@ -44,8 +44,7 @@ const Footer = () => {
           <div>
             <h4 className="mb-4 font-bold">Liên hệ</h4>
             <p className="flex items-center gap-4">
-              <FaMapMarkerAlt /> Ấp Bình Tây 2, Bình Thạnh Đông, Phú Tân, An
-              Giang
+              <FaMapMarkerAlt /> Ấp Bình Tây 2, Bình Thạnh Đông, PT, AG
             </p>
             <p className="my-4 flex items-center gap-4">
               <MdOutlinePhoneInTalk /> 0123 456 789
