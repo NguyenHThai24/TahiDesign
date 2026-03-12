@@ -7,7 +7,7 @@ import Service from "../components/Service";
 const HomePage = () => {
   return (
     <>
-      <main className="mx-auto w-full max-w-7xl py-6">
+      <main className="mx-auto w-full max-w-7xl">
         <Banner />
         <Categories />
         <Service />

@@ -4,6 +4,8 @@ import CardItem from "../components/CardItem";
 import ModalProduct from "../components/ModalProduct";
 
 const ProductPage = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [activeCate, setActiveCate] = useState(null);
@@ -46,9 +48,17 @@ const ProductPage = () => {
     ? products.filter((p) => p.categoryId === activeCate)
     : products;
 
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + itemsPerPage,
+  );
+
   return (
     <>
-      <main className="mx-auto grid w-full max-w-7xl grid-cols-12 gap-6 py-6">
+      <main className="mx-auto grid w-full max-w-7xl grid-cols-12 gap-6">
         <div className="col-span-3 hidden min-h-screen w-full bg-white p-4 lg:block">
           <h3 className="mb-3 text-xl font-bold uppercase">
             Danh mục sản phẩm
@@ -56,7 +66,10 @@ const ProductPage = () => {
 
           <div className="flex flex-col gap-2">
             <button
-              onClick={() => setActiveCate(null)}
+              onClick={() => {
+                setActiveCate(null);
+                setCurrentPage(1);
+              }}
               className={`border-b border-gray-200 px-3 py-2 text-left text-lg transition ${
                 activeCate === null
                   ? "font-extrabold"
@@ -69,7 +82,10 @@ const ProductPage = () => {
             {categories.map((item) => (
               <button
                 key={item.id}
-                onClick={() => setActiveCate(item.id)}
+                onClick={() => {
+                  setActiveCate(item.id);
+                  setCurrentPage(1);
+                }}
                 className={`border-b border-gray-200 px-3 py-2 text-left text-lg transition ${
                   activeCate === item.id
                     ? "font-extrabold"
@@ -92,14 +108,34 @@ const ProductPage = () => {
             Lọc sản phẩm
           </button>
         </div>
-        <div className="col-span-12 bg-white p-4 lg:col-span-9">
-          <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6">
-            {filteredProducts.map((item) => (
-              <CardItem
-                key={item.id}
-                item={item}
-                onClick={() => handleOpenModal(item)}
-              />
+        <div className="col-span-12 flex min-h-screen flex-col bg-white p-4 lg:col-span-9">
+          <div className="flex-grow">
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-6">
+              {currentProducts.map((item) => (
+                <CardItem
+                  key={item.id}
+                  item={item}
+                  onClick={() => handleOpenModal(item)}
+                />
+              ))}
+            </div>
+          </div>
+          <div className="mt-auto flex justify-center gap-2 pt-8">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  setCurrentPage(i + 1);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className={`rounded border px-4 py-2 ${
+                  currentPage === i + 1
+                    ? "bg-black text-white"
+                    : "hover:bg-gray-100"
+                }`}
+              >
+                {i + 1}
+              </button>
             ))}
           </div>
         </div>

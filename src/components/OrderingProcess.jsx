@@ -36,7 +36,7 @@ const steps = [
 
 const OrderingProcess = () => {
   return (
-    <section className="my-16">
+    <section className="mt-16">
       {/* Title */}
       <h3 className="text-center text-2xl font-bold uppercase">
         <span className="bg-linear-to-r from-(--color-primary) to-black bg-clip-text text-transparent">

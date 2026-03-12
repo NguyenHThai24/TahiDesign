@@ -88,5 +88,25 @@
       "/images/calendar/calendar2.jpg",
       "/images/calendar/calendar2.1.jpg"
     ]
+  },
+  {
+    "id": 303,
+    "categoryId": 4,
+    "name": "Lịch để bàn tối giản",
+    "price": 22000,
+    "images": [
+      "/images/calendar/calendar2.jpg",
+      "/images/calendar/calendar2.1.jpg"
+    ]
+  },
+  {
+    "id": 304,
+    "categoryId": 4,
+    "name": "Lịch để bàn tối giản",
+    "price": 22000,
+    "images": [
+      "/images/calendar/calendar2.jpg",
+      "/images/calendar/calendar2.1.jpg"
+    ]
   }
 ]
